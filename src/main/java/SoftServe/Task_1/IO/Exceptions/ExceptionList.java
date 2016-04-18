@@ -1,7 +1,0 @@
-package SoftServe.Task_1.IO.Exceptions;
-
-public enum ExceptionList {
-
-    INVALID_NAME, INVALID_LAST_NAME, INVALID_BIRTH_DATE, INVALID_ANALYZES_TYPE, INVALID_ANALYZES_DATE, DEFAULT
-
-}

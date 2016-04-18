@@ -1,23 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <module external.linked.project.id="Task" external.linked.project.path="$MODULE_DIR$" external.root.project.path="$MODULE_DIR$" external.system.id="GRADLE" external.system.module.group="Task" external.system.module.version="1.0-SNAPSHOT" type="JAVA_MODULE" version="4">
   <component name="FacetManager">
+    <facet type="jpa" name="JPA">
+      <configuration>
+        <setting name="validation-enabled" value="true" />
+        <setting name="provider-name" value="EclipseLink" />
+        <datasource-mapping>
+          <factory-entry name="CAR" value="9686fe9c-bbd8-46ab-84be-9930d3c8b459" />
+        </datasource-mapping>
+        <deploymentDescriptor name="persistence.xml" url="file://$MODULE_DIR$/src/main/resources/META-INF/persistence.xml" />
+      </configuration>
+    </facet>
     <facet type="web" name="Web Gradle : Task-1.0-SNAPSHOT.war">
       <configuration>
         <webroots>
           <root url="file://$MODULE_DIR$/src/main/webapp" relative="/" />
         </webroots>
         <sourceRoots>
-          <root url="file://$MODULE_DIR$/src/main/java" />
           <root url="file://$MODULE_DIR$/src/main/resources" />
+          <root url="file://$MODULE_DIR$/src/main/java" />
         </sourceRoots>
-      </configuration>
-    </facet>
-    <facet type="jpa" name="JPA">
-      <configuration>
-        <setting name="validation-enabled" value="true" />
-        <setting name="provider-name" value="EclipseLink" />
-        <datasource-mapping />
-        <deploymentDescriptor name="persistence.xml" url="file://$MODULE_DIR$/src/main/resources/META-INF/Persistence.xml" />
       </configuration>
     </facet>
   </component>
@@ -47,6 +49,8 @@
     <orderEntry type="library" exported="" name="Gradle: javax.servlet:servlet-api:2.5" level="project" />
     <orderEntry type="library" exported="" name="Gradle: javax:javaee-web-api:7.0" level="project" />
     <orderEntry type="library" exported="" name="Gradle: jstl:jstl:1.2" level="project" />
-    <orderEntry type="library" name="eclipselink-2.5.0" level="project" />
+    <orderEntry type="library" exported="" name="Gradle: org.eclipse.persistence:eclipselink:2.5.0" level="project" />
+    <orderEntry type="library" exported="" name="Gradle: org.eclipse.persistence:javax.persistence:2.1.0" level="project" />
+    <orderEntry type="library" exported="" name="Gradle: org.eclipse.persistence:commonj.sdo:2.1.1" level="project" />
   </component>
 </module>

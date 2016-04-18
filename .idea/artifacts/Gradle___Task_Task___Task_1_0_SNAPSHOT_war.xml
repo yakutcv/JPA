@@ -22,6 +22,9 @@
           <element id="library" level="project" name="Gradle: javax.servlet:servlet-api:2.5" />
           <element id="library" level="project" name="Gradle: javax:javaee-web-api:7.0" />
           <element id="library" level="project" name="Gradle: jstl:jstl:1.2" />
+          <element id="library" level="project" name="Gradle: org.eclipse.persistence:eclipselink:2.5.0" />
+          <element id="library" level="project" name="Gradle: org.eclipse.persistence:javax.persistence:2.1.0" />
+          <element id="library" level="project" name="Gradle: org.eclipse.persistence:commonj.sdo:2.1.1" />
         </element>
       </element>
       <element id="directory" name="META-INF">

@@ -1,6 +1,35 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <component name="dataSourceStorage">
-  <data-source name="MySQL - andrewdatabase@localhost" uuid="a034ab45-3624-4a56-a5ba-34bf716fec2d">
-    <database-info product="" version="" jdbc-version="" driver-name="" driver-version=""/>
+  <data-source name="MySQL - andrewdatabase@localhost" uuid="9686fe9c-bbd8-46ab-84be-9930d3c8b459">
+    <database-info product="MySQL" version="5.6.16-log" jdbc-version="4.0" driver-name="MySQL-AB JDBC Driver" driver-version="mysql-connector-java-5.1.23 ( Revision: ${bzr.revision-id} )">
+      <extra-name-characters>#@</extra-name-characters>
+      <identifier-quote-string>`</identifier-quote-string>
+    </database-info>
+    <case-sensitivity plain-identifiers="lower" quoted-identifiers="lower"/>
+    <schema name="" catalog="andrewdatabase"/>
+    <table name="analysis" schema="" catalog="andrewdatabase" type="TABLE">
+      <column name="ID" sqlType="BIGINT" precision="19" scale="0" nullable="false" jdbcType="-5"/>
+      <column name="DATE" sqlType="VARCHAR" precision="255" scale="0" nullable="true" jdbcType="12"/>
+      <column name="REPORT" sqlType="VARCHAR" precision="255" scale="0" nullable="true" jdbcType="12"/>
+      <column name="TYPE" sqlType="VARCHAR" precision="255" scale="0" nullable="true" jdbcType="12"/>
+      <column name="patient_id" sqlType="BIGINT" precision="19" scale="0" nullable="true" jdbcType="-5"/>
+      <primary-key name="PRIMARY" columns="ID"/>
+      <foreign-key name="FK_ANALYSIS_patient_id" columns="patient_id" ref-table="patient" ref-schema="" ref-catalog="andrewdatabase" ref-columns="ID" update-rule="3" delete-rule="3" deferrability="2"/>
+      <index name="FK_ANALYSIS_patient_id" unique="false" columns="patient_id"/>
+    </table>
+    <table name="patient" schema="" catalog="andrewdatabase" type="TABLE">
+      <column name="ID" sqlType="BIGINT" precision="19" scale="0" nullable="false" jdbcType="-5"/>
+      <column name="BIRTHDATE" sqlType="VARCHAR" precision="255" scale="0" nullable="true" jdbcType="12"/>
+      <column name="LASTNAME" sqlType="VARCHAR" precision="255" scale="0" nullable="true" jdbcType="12"/>
+      <column name="NAME" sqlType="VARCHAR" precision="255" scale="0" nullable="true" jdbcType="12"/>
+      <column name="STATUS" sqlType="TINYINT" precision="3" scale="0" nullable="true" jdbcType="-6" def="MA=="/>
+      <primary-key name="PRIMARY" columns="ID"/>
+      <exported-key name="FK_ANALYSIS_patient_id" table="analysis" schema="" catalog="andrewdatabase" columns="patient_id"/>
+    </table>
+    <table name="sequence" schema="" catalog="andrewdatabase" type="TABLE">
+      <column name="SEQ_NAME" sqlType="VARCHAR" precision="50" scale="0" nullable="false" jdbcType="12"/>
+      <column name="SEQ_COUNT" sqlType="DECIMAL" precision="38" scale="0" nullable="true" jdbcType="3"/>
+      <primary-key name="PRIMARY" columns="SEQ_NAME"/>
+    </table>
   </data-source>
 </component>

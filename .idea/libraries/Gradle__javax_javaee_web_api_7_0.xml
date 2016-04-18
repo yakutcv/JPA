@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="Gradle: javax:javaee-web-api:7.0">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/javax/javaee-web-api/7.0/b1fce45ba94108ebf7e1cace6427ec8761cabec1/javaee-web-api-7.0.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/javax/javaee-web-api/7.0/77d008d85d67de12f821827787d215ff68612407/javaee-web-api-7.0-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

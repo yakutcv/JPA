@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Hospital>
+    <Patient id="3">
+        <name>Vasia</name>
+        <lastName>Pupkin</lastName>
+        <birthDate>30/05/1989 10:06</birthDate>
+        <List_of_Analyzes>
+            <Analysis>
+                <type>Allergy</type>
+                <date>28/03/2015 17:00</date>
+                <report>Good Analysis</report>
+            </Analysis>
+            <Analysis>
+                <type>Blood</type>
+                <date>28/04/2013 16:00</date>
+                <report>Good</report>
+            </Analysis>
+        </List_of_Analyzes>
+    </Patient>
+    <Patient id="2">
+        <name>Petia</name>
+        <lastName>Petrushkin</lastName>
+        <birthDate>30/05/1984 10:06</birthDate>
+        <List_of_Analyzes>
+            <Analysis>
+                <type>Blood</type>
+                <date>28/03/2014 15:00</date>
+                <report>Good Analysis</report>
+            </Analysis>
+            <Analysis>
+                <type>Allergy</type>
+                <date>28/04/2013 16:00</date>
+                <report>Good</report>
+            </Analysis>
+        </List_of_Analyzes>
+    </Patient>
+    <Patient id="1">
+        <name>Andrew</name>
+        <lastName>Yasinskiy</lastName>
+        <birthDate>30/06/1987 10:06</birthDate>
+        <List_of_Analyzes>
+            <Analysis>
+                <type>Hormones</type>
+                <date>28/03/2016 15:00</date>
+                <report>Good Analyzes</report>
+            </Analysis>
+            <Analysis>
+                <type>Allergy</type>
+                <date>28/04/2016 15:00</date>
+                <report>Good</report>
+            </Analysis>
+        </List_of_Analyzes>
+    </Patient>
+</Hospital>

@@ -1691,7 +1691,7 @@
 	};
 
 	function opts_from_el(el, prefix){
-		// Derive options from element data-attrs
+		// Derive options from element output-attrs
 		var data = $(el).data(),
 			out = {}, inkey,
 			replace = new RegExp('^' + prefix.toLowerCase() + '([A-Z])');
@@ -1739,7 +1739,7 @@
 					// Preliminary otions
 					xopts = $.extend({}, defaults, elopts, options),
 					locopts = opts_from_locale(xopts.language),
-					// Options priority: js args, data-attrs, locales, defaults
+					// Options priority: js args, output-attrs, locales, defaults
 					opts = $.extend({}, defaults, locopts, elopts, options);
 				if ($this.hasClass('input-daterange') || opts.inputs){
 					$.extend(opts, {
@@ -2127,8 +2127,8 @@
 	* ================== */
 
 	$(document).on(
-		'focus.datepicker.data-api click.datepicker.data-api',
-		'[data-provide="datepicker"]',
+		'focus.datepicker.output-api click.datepicker.output-api',
+		'[output-provide="datepicker"]',
 		function(e){
 			var $this = $(this);
 			if ($this.data('datepicker'))
@@ -2139,7 +2139,7 @@
 		}
 	);
 	$(function(){
-		datepickerPlugin.call($('[data-provide="datepicker-inline"]'));
+		datepickerPlugin.call($('[output-provide="datepicker-inline"]'));
 	});
 
 }));

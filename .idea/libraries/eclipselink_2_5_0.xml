@@ -3,6 +3,7 @@
     <CLASSES>
       <root url="jar://$PROJECT_DIR$/../Library/eclipselink-2.5.0.jar!/" />
       <root url="jar://$PROJECT_DIR$/../../Library/eclipselink-2.5.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../../Libraries/org.eclipse.persistence.jpa-2.5.0.jar!/" />
     </CLASSES>
     <JAVADOC />
     <SOURCES />

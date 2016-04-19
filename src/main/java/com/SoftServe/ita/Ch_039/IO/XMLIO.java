@@ -18,7 +18,7 @@ public class XMLIO implements IO {
             JAXBContext jc = JAXBContext.newInstance(Hospital.class);
             Marshaller m = jc.createMarshaller();
             m.setProperty(Marshaller.JAXB_FORMATTED_OUTPUT, true);
-            m.marshal(hospital, new File("src\\SoftServe\\SoftServe.Task_1\\data\\" + file));
+            m.marshal(hospital, new File("src\\SoftServe\\SoftServe.Task_1\\output\\" + file));
             System.out.println("XML file created!");
         }catch (JAXBException e){
             System.out.println("JAXB wrong " + e);
@@ -31,8 +31,8 @@ public class XMLIO implements IO {
         try{
             JAXBContext jc = JAXBContext.newInstance(Hospital.class);
             Unmarshaller ums = jc.createUnmarshaller();
-            //hospital = (Hospital)ums.unmarshal(new File("src\\SoftServe\\SoftServe.Task_1\\data\\" + file));
-            FileReader reader = new FileReader("src\\SoftServe\\SoftServe.Task_1\\data\\" + file);
+            //hospital = (Hospital)ums.unmarshal(new File("src\\SoftServe\\SoftServe.Task_1\\output\\" + file));
+            FileReader reader = new FileReader("src\\SoftServe\\SoftServe.Task_1\\output\\" + file);
             hospital = (Hospital) ums.unmarshal(reader);
         }catch (JAXBException e) {
             e.printStackTrace();

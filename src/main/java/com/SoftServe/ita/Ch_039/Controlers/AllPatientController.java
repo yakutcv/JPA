@@ -1,4 +1,4 @@
-package com.SoftServe.ita.Ch_039.web.Controlers;
+package com.SoftServe.ita.Ch_039.Controlers;
 
 import com.SoftServe.ita.Ch_039.Entity.Patient;
 import com.SoftServe.ita.Ch_039.IO.SQL.PatientDAO;

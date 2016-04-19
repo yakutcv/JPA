@@ -33,7 +33,7 @@ if (typeof jQuery === 'undefined') {
      *
      * @param {jQuery|String} form The form element or selector
      * @param {Object} options The options
-     * @param {String} [namespace] The optional namespace which is used for data-{namespace}-xxx attributes and internal data.
+     * @param {String} [namespace] The optional namespace which is used for output-{namespace}-xxx attributes and internal output.
      * Currently, it's used to support backward version
      * @constructor
      */
@@ -87,7 +87,7 @@ if (typeof jQuery === 'undefined') {
          */
         _exceedThreshold: function($field) {
             var ns        = this._namespace,
-                field     = $field.attr('data-' + ns + '-field'),
+                field     = $field.attr('output-' + ns + '-field'),
                 threshold = this.options.fields[field].threshold || this.options.threshold;
             if (!threshold) {
                 return true;
@@ -104,56 +104,56 @@ if (typeof jQuery === 'undefined') {
                 ns      = this._namespace,
                 options = {
                     addOns:         {},
-                    autoFocus:      this.$form.attr('data-' + ns + '-autofocus'),
+                    autoFocus:      this.$form.attr('output-' + ns + '-autofocus'),
                     button: {
-                        selector: this.$form.attr('data-' + ns + '-button-selector') || this.$form.attr('data-' + ns + '-submitbuttons'), // Support backward
-                        disabled: this.$form.attr('data-' + ns + '-button-disabled')
+                        selector: this.$form.attr('output-' + ns + '-button-selector') || this.$form.attr('output-' + ns + '-submitbuttons'), // Support backward
+                        disabled: this.$form.attr('output-' + ns + '-button-disabled')
                     },
                     control: {
-                        valid:   this.$form.attr('data-' + ns + '-control-valid'),
-                        invalid: this.$form.attr('data-' + ns + '-control-invalid')
+                        valid:   this.$form.attr('output-' + ns + '-control-valid'),
+                        invalid: this.$form.attr('output-' + ns + '-control-invalid')
                     },
                     err: {
-                        clazz:     this.$form.attr('data-' + ns + '-err-clazz'),
-                        container: this.$form.attr('data-' + ns + '-err-container') || this.$form.attr('data-' + ns + '-container'), // Support backward
-                        parent:    this.$form.attr('data-' + ns + '-err-parent')
+                        clazz:     this.$form.attr('output-' + ns + '-err-clazz'),
+                        container: this.$form.attr('output-' + ns + '-err-container') || this.$form.attr('output-' + ns + '-container'), // Support backward
+                        parent:    this.$form.attr('output-' + ns + '-err-parent')
                     },
                     events: {
-                        formInit:         this.$form.attr('data-' + ns + '-events-form-init'),
-                        formError:        this.$form.attr('data-' + ns + '-events-form-error'),
-                        formSuccess:      this.$form.attr('data-' + ns + '-events-form-success'),
-                        fieldAdded:       this.$form.attr('data-' + ns + '-events-field-added'),
-                        fieldRemoved:     this.$form.attr('data-' + ns + '-events-field-removed'),
-                        fieldInit:        this.$form.attr('data-' + ns + '-events-field-init'),
-                        fieldError:       this.$form.attr('data-' + ns + '-events-field-error'),
-                        fieldSuccess:     this.$form.attr('data-' + ns + '-events-field-success'),
-                        fieldStatus:      this.$form.attr('data-' + ns + '-events-field-status'),
-                        localeChanged:    this.$form.attr('data-' + ns + '-events-locale-changed'),
-                        validatorError:   this.$form.attr('data-' + ns + '-events-validator-error'),
-                        validatorSuccess: this.$form.attr('data-' + ns + '-events-validator-success'),
-                        validatorIgnored: this.$form.attr('data-' + ns + '-events-validator-ignored')
+                        formInit:         this.$form.attr('output-' + ns + '-events-form-init'),
+                        formError:        this.$form.attr('output-' + ns + '-events-form-error'),
+                        formSuccess:      this.$form.attr('output-' + ns + '-events-form-success'),
+                        fieldAdded:       this.$form.attr('output-' + ns + '-events-field-added'),
+                        fieldRemoved:     this.$form.attr('output-' + ns + '-events-field-removed'),
+                        fieldInit:        this.$form.attr('output-' + ns + '-events-field-init'),
+                        fieldError:       this.$form.attr('output-' + ns + '-events-field-error'),
+                        fieldSuccess:     this.$form.attr('output-' + ns + '-events-field-success'),
+                        fieldStatus:      this.$form.attr('output-' + ns + '-events-field-status'),
+                        localeChanged:    this.$form.attr('output-' + ns + '-events-locale-changed'),
+                        validatorError:   this.$form.attr('output-' + ns + '-events-validator-error'),
+                        validatorSuccess: this.$form.attr('output-' + ns + '-events-validator-success'),
+                        validatorIgnored: this.$form.attr('output-' + ns + '-events-validator-ignored')
                     },
-                    excluded:      this.$form.attr('data-' + ns + '-excluded'),
+                    excluded:      this.$form.attr('output-' + ns + '-excluded'),
                     icon: {
-                        valid:      this.$form.attr('data-' + ns + '-icon-valid')      || this.$form.attr('data-' + ns + '-feedbackicons-valid'),      // Support backward
-                        invalid:    this.$form.attr('data-' + ns + '-icon-invalid')    || this.$form.attr('data-' + ns + '-feedbackicons-invalid'),    // Support backward
-                        validating: this.$form.attr('data-' + ns + '-icon-validating') || this.$form.attr('data-' + ns + '-feedbackicons-validating'), // Support backward
-                        feedback:   this.$form.attr('data-' + ns + '-icon-feedback')
+                        valid:      this.$form.attr('output-' + ns + '-icon-valid')      || this.$form.attr('output-' + ns + '-feedbackicons-valid'),      // Support backward
+                        invalid:    this.$form.attr('output-' + ns + '-icon-invalid')    || this.$form.attr('output-' + ns + '-feedbackicons-invalid'),    // Support backward
+                        validating: this.$form.attr('output-' + ns + '-icon-validating') || this.$form.attr('output-' + ns + '-feedbackicons-validating'), // Support backward
+                        feedback:   this.$form.attr('output-' + ns + '-icon-feedback')
                     },
-                    live:          this.$form.attr('data-' + ns + '-live'),
-                    locale:        this.$form.attr('data-' + ns + '-locale'),
-                    message:       this.$form.attr('data-' + ns + '-message'),
-                    onError:       this.$form.attr('data-' + ns + '-onerror'),
-                    onSuccess:     this.$form.attr('data-' + ns + '-onsuccess'),
+                    live:          this.$form.attr('output-' + ns + '-live'),
+                    locale:        this.$form.attr('output-' + ns + '-locale'),
+                    message:       this.$form.attr('output-' + ns + '-message'),
+                    onError:       this.$form.attr('output-' + ns + '-onerror'),
+                    onSuccess:     this.$form.attr('output-' + ns + '-onsuccess'),
                     row: {
-                        selector: this.$form.attr('data-' + ns + '-row-selector') || this.$form.attr('data-' + ns + '-group'), // Support backward
-                        valid:    this.$form.attr('data-' + ns + '-row-valid'),
-                        invalid:  this.$form.attr('data-' + ns + '-row-invalid'),
-                        feedback: this.$form.attr('data-' + ns + '-row-feedback')
+                        selector: this.$form.attr('output-' + ns + '-row-selector') || this.$form.attr('output-' + ns + '-group'), // Support backward
+                        valid:    this.$form.attr('output-' + ns + '-row-valid'),
+                        invalid:  this.$form.attr('output-' + ns + '-row-invalid'),
+                        feedback: this.$form.attr('output-' + ns + '-row-feedback')
                     },
-                    threshold:     this.$form.attr('data-' + ns + '-threshold'),
-                    trigger:       this.$form.attr('data-' + ns + '-trigger'),
-                    verbose:       this.$form.attr('data-' + ns + '-verbose'),
+                    threshold:     this.$form.attr('output-' + ns + '-threshold'),
+                    trigger:       this.$form.attr('output-' + ns + '-trigger'),
+                    verbose:       this.$form.attr('output-' + ns + '-verbose'),
                     fields:        {}
                 };
 
@@ -173,15 +173,15 @@ if (typeof jQuery === 'undefined') {
                 });
 
             if (this.options.declarative === true || this.options.declarative === 'true') {
-                // Find all fields which have either "name" or "data-{namespace}-field" attribute
+                // Find all fields which have either "name" or "output-{namespace}-field" attribute
                 this.$form
-                    .find('[name], [data-' + ns + '-field]')
+                    .find('[name], [output-' + ns + '-field]')
                     .each(function () {
                         var $field = $(this),
-                            field  = $field.attr('name') || $field.attr('data-' + ns + '-field'),
+                            field  = $field.attr('name') || $field.attr('output-' + ns + '-field'),
                             opts   = that._parseOptions($field);
                         if (opts) {
-                            $field.attr('data-' + ns + '-field', field);
+                            $field.attr('output-' + ns + '-field', field);
                             options.fields[field] = $.extend({}, opts, options.fields[field]);
                         }
                     });
@@ -288,11 +288,11 @@ if (typeof jQuery === 'undefined') {
             switch (typeof field) {
                 case 'object':
                     fields = field;
-                    field  = field.attr('data-' + ns + '-field');
+                    field  = field.attr('output-' + ns + '-field');
                     break;
                 case 'string':
                     fields = this.getFieldElements(field);
-                    fields.attr('data-' + ns + '-field', field);
+                    fields.attr('output-' + ns + '-field', field);
                     break;
                 default:
                     break;
@@ -342,8 +342,8 @@ if (typeof jQuery === 'undefined') {
                 }
 
                 // Remove all error messages and feedback icons
-                $message.find('.' + this.options.err.clazz.split(' ').join('.') + '[data-' + ns + '-validator][data-' + ns + '-for="' + field + '"]').remove();
-                $parent.find('i[data-' + ns + '-icon-for="' + field + '"]').remove();
+                $message.find('.' + this.options.err.clazz.split(' ').join('.') + '[output-' + ns + '-validator][output-' + ns + '-for="' + field + '"]').remove();
+                $parent.find('i[output-' + ns + '-icon-for="' + field + '"]').remove();
 
                 // Whenever the user change the field value, mark it as not validated yet
                 $field.off(events).on(events, function() {
@@ -359,9 +359,9 @@ if (typeof jQuery === 'undefined') {
                         $('<small/>')
                             .css('display', 'none')
                             .addClass(this.options.err.clazz)
-                            .attr('data-' + ns + '-validator', validatorName)
-                            .attr('data-' + ns + '-for', field)
-                            .attr('data-' + ns + '-result', this.STATUS_NOT_VALIDATED)
+                            .attr('output-' + ns + '-validator', validatorName)
+                            .attr('output-' + ns + '-for', field)
+                            .attr('output-' + ns + '-result', this.STATUS_NOT_VALIDATED)
                             .html(this._getMessage(field, validatorName))
                             .appendTo($message);
                     }
@@ -384,10 +384,10 @@ if (typeof jQuery === 'undefined') {
                     var $icon = $('<i/>')
                                     .css('display', 'none')
                                     .addClass(this.options.icon.feedback)
-                                    .attr('data-' + ns + '-icon-for', field)
+                                    .attr('output-' + ns + '-icon-for', field)
                                     .insertAfter($field);
 
-                    // Store the icon as a data of field element
+                    // Store the icon as a output of field element
                     (!updateAll ? $field : fields).data(ns + '.icon', $icon);
 
                     if ('tooltip' === container || 'popover' === container) {
@@ -477,9 +477,9 @@ if (typeof jQuery === 'undefined') {
          */
         _isExcluded: function($field) {
             var ns           = this._namespace,
-                excludedAttr = $field.attr('data-' + ns + '-excluded'),
+                excludedAttr = $field.attr('output-' + ns + '-excluded'),
                 // I still need to check the 'name' attribute while initializing the field
-                field        = $field.attr('data-' + ns + '-field') || $field.attr('name');
+                field        = $field.attr('output-' + ns + '-field') || $field.attr('name');
 
             switch (true) {
                 case (!!field && this.options.fields && this.options.fields[field] && (this.options.fields[field].excluded === 'true' || this.options.fields[field].excluded === true)):
@@ -535,11 +535,11 @@ if (typeof jQuery === 'undefined') {
             }
 
             var type  = $field.attr('type'),
-                name  = $field.attr('data-' + ns + '-field'),
+                name  = $field.attr('output-' + ns + '-field'),
                 event = ('radio' === type || 'checkbox' === type || 'file' === type || 'SELECT' === $field.get(0).tagName) ? 'change' : this._changeEvent;
             trigger   = ((this.options.fields[name] ? this.options.fields[name].trigger : null) || this.options.trigger || event).split(' ');
 
-            // Since the trigger data is used many times, I need to cache it to use later
+            // Since the trigger output is used many times, I need to cache it to use later
             $field.data(ns + '.trigger', trigger);
 
             return trigger;
@@ -607,7 +607,7 @@ if (typeof jQuery === 'undefined') {
          */
         _parseAddOnOptions: function() {
             var ns     = this._namespace,
-                names  = this.$form.attr('data-' + ns + '-addons'),
+                names  = this.$form.attr('output-' + ns + '-addons'),
                 addOns = this.options.addOns || {};
 
             if (names) {
@@ -631,7 +631,7 @@ if (typeof jQuery === 'undefined') {
                 attrMap = FormValidation.AddOn[addOn].html5Attributes;
                 if (attrMap) {
                     for (attr in attrMap) {
-                        option = this.$form.attr('data-' + ns + '-addons-' + addOn.toLowerCase() + '-' + attr.toLowerCase());
+                        option = this.$form.attr('output-' + ns + '-addons-' + addOn.toLowerCase() + '-' + attr.toLowerCase());
                         if (option) {
                             addOns[addOn][attrMap[attr]] = option;
                         }
@@ -650,7 +650,7 @@ if (typeof jQuery === 'undefined') {
          */
         _parseOptions: function($field) {
             var ns         = this._namespace,
-                field      = $field.attr('name') || $field.attr('data-' + ns + '-field'),
+                field      = $field.attr('name') || $field.attr('output-' + ns + '-field'),
                 validators = {},
                 validator,
                 v,          // Validator name
@@ -664,7 +664,7 @@ if (typeof jQuery === 'undefined') {
 
             for (v in FormValidation.Validator) {
                 validator    = FormValidation.Validator[v];
-                attrName     = 'data-' + ns + '-' + v.toLowerCase(),
+                attrName     = 'output-' + ns + '-' + v.toLowerCase(),
                 enabled      = $field.attr(attrName) + '';
                 html5AttrMap = ('function' === typeof validator.enableByHtml5) ? validator.enableByHtml5($field) : null;
 
@@ -682,7 +682,7 @@ if (typeof jQuery === 'undefined') {
 
                     for (html5AttrName in validator.html5Attributes) {
                         optionName  = validator.html5Attributes[html5AttrName];
-                        optionAttrName = 'data-' + ns + '-' + v.toLowerCase() + '-' + html5AttrName,
+                        optionAttrName = 'output-' + ns + '-' + v.toLowerCase() + '-' + html5AttrName,
                         optionValue = $field.attr(optionAttrName);
                         if (optionValue) {
                             if ('true' === optionValue || optionAttrName === optionValue.toLowerCase()) {
@@ -697,20 +697,20 @@ if (typeof jQuery === 'undefined') {
             }
 
             var opts = {
-                    autoFocus:   $field.attr('data-' + ns + '-autofocus'),
-                    err:         $field.attr('data-' + ns + '-err-container') || $field.attr('data-' + ns + '-container'), // Support backward
-                    excluded:    $field.attr('data-' + ns + '-excluded'),
-                    icon:        $field.attr('data-' + ns + '-icon') || $field.attr('data-' + ns + '-feedbackicons') || (this.options.fields && this.options.fields[field] ? this.options.fields[field].feedbackIcons : null), // Support backward
-                    message:     $field.attr('data-' + ns + '-message'),
-                    onError:     $field.attr('data-' + ns + '-onerror'),
-                    onStatus:    $field.attr('data-' + ns + '-onstatus'),
-                    onSuccess:   $field.attr('data-' + ns + '-onsuccess'),
-                    row:         $field.attr('data-' + ns + '-row') || $field.attr('data-' + ns + '-group') || (this.options.fields && this.options.fields[field] ? this.options.fields[field].group : null), // Support backward
-                    selector:    $field.attr('data-' + ns + '-selector'),
-                    threshold:   $field.attr('data-' + ns + '-threshold'),
-                    transformer: $field.attr('data-' + ns + '-transformer'),
-                    trigger:     $field.attr('data-' + ns + '-trigger'),
-                    verbose:     $field.attr('data-' + ns + '-verbose'),
+                    autoFocus:   $field.attr('output-' + ns + '-autofocus'),
+                    err:         $field.attr('output-' + ns + '-err-container') || $field.attr('output-' + ns + '-container'), // Support backward
+                    excluded:    $field.attr('output-' + ns + '-excluded'),
+                    icon:        $field.attr('output-' + ns + '-icon') || $field.attr('output-' + ns + '-feedbackicons') || (this.options.fields && this.options.fields[field] ? this.options.fields[field].feedbackIcons : null), // Support backward
+                    message:     $field.attr('output-' + ns + '-message'),
+                    onError:     $field.attr('output-' + ns + '-onerror'),
+                    onStatus:    $field.attr('output-' + ns + '-onstatus'),
+                    onSuccess:   $field.attr('output-' + ns + '-onsuccess'),
+                    row:         $field.attr('output-' + ns + '-row') || $field.attr('output-' + ns + '-group') || (this.options.fields && this.options.fields[field] ? this.options.fields[field].group : null), // Support backward
+                    selector:    $field.attr('output-' + ns + '-selector'),
+                    threshold:   $field.attr('output-' + ns + '-threshold'),
+                    transformer: $field.attr('output-' + ns + '-transformer'),
+                    trigger:     $field.attr('output-' + ns + '-trigger'),
+                    verbose:     $field.attr('output-' + ns + '-verbose'),
                     validators:  validators
                 },
                 emptyOptions    = $.isEmptyObject(opts),        // Check if the field options are set using HTML attributes
@@ -783,7 +783,7 @@ if (typeof jQuery === 'undefined') {
             var ns = this._namespace;
             for (var i = 0; i < this.$invalidFields.length; i++) {
                 var $field    = this.$invalidFields.eq(i),
-                    autoFocus = this.isOptionEnabled($field.attr('data-' + ns + '-field'), 'autoFocus');
+                    autoFocus = this.isOptionEnabled($field.attr('output-' + ns + '-field'), 'autoFocus');
                 if (autoFocus) {
                     // Focus the field
                     $field.focus();
@@ -800,7 +800,7 @@ if (typeof jQuery === 'undefined') {
          */
         _onFieldValidated: function($field, validatorName) {
             var ns            = this._namespace,
-                field         = $field.attr('data-' + ns + '-field'),
+                field         = $field.attr('output-' + ns + '-field'),
                 validators    = this.options.fields[field].validators,
                 counter       = {},
                 numValidators = 0,
@@ -948,7 +948,7 @@ if (typeof jQuery === 'undefined') {
                         'type': 'hidden',
                         name: this.$submitButton.attr('name')
                     })
-                    .attr('data-' + ns + '-submit-hidden', '')
+                    .attr('output-' + ns + '-submit-hidden', '')
                     .val(this.$submitButton.val())
                     .appendTo(this.$form);
             }
@@ -1017,7 +1017,7 @@ if (typeof jQuery === 'undefined') {
                 }
             } else {
                 $field = field;
-                field  = $field.attr('data-' + ns + '-field');
+                field  = $field.attr('output-' + ns + '-field');
             }
 
             if (!field || !this.options.fields[field]) {
@@ -1053,7 +1053,7 @@ if (typeof jQuery === 'undefined') {
                 return option ? this.options[option] : this.options;
             }
             if ('object' === typeof field) {
-                field = field.attr('data-' + ns + '-field');
+                field = field.attr('output-' + ns + '-field');
             }
             if (!this.options.fields[field]) {
                 return null;
@@ -1147,7 +1147,7 @@ if (typeof jQuery === 'undefined') {
                 return true;
             }
 
-            $container.find('[data-' + ns + '-field]').each(function() {
+            $container.find('[output-' + ns + '-field]').each(function() {
                 var $field = $(this);
                 if (!that._isExcluded($field)) {
                     fields.push($field);
@@ -1157,17 +1157,17 @@ if (typeof jQuery === 'undefined') {
             var total = fields.length;
             for (var i = 0; i < total; i++) {
                 var $f      = fields[i],
-                    field   = $f.attr('data-' + ns + '-field'),
+                    field   = $f.attr('output-' + ns + '-field'),
                     $errors = $f.data(ns + '.messages')
-                                .find('.' + this.options.err.clazz.split(' ').join('.') + '[data-' + ns + '-validator][data-' + ns + '-for="' + field + '"]');
+                                .find('.' + this.options.err.clazz.split(' ').join('.') + '[output-' + ns + '-validator][output-' + ns + '-for="' + field + '"]');
 
-                if ($errors.filter('[data-' + ns + '-result="' + this.STATUS_INVALID + '"]').length > 0) {
+                if ($errors.filter('[output-' + ns + '-result="' + this.STATUS_INVALID + '"]').length > 0) {
                     return false;
                 }
 
                 // If the field is not validated
-                if ($errors.filter('[data-' + ns + '-result="' + this.STATUS_NOT_VALIDATED + '"]').length > 0
-                    || $errors.filter('[data-' + ns + '-result="' + this.STATUS_VALIDATING + '"]').length > 0)
+                if ($errors.filter('[output-' + ns + '-result="' + this.STATUS_NOT_VALIDATED + '"]').length > 0
+                    || $errors.filter('[output-' + ns + '-result="' + this.STATUS_VALIDATING + '"]').length > 0)
                 {
                     return null;
                 }
@@ -1191,7 +1191,7 @@ if (typeof jQuery === 'undefined') {
             switch (typeof field) {
                 case 'object':
                     fields = field;
-                    field  = field.attr('data-' + ns + '-field');
+                    field  = field.attr('output-' + ns + '-field');
                     break;
                 case 'string':
                     fields = this.getFieldElements(field);
@@ -1303,7 +1303,7 @@ if (typeof jQuery === 'undefined') {
             switch (typeof field) {
                 case 'object':
                     $fields = field;
-                    field   = field.attr('data-' + ns + '-field');
+                    field   = field.attr('output-' + ns + '-field');
                     break;
                 case 'string':
                     $fields = this.getFieldElements(field);
@@ -1315,7 +1315,7 @@ if (typeof jQuery === 'undefined') {
             $fields.each(function() {
                 $(this)
                     .data(ns + '.messages')
-                    .find('.' + that.options.err.clazz + '[data-' + ns + '-validator="' + validator + '"][data-' + ns + '-for="' + field + '"]').html(message);
+                    .find('.' + that.options.err.clazz + '[output-' + ns + '-validator="' + validator + '"][output-' + ns + '-for="' + field + '"]').html(message);
             });
 
             return this;
@@ -1335,7 +1335,7 @@ if (typeof jQuery === 'undefined') {
             switch (typeof field) {
                 case 'object':
                     fields = field;
-                    field  = field.attr('data-' + ns + '-field');
+                    field  = field.attr('output-' + ns + '-field');
                     break;
                 case 'string':
                     fields = this.getFieldElements(field);
@@ -1367,8 +1367,8 @@ if (typeof jQuery === 'undefined') {
 
                 var $parent      = $field.closest(row),
                     $message     = $field.data(ns + '.messages'),
-                    $allErrors   = $message.find('.' + this.options.err.clazz.split(' ').join('.') + '[data-' + ns + '-validator][data-' + ns + '-for="' + field + '"]'),
-                    $errors      = validatorName ? $allErrors.filter('[data-' + ns + '-validator="' + validatorName + '"]') : $allErrors,
+                    $allErrors   = $message.find('.' + this.options.err.clazz.split(' ').join('.') + '[output-' + ns + '-validator][output-' + ns + '-for="' + field + '"]'),
+                    $errors      = validatorName ? $allErrors.filter('[output-' + ns + '-validator="' + validatorName + '"]') : $allErrors,
                     $icon        = $field.data(ns + '.icon'),
                     // Support backward
                     container    = ('function' === typeof (this.options.fields[field].container || this.options.fields[field].err || this.options.err.container))
@@ -1388,7 +1388,7 @@ if (typeof jQuery === 'undefined') {
                 }
 
                 // Show/hide error elements and feedback icons
-                $errors.attr('data-' + ns + '-result', status);
+                $errors.attr('output-' + ns + '-result', status);
 
                 switch (status) {
                     case this.STATUS_VALIDATING:
@@ -1413,14 +1413,14 @@ if (typeof jQuery === 'undefined') {
 
                     case this.STATUS_VALID:
                     case this.STATUS_IGNORED:       // Treat ignored fields like they are valid with some specialties
-                        isValidating   = ($allErrors.filter('[data-' + ns + '-result="' + this.STATUS_VALIDATING +'"]').length > 0);
-                        isNotValidated = ($allErrors.filter('[data-' + ns + '-result="' + this.STATUS_NOT_VALIDATED +'"]').length > 0);
+                        isValidating   = ($allErrors.filter('[output-' + ns + '-result="' + this.STATUS_VALIDATING +'"]').length > 0);
+                        isNotValidated = ($allErrors.filter('[output-' + ns + '-result="' + this.STATUS_NOT_VALIDATED +'"]').length > 0);
 
                         // If the field is valid (passes all validators)
                         isValidField   = (isValidating || isNotValidated)     // There are some validators that have not done
                                        ? null
-                                       : ($allErrors.filter('[data-' + ns + '-result="' + this.STATUS_VALID +'"]').length
-                                        + $allErrors.filter('[data-' + ns + '-result="' + this.STATUS_IGNORED +'"]').length === $allErrors.length); // All validators are completed
+                                       : ($allErrors.filter('[output-' + ns + '-result="' + this.STATUS_VALID +'"]').length
+                                        + $allErrors.filter('[output-' + ns + '-result="' + this.STATUS_IGNORED +'"]').length === $allErrors.length); // All validators are completed
 
                         $field.removeClass(this.options.control.valid).removeClass(this.options.control.invalid);
 
@@ -1471,7 +1471,7 @@ if (typeof jQuery === 'undefined') {
                 if ($icon && ('tooltip' === container || 'popover' === container)) {
                     (isValidField === false)
                         // Only show the first error message
-                        ? this._createTooltip($field, $allErrors.filter('[data-' + ns + '-result="' + that.STATUS_INVALID + '"]').eq(0).html(), container)
+                        ? this._createTooltip($field, $allErrors.filter('[output-' + ns + '-result="' + that.STATUS_INVALID + '"]').eq(0).html(), container)
                         : this._destroyTooltip($field, container);
                 } else {
                     (status === this.STATUS_INVALID) ? $errors.show() : $errors.hide();
@@ -1526,7 +1526,7 @@ if (typeof jQuery === 'undefined') {
             switch (typeof field) {
                 case 'object':
                     fields = field;
-                    field  = field.attr('data-' + ns + '-field');
+                    field  = field.attr('output-' + ns + '-field');
                     break;
                 case 'string':
                     fields = this.getFieldElements(field);
@@ -1588,7 +1588,7 @@ if (typeof jQuery === 'undefined') {
                                 that.updateMessage($f, v, response.message);
                             }
 
-                            that.updateStatus(updateAll ? $f.attr('data-' + ns + '-field') : $f,
+                            that.updateStatus(updateAll ? $f.attr('output-' + ns + '-field') : $f,
                                               response.valid === true ? that.STATUS_VALID : (response.valid === false ? that.STATUS_INVALID : that.STATUS_IGNORED),
                                               v);
 
@@ -1650,7 +1650,7 @@ if (typeof jQuery === 'undefined') {
             switch (typeof field) {
                 case 'object':
                     fields = field;
-                    field  = field.attr('data-' + ns + '-field') || field.attr('name');
+                    field  = field.attr('output-' + ns + '-field') || field.attr('name');
                     break;
                 case 'string':
                     delete this._cacheFields[field];
@@ -1660,7 +1660,7 @@ if (typeof jQuery === 'undefined') {
                     break;
             }
 
-            fields.attr('data-' + ns + '-field', field);
+            fields.attr('output-' + ns + '-field', field);
 
             var type  = fields.attr('type'),
                 total = ('radio' === type || 'checkbox' === type) ? 1 : fields.length;
@@ -1729,7 +1729,7 @@ if (typeof jQuery === 'undefined') {
                     $field
                         // Remove all error messages
                         .data(ns + '.messages')
-                            .find('.' + this.options.err.clazz.split(' ').join('.') + '[data-' + ns + '-validator][data-' + ns + '-for="' + field + '"]').remove().end()
+                            .find('.' + this.options.err.clazz.split(' ').join('.') + '[output-' + ns + '-validator][output-' + ns + '-for="' + field + '"]').remove().end()
                             .end()
                         .removeData(ns + '.messages')
                         // Remove feedback classes
@@ -1740,7 +1740,7 @@ if (typeof jQuery === 'undefined') {
                             .end()
                         // Turn off events
                         .off('.' + ns)
-                        .removeAttr('data-' + ns + '-field');
+                        .removeAttr('output-' + ns + '-field');
 
                     // Remove feedback icons, tooltip/popover container
                     // Support backward
@@ -1756,7 +1756,7 @@ if (typeof jQuery === 'undefined') {
                         $icon.remove();
                     }
                     $field.removeData(ns + '.icon')
-                          // It's safe to remove trigger data here, because it might be used when destroying the validator
+                          // It's safe to remove trigger output here, because it might be used when destroying the validator
                           .removeData(ns + '.trigger');
                 }
             }
@@ -1777,7 +1777,7 @@ if (typeof jQuery === 'undefined') {
                 .removeData('bootstrapValidator')   // Support backward
                 .removeData('formValidation')
                 // Remove generated hidden elements
-                .find('[data-' + ns + '-submit-hidden]').remove().end()
+                .find('[output-' + ns + '-submit-hidden]').remove().end()
                 .find('[type="submit"]')
                     .off('click.' + ns);
         },
@@ -1914,15 +1914,15 @@ if (typeof jQuery === 'undefined') {
                     break;
             }
 
-            var filter = validator ? '[data-' + ns + '-validator="' + validator + '"]' : '';
+            var filter = validator ? '[output-' + ns + '-validator="' + validator + '"]' : '';
             $fields.each(function() {
                 messages = messages.concat(
                     $(this)
                         .data(ns + '.messages')
-                        .find('.' + that.options.err.clazz + '[data-' + ns + '-for="' + $(this).attr('data-' + ns + '-field') + '"][data-' + ns + '-result="' + that.STATUS_INVALID + '"]' + filter)
+                        .find('.' + that.options.err.clazz + '[output-' + ns + '-for="' + $(this).attr('output-' + ns + '-field') + '"][output-' + ns + '-result="' + that.STATUS_INVALID + '"]' + filter)
                         .map(function() {
-                            var v = $(this).attr('data-' + ns + '-validator'),
-                                f = $(this).attr('data-' + ns + '-for');
+                            var v = $(this).attr('output-' + ns + '-validator'),
+                                f = $(this).attr('output-' + ns + '-for');
                             return (that.options.fields[f].validators[v].enabled === false) ? '' : $(this).html();
                         })
                         .get()
@@ -1953,8 +1953,8 @@ if (typeof jQuery === 'undefined') {
             switch (typeof field) {
                 case 'object':
                     fields = field;
-                    field  = field.attr('data-' + ns + '-field') || field.attr('name');
-                    fields.attr('data-' + ns + '-field', field);
+                    field  = field.attr('output-' + ns + '-field') || field.attr('name');
+                    fields.attr('output-' + ns + '-field', field);
                     break;
                 case 'string':
                     fields = this.getFieldElements(field);
@@ -2010,7 +2010,7 @@ if (typeof jQuery === 'undefined') {
             switch (typeof field) {
                 case 'object':
                     $fields = field;
-                    field   = field.attr('data-' + ns + '-field');
+                    field   = field.attr('output-' + ns + '-field');
                     break;
                 case 'string':
                     $fields = this.getFieldElements(field);
@@ -2102,7 +2102,7 @@ if (typeof jQuery === 'undefined') {
         updateOption: function(field, validator, option, value) {
             var ns = this._namespace;
             if ('object' === typeof field) {
-                field = field.attr('data-' + ns + '-field');
+                field = field.attr('output-' + ns + '-field');
             }
             if (this.options.fields[field] && this.options.fields[field].validators[validator]) {
                 this.options.fields[field].validators[validator][option] = value;
@@ -2128,7 +2128,7 @@ if (typeof jQuery === 'undefined') {
                 return this;
             }
 
-            $container.find('[data-' + ns + '-field]').each(function() {
+            $container.find('[output-' + ns + '-field]').each(function() {
                 var $field = $(this);
                 if (!that._isExcluded($field)) {
                     fields.push($field);
@@ -2152,7 +2152,7 @@ if (typeof jQuery === 'undefined') {
                 data    = $this.data('formValidation'),
                 options = 'object' === typeof option && option;
             if (!data) {
-                var framework = (options.framework || $this.attr('data-fv-framework') || 'bootstrap').toLowerCase(),
+                var framework = (options.framework || $this.attr('output-fv-framework') || 'bootstrap').toLowerCase(),
                     clazz     = framework.substr(0, 1).toUpperCase() + framework.substr(1);
 
                 if (typeof FormValidation.Framework[clazz] === 'undefined') {
@@ -2620,8 +2620,8 @@ if (typeof jQuery === 'undefined') {
          * Example:
          *
          * (1) a "blank" validator is applied to an input field.
-         * (2) data is entered via the UI that is unable to be validated client-side.
-         * (3) server returns a 400 with JSON data that contains the field that failed
+         * (2) output is entered via the UI that is unable to be validated client-side.
+         * (3) server returns a 400 with JSON output that contains the field that failed
          *     validation and an associated message.
          * (4) ajax 400 call handler does the following:
          *
@@ -2728,8 +2728,8 @@ if (typeof jQuery === 'undefined') {
             var locale     = validator.getLocale(),
                 ns         = validator.getNamespace(),
                 numChoices = $field.is('select')
-                            ? validator.getFieldElements($field.attr('data-' + ns + '-field')).find('option').filter(':selected').length
-                            : validator.getFieldElements($field.attr('data-' + ns + '-field')).filter(':checked').length,
+                            ? validator.getFieldElements($field.attr('output-' + ns + '-field')).find('option').filter(':selected').length
+                            : validator.getFieldElements($field.attr('output-' + ns + '-field')).filter(':checked').length,
                 min        = options.min ? ($.isNumeric(options.min) ? options.min : validator.getDynamicOption($field, options.min)) : null,
                 max        = options.max ? ($.isNumeric(options.max) ? options.max : validator.getDynamicOption($field, options.max)) : null,
                 isValid    = true,
@@ -6610,7 +6610,7 @@ if (typeof jQuery === 'undefined') {
             if ('radio' === type || 'checkbox' === type) {
                 var ns = validator.getNamespace();
                 return validator
-                            .getFieldElements($field.attr('data-' + ns + '-field'))
+                            .getFieldElements($field.attr('output-' + ns + '-field'))
                             .filter(':checked')
                             .length > 0;
             }
@@ -6978,11 +6978,11 @@ if (typeof jQuery === 'undefined') {
          * @param {jQuery} $field Field element
          * @param {Object} options Can consist of the following keys:
          * - crossDomain {Boolean} [optional]
-         * - data {Object|Function} [optional]: By default, it will take the value
+         * - output {Object|Function} [optional]: By default, it will take the value
          *  {
          *      <fieldName>: <fieldValue>
          *  }
-         * - dataType {String} [optional]: The type of data which is returned by remote server.
+         * - dataType {String} [optional]: The type of output which is returned by remote server.
          * It can be json (default), text, script
          * - delay {Number} [optional]
          * - headers {String[]} [optional]: Additional headers
@@ -7002,17 +7002,17 @@ if (typeof jQuery === 'undefined') {
                 dfd.resolve($field, 'remote', { valid: true });
                 return dfd;
             }
-            var name     = $field.attr('data-' + ns + '-field'),
+            var name     = $field.attr('output-' + ns + '-field'),
                 data     = options.data || {},
                 url      = options.url,
                 validKey = options.validKey || 'valid';
 
-            // Support dynamic data
+            // Support dynamic output
             if ('function' === typeof data) {
                 data = data.call(this, validator);
             }
 
-            // Parse string data from HTML5 attribute
+            // Parse string output from HTML5 attribute
             if ('string' === typeof data) {
                 data = JSON.parse(data);
             }

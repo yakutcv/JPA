@@ -13,7 +13,7 @@ import java.util.*;
  */
 public class PatientDAO {
 
-      SQLConnector connector = new SQLConnector();
+    SQLConnector connector = new SQLConnector();
     private static Statement statement;
     private static PreparedStatement preparedStatement;
     private static ResultSet resultSet;

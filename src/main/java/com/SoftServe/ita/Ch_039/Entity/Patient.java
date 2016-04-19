@@ -1,7 +1,7 @@
 package com.SoftServe.ita.Ch_039.Entity;
 
 
-import com.SoftServe.ita.Ch_039.IO.Adapters.DateTimeForJPAAdapter;
+import com.SoftServe.ita.Ch_039.IO.Adapters.DateTimeForJPAPatientAdapter;
 import com.SoftServe.ita.Ch_039.IO.Adapters.DateTimeForXmlAdapter;
 import com.google.gson.annotations.SerializedName;
 import org.joda.time.DateTime;
@@ -10,6 +10,7 @@ import org.joda.time.format.DateTimeFormat;
 import org.joda.time.format.DateTimeFormatter;
 
 import javax.persistence.*;
+import javax.validation.constraints.NotNull;
 import javax.xml.bind.annotation.*;
 import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 import java.io.Serializable;
@@ -33,28 +34,34 @@ public class Patient implements Comparable<Patient>,Serializable {
     private DateTimeFormatter formatter = DateTimeFormat.forPattern("dd/MM/yyyy");
 
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @NotNull
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @XmlAttribute(name="id")
-    private long id=0;
+    private long id=1;
 
     @Column
     @Basic(optional = false)
+    @NotNull
     @SerializedName("Name")
     @XmlElement
     private String name = "Default name";
 
-    @Column
+    @Column(name="last_name")
+    @NotNull
     @Basic(optional = false)
     @SerializedName("Last name")
     @XmlElement
     private String lastName = "Default lastName";
 
-    @Column
+
+
+    @Column(name = "Birthday")
     @Basic(optional = false)
     @SerializedName("Birthday")
     @XmlJavaTypeAdapter(DateTimeForXmlAdapter.class)
     @XmlElement
-    @Convert(converter = DateTimeForJPAAdapter.class)
+    @Convert(converter = DateTimeForJPAPatientAdapter.class)
+    @Temporal(TemporalType.DATE)
     private DateTime birthDate = new DateTime(2014,3,28,15,00);
 
     @SerializedName("List of Analyzes")
@@ -63,7 +70,17 @@ public class Patient implements Comparable<Patient>,Serializable {
     @OneToMany(cascade = CascadeType.ALL, mappedBy = "patient", fetch = FetchType.LAZY)
     private List<Analysis> listAnalyzes = new ArrayList<>();
 
+    @Column
     private boolean status = true;
+
+    //default constructor
+    public Patient() {
+
+    }
+
+    public DateTime getBirthDate() {
+        return birthDate;
+    }
 
     public Patient(long id) {
         this.id = id;
@@ -73,13 +90,8 @@ public class Patient implements Comparable<Patient>,Serializable {
         return status;
     }
 
-    //default constructor
-    public Patient() {
-
-    }
-
-    public DateTime getBirthDate() {
-        return birthDate;
+    public List<Analysis> getListAnalyzes() {
+        return listAnalyzes;
     }
 
 //    @XmlElementWrapper(name = "Analysis")

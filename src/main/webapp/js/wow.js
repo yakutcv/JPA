@@ -123,9 +123,9 @@
 
     WOW.prototype.applyStyle = function(box, hidden) {
       var delay, duration, iteration;
-      duration = box.getAttribute('data-wow-duration');
-      delay = box.getAttribute('data-wow-delay');
-      iteration = box.getAttribute('data-wow-iteration');
+      duration = box.getAttribute('output-wow-duration');
+      delay = box.getAttribute('output-wow-delay');
+      iteration = box.getAttribute('output-wow-iteration');
       return this.animate((function(_this) {
         return function() {
           return _this.customStyle(box, hidden, duration, delay, iteration);
@@ -283,7 +283,7 @@
 
     WOW.prototype.isVisible = function(box) {
       var bottom, offset, top, viewBottom, viewTop;
-      offset = box.getAttribute('data-wow-offset') || this.config.offset;
+      offset = box.getAttribute('output-wow-offset') || this.config.offset;
       viewTop = window.pageYOffset;
       viewBottom = viewTop + this.element.clientHeight - offset;
       top = this.offsetTop(box);

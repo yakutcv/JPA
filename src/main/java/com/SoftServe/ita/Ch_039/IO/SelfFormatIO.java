@@ -30,7 +30,7 @@ public class SelfFormatIO implements IO {
 
     @Override
     public void writeHospital(Hospital hospital, String file) throws IOException {
-        FileWriter writer = new FileWriter("src\\main\\java\\SoftServe.Task_1\\data\\" + file);
+        FileWriter writer = new FileWriter("src\\main\\java\\SoftServe.Task_1\\output\\" + file);
         try {
             writer.write(covertToString(hospital).toString());
             writer.flush();
@@ -46,7 +46,7 @@ public class SelfFormatIO implements IO {
         List<String> tmpHospital = new ArrayList<>();
         long id = 1;
         String st;
-        try (BufferedReader br = new BufferedReader(new FileReader("src\\main\\java\\SoftServe\\Task_1\\data\\" + file))) {
+        try (BufferedReader br = new BufferedReader(new FileReader("src\\main\\java\\SoftServe\\Task_1\\output\\" + file))) {
             while ((st = br.readLine()) != null) {
                 validPatient(AnalyzesParser.parsePatients(st));
                 tmpHospital.add(st);

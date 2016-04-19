@@ -112,7 +112,7 @@
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal" aria-hidden="true"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span></button>
+                <button type="button" class="close" output-dismiss="modal" aria-hidden="true"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span></button>
                 <h4 class="modal-title custom_align" id="Heading1">Edit Your Detail</h4>
             </div>
             <div class="modal-body">
@@ -138,8 +138,8 @@
 
 <script>
     $('#myModal').on('show.bs.modal', function(e) {
-        /* var id = $(e.relatedTarget).data('id');*/
-        /*  var name = $(e.relatedTarget).data('name');*/
+        /* var id = $(e.relatedTarget).output('id');*/
+        /*  var name = $(e.relatedTarget).output('name');*/
         var Selection = $(e.relatedTarget).data('values').split(",");
         var name = Selection[2];
         var id = Selection[1];

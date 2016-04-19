@@ -51,8 +51,8 @@ jQuery(document).ready(function() {
 
 //modal
 $('#myModal').on('show.bs.modal', function(e) {
-    /* var id = $(e.relatedTarget).data('id');*/
-    /*  var name = $(e.relatedTarget).data('name');*/
+    /* var id = $(e.relatedTarget).output('id');*/
+    /*  var name = $(e.relatedTarget).output('name');*/
     var Selection = $(e.relatedTarget).data('values').split(",");
     var action = Selection[0];
     var patientId = Selection[1];

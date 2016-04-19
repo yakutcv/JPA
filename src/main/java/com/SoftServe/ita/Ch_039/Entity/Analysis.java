@@ -1,12 +1,13 @@
 package com.SoftServe.ita.Ch_039.Entity;
 
-import com.SoftServe.ita.Ch_039.IO.Adapters.DateTimeForJPAAdapter;
+import com.SoftServe.ita.Ch_039.IO.Adapters.DateTimeForJPAAnalysisAdapter;
 import com.SoftServe.ita.Ch_039.IO.Adapters.DateTimeForXmlAdapter;
 import org.joda.time.DateTime;
 import org.joda.time.format.DateTimeFormat;
 import org.joda.time.format.DateTimeFormatter;
 
 import javax.persistence.*;
+import javax.validation.constraints.NotNull;
 import javax.xml.bind.annotation.XmlAttribute;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
@@ -24,33 +25,49 @@ import java.io.Serializable;
 public class Analysis implements Comparable<Analysis>, Serializable {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @NotNull
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @XmlAttribute(name="id")
-    private long id;
+    private long id=1;
     //@JsonAdapter(DateTimeForJSONAdapter.class)
-    @Convert(converter = DateTimeForJPAAdapter.class)
+    @Column
+    @NotNull
+    @Basic(optional = true)
+    @Convert(converter = DateTimeForJPAAnalysisAdapter.class)
     @XmlJavaTypeAdapter(DateTimeForXmlAdapter.class)
+    @Temporal(TemporalType.DATE)
     @XmlElement(name = "date")
-    private DateTime date = new DateTime(2014,3,28,15,00);
+    private DateTime date;
 
     @Column
     @Basic(optional = false)
     @XmlElement(name="report")
+    @Lob
     private String report = "Default report";
 
     @Column
+    @NotNull
     @Basic(optional = false)
     @Enumerated(EnumType.STRING)
     @XmlElement(name="type")
     private AnalysisType type = AnalysisType.DEFAULT;
 
 
-    @ManyToOne(cascade = CascadeType.ALL)
-    @JoinColumn(name = "patient_id")
+    @ManyToOne(cascade = CascadeType.ALL, optional = false)
+    @JoinColumn(name = "patient_id", updatable = true, unique= true, nullable=true, insertable=true)
     private Patient patient;
 
     @Transient
     private DateTimeFormatter formatter = DateTimeFormat.forPattern("dd/MM/yyyy HH:mm");
+
+    public Analysis(){
+
+    }
+
+    public Patient getPatient() {
+        return patient;
+    }
+
 
     public void setId(long id) {
         this.id = id;
@@ -70,10 +87,6 @@ public class Analysis implements Comparable<Analysis>, Serializable {
 
     public void setPatient(Patient patient) {
         this.patient = patient;
-    }
-
-    public Analysis(){
-
     }
 
     public DateTime getDate() {
@@ -99,8 +112,6 @@ public class Analysis implements Comparable<Analysis>, Serializable {
     public static AnalysisBuilder newAnalysisBuilder () {
         return new Analysis().new AnalysisBuilder();
     }
-
-
 
     @Override
     public int compareTo(Analysis o) {
@@ -141,8 +152,6 @@ public class Analysis implements Comparable<Analysis>, Serializable {
     public String toString() {
         return "Type of analysis - " + type +  ", Date - " + date.toString(formatter) + ", Report - " + report + "." +"\n";
     }
-
-
 
 
 }

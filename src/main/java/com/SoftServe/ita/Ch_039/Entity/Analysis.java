@@ -52,22 +52,30 @@ public class Analysis implements Comparable<Analysis>, Serializable {
     @XmlElement(name="type")
     private AnalysisType type = AnalysisType.DEFAULT;
 
-
-    @ManyToOne(cascade = CascadeType.ALL, optional = false)
-    @JoinColumn(name = "patient_id", updatable = true, unique= true, nullable=true, insertable=true)
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "patient_id")
     private Patient patient;
 
     @Transient
     private DateTimeFormatter formatter = DateTimeFormat.forPattern("dd/MM/yyyy HH:mm");
 
+
     public Analysis(){
 
     }
 
+
+    public void setPatient(Patient patient) {
+        this.patient = patient;
+        if(!patient.getListAnalyzes().contains(this)){
+            patient.getListAnalyzes().add(this);
+        }
+    }
+
+
     public Patient getPatient() {
         return patient;
     }
-
 
     public void setId(long id) {
         this.id = id;
@@ -85,9 +93,7 @@ public class Analysis implements Comparable<Analysis>, Serializable {
         this.type = type;
     }
 
-    public void setPatient(Patient patient) {
-        this.patient = patient;
-    }
+
 
     public DateTime getDate() {
         return date;

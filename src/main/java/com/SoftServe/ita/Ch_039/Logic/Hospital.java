@@ -110,7 +110,7 @@ public class Hospital implements Serializable{
     public List<Patient> getByAnalisisType(AnalysisType type) {
         List<Patient> pat = new ArrayList<>();
         for (Patient p : patients) {
-            List<Analysis> a = p.getList();
+            List<Analysis> a = p.getListAnalyzes();
             for (Analysis b : a) {
                 if (b.getType().equals(type)) {
                     pat.add(p);
@@ -125,7 +125,7 @@ public class Hospital implements Serializable{
         String s="";
        m:{
         for (Patient p : patients) {
-            List<Analysis> a = p.getList();
+            List<Analysis> a = p.getListAnalyzes();
             for (Analysis b : a) {
                 if(b.getType().equals(type)) {
                     s="Analysis " + type + "  passed.";
@@ -140,7 +140,7 @@ public class Hospital implements Serializable{
     public void checkUnpassedAnalysis(){
         String s="";
         for (Patient p : patients) {
-            List<Analysis> a = p.getList();
+            List<Analysis> a = p.getListAnalyzes();
             for (Analysis b : a) {
                 for(AnalysisType aType : AnalysisType.values()){
                     if(b.getType().equals(aType))break;

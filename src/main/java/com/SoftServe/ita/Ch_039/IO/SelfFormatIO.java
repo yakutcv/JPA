@@ -98,7 +98,7 @@ public class SelfFormatIO implements IO {
         Set<Patient> patients = value.getPatients();
         for (Patient p : patients) {
             newHospital.append(p.getName() + " " + p.getLastName() + " (" + p.getBirthDate().toString(format1) + "):{");
-            for (Analysis analysis : p.getList()) {
+            for (Analysis analysis : p.getListAnalyzes()) {
                 /*if (!(p.getList().get(p.getList().size() - 1).equals(analysis))) {}*/
                     newHospital.append(" " + analysis.getType() + " (" + analysis.getDate().toString(format) + ") " + analysis.getReport() + ",");
             }

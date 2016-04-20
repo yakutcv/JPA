@@ -27,7 +27,7 @@ public class DeletePatient extends HttpServlet {
 
         Patient patient = new PatientDAO().getPatientByIdWithAllAnalyzes(id);
 
-        if(patient.getList().isEmpty()) {
+        if(patient.getListAnalyzes().isEmpty()) {
             try{
                 new PatientDAO().deletePatientById(id);
             }catch (Exception e) {

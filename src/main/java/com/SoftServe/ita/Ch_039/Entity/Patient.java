@@ -67,8 +67,20 @@ public class Patient implements Comparable<Patient>,Serializable {
     @SerializedName("List of Analyzes")
     @XmlElementWrapper(name="List_of_Analyzes")
     @XmlElement(name="Analysis")
-    @OneToMany(cascade = CascadeType.ALL, mappedBy = "patient", fetch = FetchType.LAZY)
+    @OneToMany(mappedBy = "patient", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
     private List<Analysis> listAnalyzes = new ArrayList<>();
+
+    public List<Analysis> getListAnalyzes() {
+        return listAnalyzes;
+    }
+
+    public void addAnalysis(Analysis analysis) {
+        this.listAnalyzes.add(analysis);
+        if(analysis.getPatient()!=this){
+            analysis.setPatient(this);
+        }
+    }
+
 
     @Column
     private boolean status = true;
@@ -90,15 +102,9 @@ public class Patient implements Comparable<Patient>,Serializable {
         return status;
     }
 
-    public List<Analysis> getListAnalyzes() {
-        return listAnalyzes;
-    }
+
 
 //    @XmlElementWrapper(name = "Analysis")
-
-    public List<Analysis> getList() {
-        return listAnalyzes;
-    }
 
     public String getLastName() {
         return lastName;
@@ -250,7 +256,7 @@ public class Patient implements Comparable<Patient>,Serializable {
         String analyzes = builder.toString();
         return "Patient - "+ getFullName() +
                 ", age - " + getAge() + " years." + "\n" +
-                "The total number of Analyzes: " + getList().size() + "\n" +
+                "The total number of Analyzes: " + getListAnalyzes().size() + "\n" +
                 "All Analyzes:" + "\n" +
                 analyzes;
     }

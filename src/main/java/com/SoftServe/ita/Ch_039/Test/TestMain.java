@@ -5,7 +5,6 @@ import com.SoftServe.ita.Ch_039.Entity.AnalysisType;
 import com.SoftServe.ita.Ch_039.Entity.Patient;
 
 import javax.persistence.EntityManager;
-import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
 import java.util.ArrayList;
 import java.util.List;
@@ -53,7 +52,7 @@ public class TestMain {
         Analysis analysis2 = Analysis.newAnalysisBuilder()
                 .setType(AnalysisType.ALLERGY)
                 .setDate("03/02/2015 14:14")
-                .setReport("bad")
+                .setReport("234234234")
                 .build();
 
         List<Analysis> an = new ArrayList<>();
@@ -67,7 +66,7 @@ public class TestMain {
                 .setLastName("Petia")
                 .setName("Vasia")
                 .setBirthDate("12/02/1945")
-                .setAnalyzes(an)
+              /*  .setAnalyzes(an)*/
                 .build();
 
 
@@ -75,13 +74,15 @@ public class TestMain {
        /* analysis2.setPatient(pat2);*/
 
         //create
-        EntityManagerFactory em = Persistence.createEntityManagerFactory("HOSPITAL");
+       /* EntityManagerFactory em = Persistence.createEntityManagerFactory("HOSPITAL");
         EntityManager manager = em.createEntityManager();
         manager.getTransaction().begin();
         manager.persist(pat2);
         manager.getTransaction().commit();
         manager.close();
-        em.close();
+        em.close();*/
+
+
 
 
 
@@ -108,25 +109,32 @@ public class TestMain {
         em.close();*/
 
         //read
-     /*   EntityManager manager1 = Persistence.createEntityManagerFactory("HOSPITAL").createEntityManager();
+        EntityManager manager1 = Persistence.createEntityManagerFactory("HOSPITAL").createEntityManager();
         manager1.getTransaction().begin();
-        Patient p = manager1.find(Patient.class, 2l);
-        Analysis a = manager1.find(Patient.class, 2l).getList().get(0);
-        manager1.remove(a);
+
+        Patient p = manager1.find(Patient.class, 1l);
+      /*  p.addAnalysis(analysis2);*/
+        List<Analysis> dd = p.getListAnalyzes();
+
+        p.addAnalysis(analysis1);
+
+
+      /*  manager1.persist(p);*/
+       /* manager1.persist(p);*/
         //manager1.remove(a);
         //a.setReport("345345");
-        *//*manager1.merge(p);*//*
         manager1.getTransaction().commit();
         manager1.close();
-*/
+
+
        /* EntityManager manager1 = Persistence.createEntityManagerFactory("HOSPITAL").createEntityManager();
         manager1.getTransaction().begin();
         Patient patient = manager1.find(Patient.class, 1l);
-        System.out.println(patient);
-        *//*System.out.println(patient.getList());*//*
+        patient.addAnalysis(analysis2);
+        manager1.persist(patient);
+
         manager1.getTransaction().commit();
-        manager1.close();
-*/
+        manager1.close();*/
 
 
 

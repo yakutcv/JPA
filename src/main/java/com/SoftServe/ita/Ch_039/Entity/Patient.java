@@ -28,6 +28,14 @@ import java.util.List;
         "birthDate",
         "listAnalyzes"
 })
+
+
+
+@NamedQueries({
+        @NamedQuery(name = "GET_ALL_PATIENTS", query = "SELECT p FROM Patient p WHERE p.status = TRUE"),
+        @NamedQuery(name = "GET_ALL_PATIENTS_WITH_STATUS_FALSE", query ="SELECT p FROM Patient p WHERE p.status=FALSE"),
+        @NamedQuery(name = "GET_PATIENT_BY_ID_WITH_ALL_ANALYZES", query ="SELECT p FROM  Patient p WHERE p.id =:id AND p.status=TRUE")
+})
 public class Patient implements Comparable<Patient>,Serializable {
 
     @Transient
@@ -39,7 +47,7 @@ public class Patient implements Comparable<Patient>,Serializable {
     @XmlAttribute(name="id")
     private long id=1;
 
-    @Column
+    @Column(name="name")
     @Basic(optional = false)
     @NotNull
     @SerializedName("Name")
@@ -53,8 +61,6 @@ public class Patient implements Comparable<Patient>,Serializable {
     @XmlElement
     private String lastName = "Default lastName";
 
-
-
     @Column(name = "Birthday")
     @Basic(optional = false)
     @SerializedName("Birthday")
@@ -67,7 +73,7 @@ public class Patient implements Comparable<Patient>,Serializable {
     @SerializedName("List of Analyzes")
     @XmlElementWrapper(name="List_of_Analyzes")
     @XmlElement(name="Analysis")
-    @OneToMany(mappedBy = "patient", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
+    @OneToMany(mappedBy = "patient", cascade = CascadeType.ALL/*, fetch = FetchType.LAZY*/)
     private List<Analysis> listAnalyzes = new ArrayList<>();
 
     public List<Analysis> getListAnalyzes() {
@@ -79,6 +85,11 @@ public class Patient implements Comparable<Patient>,Serializable {
         if(analysis.getPatient()!=this){
             analysis.setPatient(this);
         }
+    }
+
+    public void setListAnalyzes(List<Analysis> listAnalyzes) {
+        this.listAnalyzes.addAll(listAnalyzes);
+        
     }
 
 
@@ -101,8 +112,6 @@ public class Patient implements Comparable<Patient>,Serializable {
     public boolean getStatus() {
         return status;
     }
-
-
 
 //    @XmlElementWrapper(name = "Analysis")
 
@@ -145,10 +154,6 @@ public class Patient implements Comparable<Patient>,Serializable {
 
     public void setBirthDate(DateTime birthDate) {
         this.birthDate = birthDate;
-    }
-
-    public void setListAnalyzes(List<Analysis> listAnalyzes) {
-        this.listAnalyzes = listAnalyzes;
     }
 
     public void setStatus(boolean status) {
@@ -260,16 +265,4 @@ public class Patient implements Comparable<Patient>,Serializable {
                 "All Analyzes:" + "\n" +
                 analyzes;
     }
-
-/*    @Override
-    public String toString() {
-        DateTimeFormatter format = DateTimeFormat.forPattern("dd/MM/yyyy HH:mm");
-
-        return "Patient{" +
-                "name='" + name + '\'' +
-                ", lastName='" + lastName + '\'' +
-                ", birthDate=" + birthDate.toString(format) +
-                ", listAnalyzes=" + listAnalyzes +
-                '}';
-    }*/
 }

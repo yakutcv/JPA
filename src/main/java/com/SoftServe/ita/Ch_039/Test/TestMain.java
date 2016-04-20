@@ -3,8 +3,10 @@ package com.SoftServe.ita.Ch_039.Test;
 import com.SoftServe.ita.Ch_039.Entity.Analysis;
 import com.SoftServe.ita.Ch_039.Entity.AnalysisType;
 import com.SoftServe.ita.Ch_039.Entity.Patient;
+import com.SoftServe.ita.Ch_039.JPA.Service.PatientService;
 
 import javax.persistence.EntityManager;
+import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
 import java.util.ArrayList;
 import java.util.List;
@@ -22,31 +24,33 @@ public class TestMain {
                 .setBirthDate("04/04/1987")
                 .setName("Andrew")
                 .setLastName("Yasinskiy")
-                .setId(1)
-                .setAnalysis(Analysis.newAnalysisBuilder()
-                        .setId(1)
-                        .setType(AnalysisType.BLOOD)
-                        .setDate("03/02/2015 14:50")
-                        .setReport("I don't know what is is...")
-                        .build())
-                .setAnalysis(Analysis.newAnalysisBuilder()
-                        .setId(2)
-                        .setType(AnalysisType.ALLERGY)
-                        .setDate("03/02/2015 14:15")
-                        .setReport("Good")
-                        .build())
                 .build();
 
+        Patient second = Patient.newPatientBuilder()
+                .setBirthDate("04/04/1987")
+                .setName("Jora")
+                .setLastName("Jora")
+                .build();
+        Patient third = Patient.newPatientBuilder()
+                .setBirthDate("04/04/1987")
+                .setName("Andrew")
+                .setLastName("Andrew")
+                .setStatus(false)
+                .build();
 
-
-
+        Patient pat2 = Patient.newPatientBuilder()
+                .setLastName("Jora")
+                .setName("Vasia")
+                .setBirthDate("12/02/1945")
+              /*  .setAnalyzes(an)*/
+                .build();
 
 
 
         Analysis analysis1 = Analysis.newAnalysisBuilder()
                 .setType(AnalysisType.ALLERGY)
                 .setDate("03/02/2015 14:15")
-                .setReport("bad")
+                .setReport("sdfsdfsdgxvbcvbcvb")
                 .build();
 
         Analysis analysis2 = Analysis.newAnalysisBuilder()
@@ -59,22 +63,28 @@ public class TestMain {
         an.add(analysis1);
         an.add(analysis2);
 
+        PatientService patientService = new PatientService();
+
+        //Patient patient =
+
+        System.out.println(patientService.getPatientById(9).getListAnalyzes());
 
 
 
-        Patient pat2 = Patient.newPatientBuilder()
-                .setLastName("Petia")
-                .setName("Vasia")
-                .setBirthDate("12/02/1945")
-              /*  .setAnalyzes(an)*/
-                .build();
+
+
+
+
+
+
+
 
 
 
        /* analysis2.setPatient(pat2);*/
 
         //create
-       /* EntityManagerFactory em = Persistence.createEntityManagerFactory("HOSPITAL");
+        /*EntityManagerFactory em = Persistence.createEntityManagerFactory("HOSPITAL");
         EntityManager manager = em.createEntityManager();
         manager.getTransaction().begin();
         manager.persist(pat2);
@@ -82,20 +92,13 @@ public class TestMain {
         manager.close();
         em.close();*/
 
-
-
-
-
         //add method 2
         /*EntityManager manager1 = Persistence.createEntityManagerFactory("HOSPITAL").createEntityManager();
         manager1.getTransaction().begin();
         manager1.persist(pat2);
         manager1.getTransaction().commit();
         manager1.close();
-
         System.out.println(pat2);*/
-
-
 
         //delete
        /* EntityManagerFactory em = Persistence.createEntityManagerFactory("HOSPITAL");
@@ -109,22 +112,14 @@ public class TestMain {
         em.close();*/
 
         //read
-        EntityManager manager1 = Persistence.createEntityManagerFactory("HOSPITAL").createEntityManager();
+        /*EntityManager manager1 = Persistence.createEntityManagerFactory("HOSPITAL").createEntityManager();
         manager1.getTransaction().begin();
-
         Patient p = manager1.find(Patient.class, 1l);
-      /*  p.addAnalysis(analysis2);*/
-        List<Analysis> dd = p.getListAnalyzes();
-
-        p.addAnalysis(analysis1);
-
-
-      /*  manager1.persist(p);*/
-       /* manager1.persist(p);*/
+        p.addAnalysis(analysis2);
         //manager1.remove(a);
         //a.setReport("345345");
         manager1.getTransaction().commit();
-        manager1.close();
+        manager1.close();*/
 
 
        /* EntityManager manager1 = Persistence.createEntityManagerFactory("HOSPITAL").createEntityManager();
@@ -132,11 +127,8 @@ public class TestMain {
         Patient patient = manager1.find(Patient.class, 1l);
         patient.addAnalysis(analysis2);
         manager1.persist(patient);
-
         manager1.getTransaction().commit();
         manager1.close();*/
-
-
 
 
         //update
@@ -147,25 +139,6 @@ public class TestMain {
         System.out.println(patient);
         man.getTransaction().commit();
         man.close();*/
-
-        /*java.util.Date date = new java.util.Date();
-        DateTimeFormatter formatter = DateTimeFormat.forPattern("dd/MM/yyyy");
-        System.out.println (new DateTime(date).toString(formatter));*/
-
-        //from datetime to date
-
-
-        /*SimpleDateFormat format = new SimpleDateFormat("dd/MM/yyyy");
-        Date date = new Date();
-        try {
-            date = format.parse(dateTime.toString());
-            System.out.println(date);
-        } catch (ParseException e) {
-            e.printStackTrace();
-        }
-
-        return date;*/
-
 
     }
 

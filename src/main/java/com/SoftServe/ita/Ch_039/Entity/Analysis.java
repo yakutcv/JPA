@@ -52,18 +52,15 @@ public class Analysis implements Comparable<Analysis>, Serializable {
     @XmlElement(name="type")
     private AnalysisType type = AnalysisType.DEFAULT;
 
-    @ManyToOne(fetch = FetchType.LAZY)
+    @ManyToOne
     @JoinColumn(name = "patient_id")
     private Patient patient;
 
     @Transient
     private DateTimeFormatter formatter = DateTimeFormat.forPattern("dd/MM/yyyy HH:mm");
 
-
     public Analysis(){
-
     }
-
 
     public void setPatient(Patient patient) {
         this.patient = patient;
@@ -92,8 +89,6 @@ public class Analysis implements Comparable<Analysis>, Serializable {
     public void setType(AnalysisType type) {
         this.type = type;
     }
-
-
 
     public DateTime getDate() {
         return date;

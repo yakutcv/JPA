@@ -27,6 +27,7 @@ public class AddPatient extends HttpServlet {
 
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+
         PrintWriter out = response.getWriter();
         String name = request.getParameter("name");
         String lastName = request.getParameter("lastName");
@@ -46,15 +47,7 @@ public class AddPatient extends HttpServlet {
             out.print("Invalid_last_name");
         }else if(!validBirthDate(patient.getBirthDateInString())) {
             out.print("Invalid_birth_date");
-        } /*else{
-            Long tmpId = null;
-            try{
-                tmpId = Long.parseLong(id);
-            }catch (Exception e) {
-
-            }
-            */
-
+        }
         if (id.equals("")){
             List<Patient> tmpPatients;
             try {
@@ -87,27 +80,7 @@ public class AddPatient extends HttpServlet {
             e.printStackTrace();
         }
 
-       /*
-        Set<Patient> tmpPatients = new HashSet<>();
-
-       try {
-            boolean flag = true;
-            tmpPatients = new PatientDAO().getAllPatients();
-            for(Patient onePatient: tmpPatients) {
-                if(onePatient.getFullName().equals(patient.getFullName())) {
-                    flag=false;
-                    RequestDispatcher dispatcher = request.getRequestDispatcher("AddPatient.jsp");
-                    dispatcher.forward(request, response);
-                    break;
-                }
-            }
-            if(flag) {
-                new PatientDAO().addPatient(patient);
-            }
-        } catch (Exception e) {
-            e.printStackTrace();
-        }*/
-        List<Patient> patients = new ArrayList<>();
+       List<Patient> patients = new ArrayList<>();
         try{
             patients = new PatientDAO().getAllPatients();
         }catch (Exception e) {

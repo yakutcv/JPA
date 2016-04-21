@@ -5,6 +5,7 @@ import com.SoftServe.ita.Ch_039.Entity.Patient;
 import com.SoftServe.ita.Ch_039.IO.SQL.AnalyzesDAO;
 import com.SoftServe.ita.Ch_039.IO.SQL.PatientDAO;
 
+import javax.persistence.PersistenceException;
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -31,30 +32,21 @@ public class DeleteAnalysis extends HttpServlet {
 
         long analyzesId = Long.parseLong(request.getParameter("idA"));
         long patientId = Long.parseLong(request.getParameter("idP"));
-
-        System.out.println(analyzesId);
-        System.out.println(patientId);
-
-
         List<Analysis> analyzes = new ArrayList<>();
         Patient patient = new PatientDAO().getPatientById(patientId);
-
         try{
             new AnalyzesDAO().deleteAnalysisById(analyzesId);
-        }catch (Exception e){
+        }catch (PersistenceException e){
             e.printStackTrace();
         }
 
         try {
             analyzes = new AnalyzesDAO().getAllAnalyzesByPatientId(patientId);
-        } catch (Exception e) {
+        } catch (PersistenceException e) {
         }
-
         request.setAttribute("analyzes", analyzes);
         request.setAttribute("patient", patient);
-
         RequestDispatcher rd = request.getRequestDispatcher("AllAnalyzes.jsp");
-
         rd.forward(request, response);
     }
 }

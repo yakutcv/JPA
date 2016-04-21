@@ -40,8 +40,9 @@ import java.util.List;
 @NamedQueries({
         @NamedQuery(name = "GET_ALL_PATIENTS", query = "SELECT p FROM Patient p WHERE p.status = TRUE"),
         @NamedQuery(name = "GET_ALL_PATIENTS_WITH_STATUS_FALSE", query ="SELECT p FROM Patient p WHERE p.status=FALSE"),
-        @NamedQuery(name = "GET_PATIENT_BY_ID_WITH_ALL_ANALYZES", query ="SELECT p FROM Patient p JOIN FETCH p.listAnalyzes WHERE p.id=:id")
+        @NamedQuery(name = "GET_PATIENT_BY_ID", query ="SELECT p FROM Patient p WHERE p.id=:id")
 })
+@NamedEntityGraph(name="graph.Patient.listAnalyzes", attributeNodes = @NamedAttributeNode(value = "listAnalyzes"))
 public class Patient implements Comparable<Patient>,Serializable {
 
     @Transient
@@ -81,7 +82,6 @@ public class Patient implements Comparable<Patient>,Serializable {
     @XmlElementWrapper(name="List_of_Analyzes")
     @XmlElement(name="Analysis")
     @OneToMany(mappedBy = "patient", cascade = CascadeType.ALL)
-    @JoinFetch(value = JoinFetchType.OUTER)
     private List<Analysis> listAnalyzes = new ArrayList<>();
 
     public List<Analysis> getListAnalyzes() {

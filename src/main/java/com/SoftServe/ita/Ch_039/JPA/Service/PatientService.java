@@ -2,13 +2,8 @@ package com.SoftServe.ita.Ch_039.JPA.Service;
 
 import com.SoftServe.ita.Ch_039.Entity.Patient;
 
-import javax.persistence.EntityManager;
-import javax.persistence.Persistence;
-import javax.persistence.PersistenceException;
-import javax.persistence.Query;
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.List;
+import javax.persistence.*;
+import java.util.*;
 
 /**
  * Created by ayasintc on 4/5/2016.
@@ -123,20 +118,18 @@ public class PatientService {
     }
 
 
-    //!!! don't working
 
     public Patient getPatientByIdWithAllAnalyzes(long id)throws PersistenceException {
         Patient patient = null;
         try{
             manager.getTransaction().begin();
+            EntityGraph query = manager.createEntityGraph("graph.Patient.listAnalyzes");
+            Map map = new HashMap<>();
+            map.put("javax.persistence.fetchgraph", query);
 
-
-
-            Query query = manager.createNamedQuery("GET_PATIENT_BY_ID_WITH_ALL_ANALYZES", Patient.class);
-            query.setParameter("id",id);
-            patient = (Patient) query.getSingleResult();
-
-
+            patient = manager.find(Patient.class, id, map);
+            /*Query query2 = manager.createNamedQuery("GET_PATIENT_BY_ID", Patient.class).setHint("javax.persistence.fetchgraph", query);*/
+          /*  patient = (Patient) query2.setParameter("id", id).getSingleResult();*/
             manager.getTransaction().commit();
         }catch (PersistenceException e) {
             e.printStackTrace();

@@ -1,8 +1,11 @@
 package com.SoftServe.ita.Ch_039.Controlers;
 
+import com.SoftServe.ita.Ch_039.Entity.Analysis;
 import com.SoftServe.ita.Ch_039.Entity.Patient;
+import com.SoftServe.ita.Ch_039.IO.SQL.AnalyzesDAO;
 import com.SoftServe.ita.Ch_039.IO.SQL.PatientDAO;
 
+import javax.persistence.PersistenceException;
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -24,36 +27,29 @@ public class DeletePatient extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
         long id = Long.parseLong(request.getParameter("id"));
-
-        Patient patient = new PatientDAO().getPatientByIdWithAllAnalyzes(id);
-
-        if(patient.getListAnalyzes().isEmpty()) {
+        List<Analysis> analysis = new AnalyzesDAO().getAllAnalyzesByPatientId(id);
+        Patient patient = new PatientDAO().getPatientById(id);
+        if(analysis.isEmpty()) {
             try{
                 new PatientDAO().deletePatientById(id);
-            }catch (Exception e) {
+            }catch (PersistenceException e) {
                 e.printStackTrace();
             }
-
         }else{
             try{
                 new PatientDAO().changeStatusPatientToFalse(patient);
             }catch (Exception e) {
                 e.printStackTrace();
             }
-
         }
         List<Patient> patients = new ArrayList<>();
-
         try{
             patients = new PatientDAO().getAllPatients();
-        } catch (Exception e) {
+        } catch (PersistenceException e) {
         }
-
         request.setAttribute("patients", patients);
         request.setAttribute("patient", patient);
-
         RequestDispatcher rd = request.getRequestDispatcher("AllPatients.jsp");
-
         rd.forward(request, response);
     }
 

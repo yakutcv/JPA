@@ -3,6 +3,7 @@ package com.SoftServe.ita.Ch_039.Controlers;
 import com.SoftServe.ita.Ch_039.Entity.Patient;
 import com.SoftServe.ita.Ch_039.IO.SQL.PatientDAO;
 
+import javax.persistence.PersistenceException;
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -18,7 +19,6 @@ public class EditPatientController extends HttpServlet {
 
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-
         String id = request.getParameter("id");
         Patient patient2 = new PatientDAO().getPatientById(Long.parseLong(id));
         String name = request.getParameter("name");
@@ -33,14 +33,13 @@ public class EditPatientController extends HttpServlet {
                 .build();
         try {
             new PatientDAO().updatePatient(patient);
-        } catch (Exception e) {
+        } catch (PersistenceException e) {
             e.printStackTrace();
         }
         List<Patient> patients = new ArrayList<>();
         try {
             patients = new PatientDAO().getAllPatients();
-        } catch (Exception e) {}
-
+        } catch (PersistenceException e) {}
         request.setAttribute("patients", patients);
         request.setAttribute("patient", patient);
         RequestDispatcher rd = request.getRequestDispatcher("AllPatients.jsp");

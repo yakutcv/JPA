@@ -38,8 +38,6 @@ public class TestMain {
               /*  .setAnalyzes(an)*/
                 .build();
 
-
-
         Analysis analysis1 = Analysis.newAnalysisBuilder()
                 .setType(AnalysisType.BIOPSY)
                 .setDate("03/02/2015 14:15")
@@ -63,26 +61,11 @@ public class TestMain {
         an.add(analysis1);
         an.add(analysis2);
 
-
-
         PatientService patientService = new PatientService();
-
-        Patient p = patientService.getPatientById(1);
 
         AnalyzesService analyzesService = new AnalyzesService();
 
-
-        System.out.println(patientService.getPatientByIdWithAllAnalyzes(1).getListAnalyzes());
-
-
-
-
-
-
-
-
-
-       /* Patient p = patientService.getPatientByIdWithAllAnalyzes(1);*/
+        System.out.println(patientService.getPatientByIdWithAllAnalyzes(9));
 
 
 

@@ -5,6 +5,7 @@ import com.SoftServe.ita.Ch_039.Entity.Patient;
 import com.SoftServe.ita.Ch_039.IO.SQL.AnalyzesDAO;
 import com.SoftServe.ita.Ch_039.IO.SQL.PatientDAO;
 
+import javax.persistence.PersistenceException;
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -34,7 +35,7 @@ public class AllAnalyzesController extends HttpServlet {
 
             analyzes = new AnalyzesDAO().getAllAnalyzesByPatientId(id);
 
-        }catch (Exception e) {
+        }catch (PersistenceException e) {
             e.printStackTrace();
         }
 

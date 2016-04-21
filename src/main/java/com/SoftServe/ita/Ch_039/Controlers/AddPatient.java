@@ -3,6 +3,7 @@ package com.SoftServe.ita.Ch_039.Controlers;
 import com.SoftServe.ita.Ch_039.Entity.Patient;
 import com.SoftServe.ita.Ch_039.IO.SQL.PatientDAO;
 
+import javax.persistence.PersistenceException;
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -23,8 +24,6 @@ import static com.SoftServe.ita.Ch_039.IO.Validators.SelfFormatValidator.validNa
  */
 @WebServlet("/AddPatient")
 public class AddPatient extends HttpServlet {
-
-
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
@@ -58,7 +57,7 @@ public class AddPatient extends HttpServlet {
                         break;
                     }
                 }
-            } catch (SQLException e) {
+            } catch (PersistenceException e) {
                 e.printStackTrace();
             }
         }
@@ -76,14 +75,14 @@ public class AddPatient extends HttpServlet {
                 .build();
         try{
             new PatientDAO().addPatient(patient);
-        }catch (Exception e){
+        }catch (PersistenceException e){
             e.printStackTrace();
         }
 
        List<Patient> patients = new ArrayList<>();
         try{
             patients = new PatientDAO().getAllPatients();
-        }catch (Exception e) {
+        }catch (PersistenceException e) {
             e.printStackTrace();
         }
         request.setAttribute("patients", patients);

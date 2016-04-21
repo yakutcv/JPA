@@ -2,362 +2,132 @@ package com.SoftServe.ita.Ch_039.IO.SQL;
 
 import com.SoftServe.ita.Ch_039.Entity.Patient;
 
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.sql.SQLException;
-import java.sql.Statement;
+import javax.persistence.*;
 import java.util.*;
 
-/**
- * Created by ayasintc on 4/5/2016.
- */
 public class PatientDAO {
+    private EntityManager manager = Persistence.createEntityManagerFactory("HOSPITAL").createEntityManager();
+    private String TABLE_NAME = "Patient";
 
-    SQLConnector connector = new SQLConnector();
-    private static Statement statement;
-    private static PreparedStatement preparedStatement;
-    private static ResultSet resultSet;
-    private String TABLE_NAME = "Patients";
-    private String CREATE_PATIENT_TABLE = "CREATE TABLE  "+ TABLE_NAME + " (id int NOT NULL AUTO_INCREMENT PRIMARY KEY, Name text NOT NULL, Last_name text NOT NULL, Birth_date text NOT NULL, Status BIT DEFAULT TRUE)";
-    private String DELETE_PATIENT_TABLE = "DROP TABLE " + TABLE_NAME;
-    private String CREATE_PATIENT = "INSERT INTO " + TABLE_NAME + " (Name, Last_name, Birth_date, Status) VALUES (?, ?, ?, ?)";
-    private String DELETE_PATIENT = "DELETE FROM " + TABLE_NAME + " WHERE id =?";
-    private String UPDATE_PATIENT = "UPDATE " + TABLE_NAME + " Patients SET Name =?, Last_name=?, Birth_date=?, Status=? WHERE id =?";
-    private String UPDATE_PATIENT_STATUS = "UPDATE " + TABLE_NAME + " Patients SET Status =FALSE WHERE id =?";
-    private String GET_PATIENT_BY_ID = "SELECT * FROM "+ TABLE_NAME +" WHERE id =?";
-    private String GET_ALL_PATIENTS = "SELECT * FROM "+TABLE_NAME+" WHERE Status=TRUE";
-    private String GET_ALL_PATIENTS_WITH_STATUS_FALSE = "SELECT * FROM "+TABLE_NAME+" WHERE Status=FALSE";
-    private String GET_PATIENT_BY_ID_WITH_ALL_ANALYZES = "SELECT * FROM "+ TABLE_NAME +" WHERE id =? AND Status = TRUE";
-
-    public boolean createPatientTable() {
-        try{
-            connector.connect();
-            statement = connector.getConnection().createStatement();
-            statement.executeUpdate(CREATE_PATIENT_TABLE);
-            System.out.println("Patients table created!");
+    public boolean addPatient(Patient patient) throws PersistenceException{
+        try {
+            manager.getTransaction().begin();
+            manager.persist(patient);
+            manager.getTransaction().commit();
             return true;
-        }catch (SQLException e) {
+        } catch (PersistenceException e) {
+            System.out.println("Couldn't add patient!");
             e.printStackTrace();
-            System.out.println("Couldn't create table Patient!");
-        }
-        catch (Exception e) {
-            System.out.println("Connection failed!");
-            e.printStackTrace();
-        }finally {
-            try {
-                statement.close();
-                connector.close();
-            } catch (SQLException e) {
-                e.printStackTrace();
-            }
+            manager.getTransaction().rollback();
         }
         return false;
     }
 
-    public boolean deletePatientTable() {
+    public boolean deletePatientById(long id) throws PersistenceException{
         try{
-            connector.connect();
-            statement = connector.getConnection().createStatement();
-            statement.executeUpdate(DELETE_PATIENT_TABLE);
-            System.out.println("Patients table delete!");
+            manager.getTransaction().begin();
+            manager.remove(manager.find(Patient.class, id));
+            manager.getTransaction().commit();
             return true;
-        }catch (SQLException e) {
+        }catch (PersistenceException e) {
+            System.out.println("Couldn't delete patient with id: " + id);
             e.printStackTrace();
-            System.out.println("Table " +  TABLE_NAME + " don't found!");
-        }
-        catch (Exception e) {
-            System.out.println("Connection failed!");
-            e.printStackTrace();
-        }finally {
-            try {
-                statement.close();
-                connector.close();
-            } catch (SQLException e) {
-                e.printStackTrace();
-            }
+            manager.getTransaction().rollback();
         }
         return false;
     }
 
-    public boolean addPatient(Patient patient){
+    public boolean updatePatient (Patient patient) throws PersistenceException{
         try{
-            connector.connect();
-            preparedStatement = connector.getConnection().prepareStatement(CREATE_PATIENT);
-            preparedStatement.setString(1,patient.getName());
-            preparedStatement.setString(2,patient.getLastName());
-            preparedStatement.setString(3,patient.getBirthDateInString());
-            preparedStatement.setBoolean(4, patient.getStatus());
-            preparedStatement.executeUpdate();
-            System.out.println("Patients " + patient.getFullName() + " has been added into table " + TABLE_NAME);
+            manager.getTransaction().begin();
+            manager.merge(patient);
+            manager.getTransaction().commit();
             return true;
-        }catch (SQLException e) {
-            e.printStackTrace();
-            System.out.println("Couldn't add Patient into table!");
-        } catch (Exception e) {
-            System.out.println("Connection failed!");
-            e.printStackTrace();
-        }finally {
-            try {
-                preparedStatement.close();
-                connector.close();
-            } catch (SQLException e) {
-                e.printStackTrace();
-            }
-        }
-        return false;
-    }
-
-    public boolean deletePatientById(long id) {
-        try{
-            connector.connect();
-            preparedStatement = connector.getConnection().prepareStatement(DELETE_PATIENT);
-            preparedStatement.setLong(1, id);
-            preparedStatement.executeUpdate();
-            System.out.println("Patient with id " + id + " was deleted!");
-            return true;
-        }catch (SQLException e) {
-            e.printStackTrace();
-            System.out.println("Couldn't find patient id: " + id);
-        } catch (Exception e) {
-            System.out.println("Connection failed!");
-            e.printStackTrace();
-        }finally {
-            try {
-                preparedStatement.close();
-                connector.close();
-            } catch (SQLException e) {
-                e.printStackTrace();
-            }
-        }
-        return false;
-    }
-
-    public boolean updatePatient (Patient patient){
-        try{
-            connector.connect();
-            preparedStatement = connector.getConnection().prepareStatement(UPDATE_PATIENT);
-            preparedStatement.setString(1, patient.getName());
-            preparedStatement.setString(2, patient.getLastName());
-            preparedStatement.setString(3,patient.getBirthDateInString());
-            preparedStatement.setBoolean(4, patient.getStatus());
-            preparedStatement.setLong(5, patient.getId());
-            preparedStatement.executeUpdate();
-            System.out.println("Patient with id " + patient.getFullName() + " was updateded!");
-        }catch (SQLException e) {
-            e.printStackTrace();
+        }catch (PersistenceException e) {
             System.out.println("Couldn't update patient " + patient);
-        } catch (Exception e) {
-            System.out.println("Connection failed!");
             e.printStackTrace();
-        }finally {
-            try {
-                preparedStatement.close();
-                connector.close();
-            } catch (SQLException e) {
-                e.printStackTrace();
-            }
+            manager.getTransaction().rollback();
         }
         return false;
     }
 
-
-    public boolean addListPatients(List<Patient> patients) {
-        try{
-            connector.connect();
-            preparedStatement = connector.getConnection().prepareStatement(CREATE_PATIENT);
-            for(Patient p : patients) {
-                preparedStatement.setString(1, p.getName());
-                preparedStatement.setString(2, p.getLastName());
-                preparedStatement.setString(3, p.getBirthDateInString());
-                preparedStatement.setBoolean(4, p.getStatus());
-                preparedStatement.addBatch();
-            }
-            preparedStatement.executeBatch();
-            System.out.println("List patient was add!");
-            return true;
-        }catch (SQLException e) {
-            e.printStackTrace();
-            System.out.println("Couldn't add List Patients to table " + TABLE_NAME);
-        } catch (Exception e) {
-            System.out.println("Connection failed!");
-            e.printStackTrace();
-        }finally {
-            try {
-                preparedStatement.close();
-                connector.close();
-            } catch (SQLException e) {
-                e.printStackTrace();
-            }
-        }
-        return false;
-    }
-
-    public Patient getPatientById(long id) {
+    public Patient getPatientById(long id) throws PersistenceException{
         Patient patient = null;
         try{
-            connector.connect();
-            preparedStatement = connector.getConnection().prepareStatement(GET_PATIENT_BY_ID);
-            preparedStatement.setLong(1, id);
-            resultSet = preparedStatement.executeQuery();
-            while(resultSet.next()) {
-                patient = Patient.newPatientBuilder()
-                        .setId(resultSet.getInt(1))
-                        .setName(resultSet.getString(2))
-                        .setLastName(resultSet.getString(3))
-                        .setBirthDate(resultSet.getString(4))
-                        .setStatus(resultSet.getBoolean(5))
-                        .build();
-            }
-        }catch (SQLException e) {
-            e.printStackTrace();
+            manager.getTransaction().begin();
+            patient = manager.getReference(Patient.class, id);
+            manager.getTransaction().commit();
+        }catch (PersistenceException e) {
             System.out.println("Couldn't find patient with id: " + id);
-        } catch (Exception e) {
             e.printStackTrace();
-        }finally {
-            try {
-                resultSet.close();
-                preparedStatement.close();
-                connector.close();
-            } catch (SQLException e) {
-                System.out.println("Connection failed!");
-                e.printStackTrace();
-            }
+            manager.getTransaction().rollback();
         }
         return patient;
     }
 
-    public synchronized List<Patient> getAllPatients() throws SQLException{
+    public synchronized List<Patient> getAllPatients() throws PersistenceException{
         List<Patient> patients = new ArrayList<>();
         try{
-            connector.connect();
-            preparedStatement = connector.getConnection().prepareStatement(GET_ALL_PATIENTS);
-            resultSet = preparedStatement.executeQuery();
-            while(resultSet.next()) {
-                patients.add(new Patient().newPatientBuilder()
-                        .setId(resultSet.getInt(1))
-                        .setName(resultSet.getString(2))
-                        .setLastName(resultSet.getString(3))
-                        .setBirthDate(resultSet.getString(4))
-                        .setStatus(resultSet.getBoolean(5))
-                        .build());
-            }
-        }catch (SQLException e) {
-            e.printStackTrace();
+            manager.getTransaction().begin();
+            Query query = manager.createNamedQuery("GET_ALL_PATIENTS", Patient.class);
+            patients = query.getResultList();
+            manager.getTransaction().commit();
+        }catch (PersistenceException e) {
             System.out.println("Couldn't read patients from table " + TABLE_NAME);
-        } catch (Exception e) {
             e.printStackTrace();
-        }finally {
-            try {
-                resultSet.close();
-                preparedStatement.close();
-                connector.close();
-            } catch (SQLException e) {
-                System.out.println("Connection failed!");
-                e.printStackTrace();
-            }
+            manager.getTransaction().rollback();
         }
         Collections.sort(patients);
         return patients;
     }
 
-    public List<Patient> getAllPatientsWithStatusFalse() {
+    public List<Patient> getAllPatientsWithStatusFalse() throws PersistenceException{
         List<Patient> patients = new ArrayList<>();
         try{
-            connector.connect();
-            preparedStatement = connector.getConnection().prepareStatement(GET_ALL_PATIENTS_WITH_STATUS_FALSE);
-            resultSet = preparedStatement.executeQuery();
-            while(resultSet.next()) {
-                patients.add(new Patient().newPatientBuilder()
-                        .setId(resultSet.getInt(1))
-                        .setName(resultSet.getString(2))
-                        .setLastName(resultSet.getString(3))
-                        .setBirthDate(resultSet.getString(4))
-                        .setStatus(resultSet.getBoolean(5))
-                        .build());
-            }
-        }catch (SQLException e) {
+            manager.getTransaction().begin();
+            Query query = manager.createNamedQuery("GET_ALL_PATIENTS_WITH_STATUS_FALSE", Patient.class);
+            patients = query.getResultList();
+            manager.getTransaction().commit();
+        }catch (PersistenceException e) {
             e.printStackTrace();
             System.out.println("Couldn't read patients from table " + TABLE_NAME);
-        } catch (Exception e) {
-            e.printStackTrace();
-        }finally {
-            try {
-                resultSet.close();
-                preparedStatement.close();
-                connector.close();
-            } catch (SQLException e) {
-                System.out.println("Connection failed!");
-                e.printStackTrace();
-            }
+            manager.getTransaction().rollback();
         }
         Collections.sort(patients);
         return patients;
     }
 
-    public boolean changeStatusPatientToFalse(Patient patient) {
+    public boolean changeStatusPatientToFalse(Patient patient)throws PersistenceException{
         try{
-            connector.connect();
-            preparedStatement = connector.getConnection().prepareStatement(UPDATE_PATIENT_STATUS);
-            preparedStatement.setLong(1, patient.getId());
-            preparedStatement.executeUpdate();
-            System.out.println("Patients status with name " + patient.getFullName() + " was changed!");
-        }catch (SQLException e) {
+            manager.getTransaction().begin();
+            patient.setStatus(false);
+            manager.merge(patient);
+            manager.getTransaction().commit();
+            return true;
+        }catch (PersistenceException e) {
             e.printStackTrace();
             System.out.println("Couldn't update patient status " + patient);
-        } catch (Exception e) {
-            System.out.println("Connection failed!");
-            e.printStackTrace();
-        }finally {
-            try {
-                preparedStatement.close();
-                connector.close();
-            } catch (SQLException e) {
-                e.printStackTrace();
-            }
+            manager.getTransaction().rollback();
         }
         return false;
     }
 
-
-    public Patient getPatientByIdWithAllAnalyzes(long id) {
-       Patient patient = null;
+    public Patient getPatientByIdWithAllAnalyzes(long id)throws PersistenceException {
+        Patient patient = null;
         try{
-            connector.connect();
-            preparedStatement = connector.getConnection().prepareStatement(GET_PATIENT_BY_ID_WITH_ALL_ANALYZES);
-            preparedStatement.setLong(1, id);
-            resultSet = preparedStatement.executeQuery();
-            while(resultSet.next()) {
-                patient = Patient.newPatientBuilder()
-                        .setId(resultSet.getLong(1))
-                        .setName(resultSet.getString(2))
-                        .setLastName(resultSet.getString(3))
-                        .setBirthDate(resultSet.getString(4))
-                        .setStatus(resultSet.getBoolean(5))
-                        .setAnalyzes(new ArrayList<>(new AnalyzesDAO().getAllAnalyzesByPatientId(resultSet.getLong(1))))
-                        .build();
-            }
-        }catch (SQLException e) {
+            manager.getTransaction().begin();
+            EntityGraph query = manager.createEntityGraph("graph.Patient.listAnalyzes");
+            Map map = new HashMap<>();
+            map.put("javax.persistence.fetchgraph", query);
+            patient = manager.find(Patient.class, id, map);
+            /*Query query2 = manager.createNamedQuery("GET_PATIENT_BY_ID", Patient.class).setHint("javax.persistence.fetchgraph", query);*/
+          /*  patient = (Patient) query2.setParameter("id", id).getSingleResult();*/
+            manager.getTransaction().commit();
+        }catch (PersistenceException e) {
             e.printStackTrace();
-            System.out.println("Couldn't find patient with id" + id);
-        } catch (Exception e) {
-            e.printStackTrace();
-        }finally {
-            try {
-                resultSet.close();
-                preparedStatement.close();
-                connector.close();
-            } catch (SQLException e) {
-                System.out.println("Connection failed!");
-                e.printStackTrace();
-            }
+            System.out.println("Couldn't find patient with id " + id);
+            manager.getTransaction().rollback();
         }
         return patient;
     }
-
-
-
-
-
-
-
 }

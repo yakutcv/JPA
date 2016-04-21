@@ -3,6 +3,7 @@ package com.SoftServe.ita.Ch_039.Controlers;
 import com.SoftServe.ita.Ch_039.Entity.Patient;
 import com.SoftServe.ita.Ch_039.IO.SQL.PatientDAO;
 
+import javax.persistence.PersistenceException;
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -25,22 +26,16 @@ public class AllPatientController extends HttpServlet {
         dispatcher.forward(request, response);
 
     }
-
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        //PrintWriter out = response.getWriter();
 
         List<Patient> patients = new ArrayList<>();
         try{
             patients = new PatientDAO().getAllPatients();
-        }catch (Exception e) {
+        }catch (PersistenceException e) {
             e.printStackTrace();
-            //out.print("Can't view all patients from DB");
         }
         request.setAttribute("patients", patients);
-
         RequestDispatcher dispatcher = request.getRequestDispatcher("AllPatients.jsp");
-
         dispatcher.forward(request, response);
-
     }
 }

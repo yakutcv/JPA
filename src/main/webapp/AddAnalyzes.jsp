@@ -76,7 +76,7 @@
                                               id="inputReport" onkeyup="checkReport(this.value)"></textarea>
                                     <span id="wrongLengthReport">Report must contains maximum 200 characters!</span>
                                 </div>
-                                <input type="hidden" name="id" id="patientId" value="${patient.getId()}">
+                                <input type="hidden" nam\se="id" id="patientId" value="${patient.getId()}">
                                 <button type="submit" onclick = "checkAnalysis(event)" class="btn form-control">Add Analyzes</button>
                             </div>
                             <form name="goToListWithAnalyzes" role="form" class="registration-form" action="AllAnalyzes" method="GET">

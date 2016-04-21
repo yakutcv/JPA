@@ -14,7 +14,6 @@
     <script src="${pageContext.request.contextPath}/js/moment-with-locales.min.js"></script>
     <script src="${pageContext.request.contextPath}/js/bootstrap-datetimepicker.min.js"></script>
 
-
     <title>All Analyzes</title>
 </head>
 
@@ -45,13 +44,13 @@
 
                             <div class="col-sm-5">
                                 <p data-placement="top" data-toggle="tooltip" title="Delete">
-                                    <button  class="btn btn-danger" id="deletePatient" data-values="DeleteAnalysis?idP=,${patient.id},&idA=${analysis.id},${analysis.getType()},${analysis.getDateInString()}" data-toggle="modal" data-target="#myModalAnalysis">
+                                    <button  class="btn btn-danger" id="deletePatient" data-values="DeleteAnalysis?idP=,${patient.id},&idA=${analysis.id},${analysis.getType()},${analysis.getDateInString()}" data-toggle="modal" data-target="#myModal">
                                         <span class="glyphicon glyphicon-trash"></span>
                                     </button>
                                 </p>
                             </div>
-                          <%-- modal window --%>
-                            <div class="modal fade" id="myModalAnalysis" tabindex="-1" role="dialog" aria-labelledby="edit" aria-hidden="true">
+                                <%-- modal window --%>
+                            <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="edit" aria-hidden="true">
                                 <div class="modal-dialog">
                                     <div class="modal-content">
                                         <div class="modal-header">
@@ -81,26 +80,13 @@
 
         <a class="btn btn-success btn-lg" role="button" href = "<c:url value = "AddAnalyzes?id=${patient.id}"/>">
             <span class="glyphicon glyphicon-plus"></span> Add </a>
+
         <input type="hidden" id="tmpId" value = "patientId" name = "id" value="${patient.getId()}">
 
     </div>
 </div>
 
 
-<script>
-    $('#myModalAnalysis').on('show.bs.modal', function(e) {
-        /* var id = $(e.relatedTarget).output('id');*/
-        /*  var name = $(e.relatedTarget).output('name');*/
-        var Selection = $(e.relatedTarget).data('values').split(",");
-        var action = Selection[0];
-        var patientId = Selection[1];
-        var analysisId = Selection[2];
-        var analysisType = Selection[3];
-        var analysisDate = Selection[4];
-        $(this).find('#deleteButton').attr('href', action+patientId+analysisId);
-        $('.debug-url').html('Are you really want to delete analysis <strong>' + analysisType + " by " + analysisDate + "?" + '</strong>');
-    });
-</script>
-
+<script src="${pageContext.request.contextPath}/assets/js/myScripts.js"></script>
 </body>
 </html>

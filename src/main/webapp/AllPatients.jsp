@@ -19,6 +19,7 @@
     <script src="${pageContext.request.contextPath}/js/bootstrap.min.js"></script>
     <script src="${pageContext.request.contextPath}/js/moment-with-locales.min.js"></script>
     <script src="${pageContext.request.contextPath}/js/bootstrap-datetimepicker.min.js"></script>
+
     <title>All Patients</title>
 
 </head>
@@ -66,14 +67,14 @@
                         <td>
                             <div class="col-sm-5">
                                 <p data-placement="top" data-toggle="tooltip" title="Delete">
-                                    <button  class="btn btn-danger" id="deletePatient" data-values="DeletePatient?id=,${patient.id},${patient.name}" data-toggle="modal" data-target="#myModalPatient">
+                                    <button  class="btn btn-danger" id="deletePatient" data-values="DeletePatient?id=,${patient.id},${patient.name}" data-toggle="modal" data-target="#myModal">
                                         <span class="glyphicon glyphicon-trash"></span>
                                     </button>
                                 </p>
                             </div>
                                 <%-- </form>--%>
                                 <%--  modal--%>
-                            <div class="modal fade" id="myModalPatient" tabindex="-1" role="dialog" aria-labelledby="edit" aria-hidden="true">
+                            <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="edit" aria-hidden="true">
                                 <div class="modal-dialog">
                                     <div class="modal-content">
                                         <div class="modal-header">
@@ -111,7 +112,7 @@
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">
-                <button type="button" class="close" output-dismiss="modal" aria-hidden="true"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span></button>
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span></button>
                 <h4 class="modal-title custom_align" id="Heading1">Edit Your Detail</h4>
             </div>
             <div class="modal-body">
@@ -136,9 +137,9 @@
 --%>
 
 <script>
-    $('#myModalPatient').on('show.bs.modal', function(e) {
-        /* var id = $(e.relatedTarget).output('id');*/
-        /*  var name = $(e.relatedTarget).output('name');*/
+    $('#myModal').on('show.bs.modal', function(e) {
+        /* var id = $(e.relatedTarget).data('id');*/
+        /*  var name = $(e.relatedTarget).data('name');*/
         var Selection = $(e.relatedTarget).data('values').split(",");
         var name = Selection[2];
         var id = Selection[1];
@@ -147,8 +148,6 @@
         $('.debug-url').html('Are you sure you want to delete patient <strong>' + name +" ?" + '</strong>');
     });
 </script>
-
-
 
 </body>
 </html>

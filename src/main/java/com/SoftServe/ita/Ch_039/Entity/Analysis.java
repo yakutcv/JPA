@@ -22,6 +22,15 @@ import java.io.Serializable;
         "date",
         "report"
 })
+
+@NamedQueries({
+        @NamedQuery(name = "GET_ALL_ANALYZES", query = "SELECT a FROM Analysis a"),
+        @NamedQuery(name = "GET_ANALYZES_BY_PATIENT", query ="SELECT a FROM Analysis a WHERE a.patient =:patient"),
+        @NamedQuery(name = "GET_ANALYZES_BY_PATIENT_ID", query ="SELECT a FROM Analysis a WHERE a.patient.id =:id"),
+})
+
+
+
 public class Analysis implements Comparable<Analysis>, Serializable {
 
     @Id
@@ -64,9 +73,9 @@ public class Analysis implements Comparable<Analysis>, Serializable {
 
     public void setPatient(Patient patient) {
         this.patient = patient;
-        if(!patient.getListAnalyzes().contains(this)){
+        /*if(!patient.getListAnalyzes().contains(this)){
             patient.getListAnalyzes().add(this);
-        }
+        }*/
     }
 
 
@@ -78,8 +87,8 @@ public class Analysis implements Comparable<Analysis>, Serializable {
         this.id = id;
     }
 
-    public void setDate(DateTime date) {
-        this.date = date;
+    public void setDate(String date) {
+        this.date = formatter.parseDateTime(date);
     }
 
     public void setReport(String report) {

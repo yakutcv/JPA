@@ -1,16 +1,11 @@
 package com.SoftServe.ita.Ch_039.JPA.Service;
 
 import com.SoftServe.ita.Ch_039.Entity.Patient;
-import com.SoftServe.ita.Ch_039.IO.SQL.AnalyzesDAO;
 
 import javax.persistence.EntityManager;
 import javax.persistence.Persistence;
 import javax.persistence.PersistenceException;
 import javax.persistence.Query;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.sql.SQLException;
-import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
@@ -112,7 +107,7 @@ public class PatientService {
         return patients;
     }
 
-    public boolean changeStatusPatientToFalse(Patient patient) {
+    public boolean changeStatusPatientToFalse(Patient patient)throws PersistenceException{
         try{
             manager.getTransaction().begin();
             patient.setStatus(false);
@@ -128,43 +123,26 @@ public class PatientService {
     }
 
 
-/*
+    //!!! don't working
 
-    public Patient getPatientByIdWithAllAnalyzes(long id) {
+    public Patient getPatientByIdWithAllAnalyzes(long id)throws PersistenceException {
         Patient patient = null;
         try{
+            manager.getTransaction().begin();
 
-            while(resultSet.next()) {
-                patient = Patient.newPatientBuilder()
-                        .setId(resultSet.getLong(1))
-                        .setName(resultSet.getString(2))
-                        .setLastName(resultSet.getString(3))
-                        .setBirthDate(resultSet.getString(4))
-                        .setStatus(resultSet.getBoolean(5))
-                        .setAnalyzes(new ArrayList<>(new AnalyzesDAO().getAllAnalyzesByPatientId(resultSet.getLong(1))))
-                        .build();
-            }
-        }catch (SQLException e) {
+
+
+            Query query = manager.createNamedQuery("GET_PATIENT_BY_ID_WITH_ALL_ANALYZES", Patient.class);
+            query.setParameter("id",id);
+            patient = (Patient) query.getSingleResult();
+
+
+            manager.getTransaction().commit();
+        }catch (PersistenceException e) {
             e.printStackTrace();
-            System.out.println("Couldn't find patient with id" + id);
-        } catch (Exception e) {
-            e.printStackTrace();
-        }finally {
-            try {
-                resultSet.close();
-                preparedStatement.close();
-                connector.close();
-            } catch (SQLException e) {
-                System.out.println("Connection failed!");
-                e.printStackTrace();
-            }
+            System.out.println("Couldn't find patient with id " + id);
+            manager.getTransaction().rollback();
         }
         return patient;
     }
-
-*/
-
-
-
-
 }

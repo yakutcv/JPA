@@ -3,18 +3,11 @@ package com.SoftServe.ita.Ch_039.Test;
 import com.SoftServe.ita.Ch_039.Entity.Analysis;
 import com.SoftServe.ita.Ch_039.Entity.AnalysisType;
 import com.SoftServe.ita.Ch_039.Entity.Patient;
+import com.SoftServe.ita.Ch_039.JPA.Service.AnalyzesService;
 import com.SoftServe.ita.Ch_039.JPA.Service.PatientService;
 
-import javax.persistence.EntityManager;
-import javax.persistence.EntityManagerFactory;
-import javax.persistence.Persistence;
 import java.util.ArrayList;
 import java.util.List;
-
-
-/**
- * Created by ayasintc on 3/29/2016.
- */
 
 public class TestMain {
 
@@ -48,27 +41,48 @@ public class TestMain {
 
 
         Analysis analysis1 = Analysis.newAnalysisBuilder()
-                .setType(AnalysisType.ALLERGY)
+                .setType(AnalysisType.BIOPSY)
                 .setDate("03/02/2015 14:15")
                 .setReport("sdfsdfsdgxvbcvbcvb")
                 .build();
 
         Analysis analysis2 = Analysis.newAnalysisBuilder()
-                .setType(AnalysisType.ALLERGY)
+                .setType(AnalysisType.BIOPSY)
                 .setDate("03/02/2015 14:14")
                 .setReport("234234234")
+                .build();
+
+
+        Analysis analysis3 = Analysis.newAnalysisBuilder()
+                .setType(AnalysisType.ALLERGY_2)
+                .setDate("03/02/2015 14:14")
+                .setReport("bbbbbbbbbb")
                 .build();
 
         List<Analysis> an = new ArrayList<>();
         an.add(analysis1);
         an.add(analysis2);
 
+
+
         PatientService patientService = new PatientService();
 
-        //Patient patient =
+        Patient p = patientService.getPatientById(1);
 
-        System.out.println(patientService.getPatientById(9).getListAnalyzes());
+        AnalyzesService analyzesService = new AnalyzesService();
 
+
+        System.out.println(patientService.getPatientByIdWithAllAnalyzes(1).getListAnalyzes());
+
+
+
+
+
+
+
+
+
+       /* Patient p = patientService.getPatientByIdWithAllAnalyzes(1);*/
 
 
 

@@ -4,6 +4,11 @@ package com.SoftServe.ita.Ch_039.Entity;
 import com.SoftServe.ita.Ch_039.IO.Adapters.DateTimeForJPAPatientAdapter;
 import com.SoftServe.ita.Ch_039.IO.Adapters.DateTimeForXmlAdapter;
 import com.google.gson.annotations.SerializedName;
+import org.eclipse.persistence.annotations.BatchFetch;
+import org.eclipse.persistence.annotations.BatchFetchType;
+import org.eclipse.persistence.annotations.JoinFetch;
+import org.eclipse.persistence.annotations.JoinFetchType;
+import org.eclipse.persistence.config.QueryHints;
 import org.joda.time.DateTime;
 import org.joda.time.Years;
 import org.joda.time.format.DateTimeFormat;
@@ -17,6 +22,7 @@ import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
+
 @Entity
 @Table
 @XmlRootElement(name="Patient")
@@ -29,12 +35,12 @@ import java.util.List;
         "listAnalyzes"
 })
 
-
+//WHERE p.id = :id
 
 @NamedQueries({
         @NamedQuery(name = "GET_ALL_PATIENTS", query = "SELECT p FROM Patient p WHERE p.status = TRUE"),
         @NamedQuery(name = "GET_ALL_PATIENTS_WITH_STATUS_FALSE", query ="SELECT p FROM Patient p WHERE p.status=FALSE"),
-        @NamedQuery(name = "GET_PATIENT_BY_ID_WITH_ALL_ANALYZES", query ="SELECT p FROM  Patient p WHERE p.id =:id AND p.status=TRUE")
+        @NamedQuery(name = "GET_PATIENT_BY_ID_WITH_ALL_ANALYZES", query ="SELECT p FROM Patient p JOIN FETCH p.listAnalyzes WHERE p.id=:id")
 })
 public class Patient implements Comparable<Patient>,Serializable {
 
@@ -70,28 +76,29 @@ public class Patient implements Comparable<Patient>,Serializable {
     @Temporal(TemporalType.DATE)
     private DateTime birthDate = new DateTime(2014,3,28,15,00);
 
+
     @SerializedName("List of Analyzes")
     @XmlElementWrapper(name="List_of_Analyzes")
     @XmlElement(name="Analysis")
-    @OneToMany(mappedBy = "patient", cascade = CascadeType.ALL/*, fetch = FetchType.LAZY*/)
+    @OneToMany(mappedBy = "patient", cascade = CascadeType.ALL)
+    @JoinFetch(value = JoinFetchType.OUTER)
     private List<Analysis> listAnalyzes = new ArrayList<>();
 
     public List<Analysis> getListAnalyzes() {
         return listAnalyzes;
     }
 
-    public void addAnalysis(Analysis analysis) {
+    /*public void addAnalysis(Analysis analysis) {
         this.listAnalyzes.add(analysis);
         if(analysis.getPatient()!=this){
             analysis.setPatient(this);
         }
-    }
+    }*/
 
     public void setListAnalyzes(List<Analysis> listAnalyzes) {
         this.listAnalyzes.addAll(listAnalyzes);
         
     }
-
 
     @Column
     private boolean status = true;
@@ -136,10 +143,6 @@ public class Patient implements Comparable<Patient>,Serializable {
         return id;
     }
 
-    public void setFormatter(DateTimeFormatter formatter) {
-        this.formatter = formatter;
-    }
-
     public void setId(long id) {
         this.id = id;
     }
@@ -152,8 +155,8 @@ public class Patient implements Comparable<Patient>,Serializable {
         this.lastName = lastName;
     }
 
-    public void setBirthDate(DateTime birthDate) {
-        this.birthDate = birthDate;
+    public void setBirthDate(String birthDate) {
+        this.birthDate = formatter.parseDateTime(birthDate);
     }
 
     public void setStatus(boolean status) {
@@ -226,30 +229,6 @@ public class Patient implements Comparable<Patient>,Serializable {
             return Patient.this;
         }
     }
-
-
-  /*  @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-
-        Patient patient = (Patient) o;
-
-        if (!birthDate.equals(patient.birthDate)) return false;
-        if (!lastName.equals(patient.lastName)) return false;
-        if (!name.equals(patient.name)) return false;
-
-        return true;
-    }
-
-    @Override
-    public int hashCode() {
-        int result = name.hashCode();
-        result = 31 * result + lastName.hashCode();
-        result = 31 * result + birthDate.hashCode();
-        return result;
-    }*/
-
 
     //first override
     @Override

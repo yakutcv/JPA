@@ -52,5 +52,6 @@
     <orderEntry type="library" exported="" name="Gradle: org.eclipse.persistence:eclipselink:2.5.0" level="project" />
     <orderEntry type="library" exported="" name="Gradle: org.eclipse.persistence:javax.persistence:2.1.0" level="project" />
     <orderEntry type="library" exported="" name="Gradle: org.eclipse.persistence:commonj.sdo:2.1.1" level="project" />
+    <orderEntry type="library" name="bootstrap" level="application" />
   </component>
 </module>

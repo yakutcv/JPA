@@ -46,7 +46,7 @@ public class AnalyzesDAO {
         return false;
     }
 
-    public boolean updateAnalysis(Analysis analysis) throws PersistenceException {
+  /*  public boolean updateAnalysis(Analysis analysis) throws PersistenceException {
         try {
             manager.getTransaction().begin();
             manager.merge(analysis);
@@ -58,9 +58,9 @@ public class AnalyzesDAO {
             manager.getTransaction().rollback();
         }
         return false;
-    }
+    }*/
 
-    public Analysis getAnalyzesById(long id) throws PersistenceException {
+  /*  public Analysis getAnalyzesById(long id) throws PersistenceException {
         Analysis analysis = null;
         try {
             manager.getTransaction().begin();
@@ -73,7 +73,7 @@ public class AnalyzesDAO {
         }
         return analysis;
     }
-
+*/
     public boolean addListAnalysis(List<Analysis> analysisList, Patient patient) throws PersistenceException {
         try {
             manager.getTransaction().begin();

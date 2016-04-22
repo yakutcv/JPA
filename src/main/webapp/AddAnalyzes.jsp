@@ -14,29 +14,27 @@
     <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/css/bootstrap.min.css"/>
     <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/css/bootstrap-datetimepicker.min.css"/>
     <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:400,100,300,500">
-    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
-    <link rel="stylesheet" href="assets/font-awesome/css/font-awesome.min.css">
-    <link rel="stylesheet" href="assets/css/form-elements.css">
-    <link rel="stylesheet" href="assets/css/style.css">
-    <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/css/bootstrap.min.css"/>
-    <link rel="stylesheet" type="text/css"href="${pageContext.request.contextPath}/css/bootstrap-datetimepicker.min.css"/>
+    <link rel="stylesheet" href="${pageContext.request.contextPath}assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="${pageContext.request.contextPath}assets/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="${pageContext.request.contextPath}assets/css/form-elements.css">
+    <link rel="stylesheet" href="${pageContext.request.contextPath}assets/css/style.css">
     <link rel="stylesheet" href="${pageContext.request.contextPath}css/jquery.toastmessage.css">
     <link rel="stylesheet" href="${pageContext.request.contextPath}css/style.css">
+    <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/css/bootstrap.min.css"/>
+    <link rel="stylesheet" type="text/css"href="${pageContext.request.contextPath}/css/bootstrap-datetimepicker.min.css"/>
+    <link rel="stylesheet" href="${pageContext.request.contextPath}css/style.css">
+
 
     <script src="${pageContext.request.contextPath}/js/jquery-2.1.4.min.js"></script>
-    <script src="${pageContext.request.contextPath}/js/bootstrap.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
     <script src="${pageContext.request.contextPath}/js/moment-with-locales.min.js"></script>
+    <script src="${pageContext.request.contextPath}/js/check.js"></script>
+    <script src="${pageContext.request.contextPath}js/jquery.toastmessage.js"></script>
+    <script src="${pageContext.request.contextPath}assets/js/jquery.backstretch.min.js"></script>
     <script src="${pageContext.request.contextPath}/js/bootstrap-datetimepicker.min.js"></script>
-    <script type="text/javascript">
-        var d = new Date();
-        $(function () {
-            $('#datetimepicker2').datetimepicker({
-                format: 'DD/MM/YYYY HH:mm',
-                sideBySide: true,
-                maxDate:d
-            });
-        });
-    </script>
+    <script src="${pageContext.request.contextPath}/js/datetimePicker.js"></script>
+    <script src="${pageContext.request.contextPath}/assets/js/Background.js"></script>
+
 </head>
 <body>
 <!-- Top content -->
@@ -72,11 +70,11 @@
                                 </div>
                                 <div class="form-group">
                                     <label class="sr-only" for="inputReport">Report</label>
-                                    <textarea name="report" placeholder="Report..." class="form-report form-control"
-                                              id="inputReport" onkeyup="checkReport(this.value)"></textarea>
+                                   <textarea name="report" placeholder="Report..." class="form-report form-control"
+                                             id="inputReport" onkeyup="checkReport(this.value)"></textarea>
                                     <span id="wrongLengthReport">Report must contains maximum 200 characters!</span>
                                 </div>
-                                <input type="hidden" nam\se="id" id="patientId" value="${patient.getId()}">
+                                <input type="hidden" name="id" id="patientId" value="${patient.getId()}">
                                 <button type="submit" onclick = "checkAnalysis(event)" class="btn form-control">Add Analyzes</button>
                             </div>
                             <form name="goToListWithAnalyzes" role="form" class="registration-form" action="AllAnalyzes" method="GET">
@@ -107,15 +105,5 @@
         </div>
     </div>
 </footer>
-<!-- Javascript -->
-<script src="assets/js/jquery-1.11.1.min.js"></script>
-<script src="${pageContext.request.contextPath}/js/jquery-2.1.4.min.js"></script>
-<script src="${pageContext.request.contextPath}/js/bootstrap.min.js"></script>
-<script src="${pageContext.request.contextPath}/js/moment-with-locales.min.js"></script>
-<script src="${pageContext.request.contextPath}/js/bootstrap-datetimepicker.min.js"></script>
-<script src="${pageContext.request.contextPath}js/jquery.toastmessage.js"></script>
-<script src="assets/js/jquery.backstretch.min.js"></script>
-<script src="assets/js/myScripts.js"></script>
-
 </body>
 </html>

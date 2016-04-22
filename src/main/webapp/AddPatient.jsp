@@ -14,7 +14,7 @@
     <!-- CSS -->
 
     <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/css/bootstrap.min.css" />
-    <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/css/bootstrap-datetimepicker.min.css" />
+
     <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:400,100,300,500">
     <link rel="stylesheet" href="${pageContext.request.contextPath}assets/font-awesome/css/font-awesome.min.css">
     <link rel="stylesheet" href="${pageContext.request.contextPath}assets/css/form-elements.css">
@@ -22,6 +22,7 @@
     <link rel="stylesheet" href="${pageContext.request.contextPath}css/jquery.toastmessage.css">
     <link rel="stylesheet" href="${pageContext.request.contextPath}css/formValidation.css">
     <link rel="stylesheet" href="${pageContext.request.contextPath}css/style.css">
+    <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/css/bootstrap-datetimepicker.min.css" />
 
     <script src="${pageContext.request.contextPath}/js/jquery-2.1.4.min.js"></script>
     <script src="${pageContext.request.contextPath}/js/bootstrap.min.js"></script>
@@ -29,7 +30,9 @@
     <script src="${pageContext.request.contextPath}/js/bootstrap-datetimepicker.min.js"></script>
     <script src="${pageContext.request.contextPath}/js/jquery.backstretch.min.js"></script>
     <script src="${pageContext.request.contextPath}js/validationForm.js"></script>
-    <script src="assets/js/myScripts.js"></script>
+    <script src="${pageContext.request.contextPath}/js/check.js"></script>
+    <script src="${pageContext.request.contextPath}/js/datetimePicker.js"></script>
+    <script src="${pageContext.request.contextPath}/assets/js/Background.js"></script>
 </head>
 <body>
 <div class="top-content">

@@ -30,7 +30,6 @@ import java.io.Serializable;
 })
 
 
-
 public class Analysis implements Comparable<Analysis>, Serializable {
 
     @Id
@@ -52,14 +51,14 @@ public class Analysis implements Comparable<Analysis>, Serializable {
     @Basic(optional = false)
     @XmlElement(name="report")
     @Lob
-    private String report = "Default report";
+    private String report;
 
     @Column
     @NotNull
     @Basic(optional = false)
     @Enumerated(EnumType.STRING)
     @XmlElement(name="type")
-    private AnalysisType type = AnalysisType.DEFAULT;
+    private AnalysisType type;
 
     @ManyToOne
     @JoinColumn(name = "patient_id")
@@ -77,7 +76,6 @@ public class Analysis implements Comparable<Analysis>, Serializable {
             patient.getListAnalyzes().add(this);
         }*/
     }
-
 
     public Patient getPatient() {
         return patient;

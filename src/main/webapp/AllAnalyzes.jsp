@@ -1,19 +1,23 @@
-
-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
     <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/css/bootstrap.min.css" />
     <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/css/bootstrap-datetimepicker.min.css" />
 
-    <script src="${pageContext.request.contextPath}/js/jquery-2.1.4.min.js"></script>
-    <script src="${pageContext.request.contextPath}/js/bootstrap.min.js"></script>
+    <script src="${pageContext.request.contextPath}/js/jquery-2.2.3.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
     <script src="${pageContext.request.contextPath}/js/moment-with-locales.min.js"></script>
     <script src="${pageContext.request.contextPath}/js/bootstrap-datetimepicker.min.js"></script>
-
+    <script src="${pageContext.request.contextPath}/js/modal.js"></script>
     <title>All Analyzes</title>
 </head>
 
@@ -22,7 +26,7 @@
 <div class="container">
     <div class="row">
         <div class="col-md-12">
-            <h2 text-center> All analyzes for patient ${patient.getFullName()}</h2>
+            <h2> All analyzes for patient ${patient.getFullName()}</h2>
             <div class="table-responsive">
                 <table id="mytable" class="table table-bordred table-striped">
                     <thead>
@@ -44,13 +48,13 @@
 
                             <div class="col-sm-5">
                                 <p data-placement="top" data-toggle="tooltip" title="Delete">
-                                    <button  class="btn btn-danger" id="deletePatient" data-values="DeleteAnalysis?idP=,${patient.id},&idA=${analysis.id},${analysis.getType()},${analysis.getDateInString()}" data-toggle="modal" data-target="#myModal">
+                                    <button  class="btn btn-danger" id="deletePatient" data-values="DeleteAnalysis?idP=,${patient.id},&idA=${analysis.id},${analysis.getType()},${analysis.getDateInString()}" data-toggle="modal" data-target="#deleteAnalysisModal">
                                         <span class="glyphicon glyphicon-trash"></span>
                                     </button>
                                 </p>
                             </div>
                                 <%-- modal window --%>
-                            <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="edit" aria-hidden="true">
+                            <div class="modal fade" id="deleteAnalysisModal" tabindex="-1" role="dialog" aria-labelledby="edit" aria-hidden="true">
                                 <div class="modal-dialog">
                                     <div class="modal-content">
                                         <div class="modal-header">
@@ -70,10 +74,12 @@
                         </td>
                     </tr>
                     </tbody>
+                    </c:forEach>
+                </table>
             </div>
         </div>
-        </c:forEach>
-        </table>
+
+
 
         <a class="btn btn-default btn-lg" role="button" href = "<c:url value ="Patients"/>">
             <span class="glyphicon glyphicon-arrow-left"></span> Go back to the list with all patients </a>
@@ -86,7 +92,19 @@
     </div>
 </div>
 
+<script>
+    $('#deleteAnalysisModal').on('show.bs.modal', function(e) {
+        var Selection = $(e.relatedTarget).data('values').split(",");
+        var action = Selection[0];
+        var patientId = Selection[1];
+        var analysisId = Selection[2];
+        var analysisType = Selection[3];
+        var analysisDate = Selection[4];
+        $(this).find('#deleteButton').attr('href', action+patientId+analysisId);
+        $('.debug-url').html('Are you really want to delete analysis <strong>' + analysisType + " by " + analysisDate + "?" + '</strong>');
+    });
+</script>
 
-<script src="${pageContext.request.contextPath}/assets/js/myScripts.js"></script>
 </body>
 </html>
+-

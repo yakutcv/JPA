@@ -14,9 +14,7 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
-/**
- * Created by ayasintc on 4/7/2016.
- */
+
     @WebServlet("/Patients")
 public class AllPatientController extends HttpServlet {
 

@@ -35,8 +35,6 @@ import java.util.List;
         "listAnalyzes"
 })
 
-//WHERE p.id = :id
-
 @NamedQueries({
         @NamedQuery(name = "GET_ALL_PATIENTS", query = "SELECT p FROM Patient p WHERE p.status = TRUE"),
         @NamedQuery(name = "GET_ALL_PATIENTS_WITH_STATUS_FALSE", query ="SELECT p FROM Patient p WHERE p.status=FALSE"),
@@ -59,14 +57,14 @@ public class Patient implements Comparable<Patient>,Serializable {
     @NotNull
     @SerializedName("Name")
     @XmlElement
-    private String name = "Default name";
+    private String name;
 
     @Column(name="last_name")
     @NotNull
     @Basic(optional = false)
     @SerializedName("Last name")
     @XmlElement
-    private String lastName = "Default lastName";
+    private String lastName;
 
     @Column(name = "Birthday")
     @Basic(optional = false)
@@ -75,7 +73,7 @@ public class Patient implements Comparable<Patient>,Serializable {
     @XmlElement
     @Convert(converter = DateTimeForJPAPatientAdapter.class)
     @Temporal(TemporalType.DATE)
-    private DateTime birthDate = new DateTime(2014,3,28,15,00);
+    private DateTime birthDate;
 
 
     @SerializedName("List of Analyzes")

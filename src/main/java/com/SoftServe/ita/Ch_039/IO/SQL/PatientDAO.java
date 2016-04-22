@@ -65,7 +65,7 @@ public class PatientDAO {
         return patient;
     }
 
-    public synchronized List<Patient> getAllPatients() throws PersistenceException{
+    public List<Patient> getAllPatients() throws PersistenceException{
         List<Patient> patients = new ArrayList<>();
         try{
             manager.getTransaction().begin();

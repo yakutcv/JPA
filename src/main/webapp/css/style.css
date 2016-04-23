@@ -248,7 +248,8 @@ img { max-width: 100%; }
     color: #ffffff;
 }
 
-#inputReport {
+.form-first-name, .form-last-name, .form-control{
 
+    color:#000000;!important;
 
 }

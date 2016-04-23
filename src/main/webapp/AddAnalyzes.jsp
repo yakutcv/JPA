@@ -14,26 +14,26 @@
     <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/css/bootstrap.min.css"/>
     <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/css/bootstrap-datetimepicker.min.css"/>
     <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:400,100,300,500">
-    <link rel="stylesheet" href="${pageContext.request.contextPath}assets/bootstrap/css/bootstrap.min.css">
-    <link rel="stylesheet" href="${pageContext.request.contextPath}assets/font-awesome/css/font-awesome.min.css">
-    <link rel="stylesheet" href="${pageContext.request.contextPath}assets/css/form-elements.css">
-    <link rel="stylesheet" href="${pageContext.request.contextPath}assets/css/style.css">
-    <link rel="stylesheet" href="${pageContext.request.contextPath}css/jquery.toastmessage.css">
-    <link rel="stylesheet" href="${pageContext.request.contextPath}css/style.css">
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/assets/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/assets/css/form-elements.css">
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/assets/css/style.css">
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/css/jquery.toastmessage.css">
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/css/style.css">
     <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/css/bootstrap.min.css"/>
-    <link rel="stylesheet" type="text/css"href="${pageContext.request.contextPath}/css/bootstrap-datetimepicker.min.css"/>
-    <link rel="stylesheet" href="${pageContext.request.contextPath}css/style.css">
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/css/style.css">
+    <link rel="stylesheet" type="text/css"href="${pageContext.request.contextPath}/dateTimePicker/css/bootstrap-datetimepicker.min.css"/>
 
-
-    <script src="${pageContext.request.contextPath}/js/jquery-2.1.4.min.js"></script>
+    <script src="${pageContext.request.contextPath}/js/jquery-2.2.3.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
     <script src="${pageContext.request.contextPath}/js/moment-with-locales.min.js"></script>
     <script src="${pageContext.request.contextPath}/js/check.js"></script>
     <script src="${pageContext.request.contextPath}js/jquery.toastmessage.js"></script>
-    <script src="${pageContext.request.contextPath}assets/js/jquery.backstretch.min.js"></script>
-    <script src="${pageContext.request.contextPath}/js/bootstrap-datetimepicker.min.js"></script>
-    <script src="${pageContext.request.contextPath}/js/datetimePicker.js"></script>
+    <script src="${pageContext.request.contextPath}/assets/js/jquery.backstretch.min.js"></script>
     <script src="${pageContext.request.contextPath}/assets/js/Background.js"></script>
+    <script src="${pageContext.request.contextPath}/dateTimePicker/js/bootstrap-datetimepicker.min.js"></script>
+    <script src="${pageContext.request.contextPath}/js/datetimePicker.js"></script>
+
 
 </head>
 <body>
@@ -54,7 +54,7 @@
                             </div>
                         </div>
                         <div class="form-bottom">
-                            <div role="form" <%--action="AddAnalyzes?id=${patient.getId()}" method="POST"--%> class="registration-form">
+                            <div role="form" <%--action="AddAnalyzesController?id=${patient.getId()}" method="POST"--%> class="registration-form">
                                 <div class="form-group">
                                     <label class="sr-only control-label" for="inputType">Type Analyzes</label>
                                     <select name="type" class="form-control" id="inputType">
@@ -77,7 +77,7 @@
                                 <input type="hidden" name="id" id="patientId" value="${patient.getId()}">
                                 <button type="submit" onclick = "checkAnalysis(event)" class="btn form-control">Add Analyzes</button>
                             </div>
-                            <form name="goToListWithAnalyzes" role="form" class="registration-form" action="AllAnalyzes" method="GET">
+                            <form name="goToListWithAnalyzes" role="form" class="registration-form" action="AllAnalyzesController" method="GET">
                                 <input type="hidden" name="id" id="patientId2" value="${patient.getId()}">
                                 <button type="submit" class="btn btn-primary">Go back to the list with Analyzes </button>
                             </form>

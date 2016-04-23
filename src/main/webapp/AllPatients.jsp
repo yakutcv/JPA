@@ -18,8 +18,6 @@
     <script src="${pageContext.request.contextPath}/js/moment-with-locales.min.js"></script>
     <script src="${pageContext.request.contextPath}/js/bootstrap-datetimepicker.min.js"></script>
 
-
-
     <title>All Patients</title>
 </head>
 <body>
@@ -28,11 +26,6 @@
     <div class="row">
         <div class="col-md-12">
             <h4>All Patients</h4>
-
-            <form action = "Admin.jsp" class="text-right">
-                <button type="submit" class="btn btn-default"> Admin</button>
-            </form>
-
 
             <div class="table-responsive">
                 <table id="mytable" class="table table-bordred table-striped">
@@ -57,7 +50,7 @@
                             <td>
                                 <div class="col-sm-5" name = "listAnalyzes">
                                     <p data-placement="top" data-toggle="tooltip" title="Analyzes">
-                                        <a class="btn btn-success" data-title="Analyzes" href="AllAnalyzes?id=${patient.id}"><span class="glyphicon glyphicon-tint"> </span></a></p>
+                                        <a class="btn btn-success" data-title="Analyzes" href="AllAnalyzesController?id=${patient.id}"><span class="glyphicon glyphicon-tint"> </span></a></p>
                                 </div>
                             </td>
 
@@ -72,7 +65,7 @@
                             <td>
                                 <div class="col-sm-5">
                                     <p data-placement="top" data-toggle="tooltip" title="Delete">
-                                        <button  class="btn btn-danger" id="deletePatient" data-values="DeletePatient?id=,${patient.id},${patient.name}" data-toggle="modal" data-target="#deletePatientModal">
+                                        <button  class="btn btn-danger" id="deletePatient" data-values="DeletePatientController?id=,${patient.id},${patient.lastName}" data-toggle="modal" data-target="#deletePatientModal">
                                             <span class="glyphicon glyphicon-trash"></span>
                                         </button>
                                     </p>
@@ -84,21 +77,16 @@
                     </c:forEach>
                 </table>
             </div>
-            <input type="hidden" id="tmpId" value = "patientId" name = "id" value="${patient.getId()}">
-
         </div>
-        <form name = "goIndex" action = "Patients" method = "POST">
-            <button type="submit" class="btn btn-default btn-lg"> <span class="glyphicon glyphicon-arrow-left"></span>Go back to the main page</button>
-        </form>
+
+        <div>
+            <a type="submit" class="btn btn-default btn-lg" href= "<c:url value = "index.jsp"/>" ><span class="glyphicon glyphicon-arrow-left"></span>Go back to the main page</a>
+
+            <a class="btn btn-success btn-lg" role="button" href = "<c:url value = "AddPatient.jsp"/>">
+                <span class="glyphicon glyphicon-plus"></span> Add Patient </a>
+        </div>
     </div>
-
-
-
-
 </div>
-
-
-
 
 <%--
 <div class="modal fade" id="edit" tabindex="-1" role="dialog" aria-labelledby="edit" aria-hidden="true">
@@ -156,11 +144,11 @@
         /* var id = $(e.relatedTarget).data('id');*/
         /*  var name = $(e.relatedTarget).data('name');*/
         var Selection = $(e.relatedTarget).data('values').split(",");
-        var name = Selection[2];
+        var lastName = Selection[2];
         var id = Selection[1];
         var action = Selection[0];
         $(this).find('#deleteButton').attr('href', action+id);
-        $('.debug-url').html('Are you sure you want to delete patient <strong>' + name +" ?" + '</strong>');
+        $('.debug-url').html('Are you really want to delete patient <strong>' + lastName +" ?" + '</strong>');
     });
 </script>
 

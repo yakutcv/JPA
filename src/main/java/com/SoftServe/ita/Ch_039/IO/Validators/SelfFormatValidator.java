@@ -1,6 +1,6 @@
 package com.SoftServe.ita.Ch_039.IO.Validators;
 
-import com.SoftServe.ita.Ch_039.Entity.AnalysisType;
+import com.SoftServe.ita.Ch_039.Model.Entity.AnalysisType;
 import com.SoftServe.ita.Ch_039.IO.Exceptions.ExceptionList;
 import com.SoftServe.ita.Ch_039.IO.Exceptions.SelfFormatException;
 import org.joda.time.DateTime;

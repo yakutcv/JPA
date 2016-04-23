@@ -1,12 +1,12 @@
 package com.SoftServe.ita.Ch_039.IO;
 
 import com.SoftServe.ita.Ch_039.IO.Parsers.AnalyzesParser;
-import com.SoftServe.ita.Ch_039.Logic.Hospital;
-import com.SoftServe.ita.Ch_039.Entity.Analysis;
-import com.SoftServe.ita.Ch_039.Entity.AnalysisType;
-import com.SoftServe.ita.Ch_039.Entity.Patient;
+import com.SoftServe.ita.Ch_039.Model.Logic.Hospital;
+import com.SoftServe.ita.Ch_039.Model.Entity.Analysis;
+import com.SoftServe.ita.Ch_039.Model.Entity.AnalysisType;
+import com.SoftServe.ita.Ch_039.Model.Entity.Patient;
 import com.SoftServe.ita.Ch_039.IO.Exceptions.SelfFormatException;
-import com.SoftServe.ita.Ch_039.Interfaces.IO;
+import com.SoftServe.ita.Ch_039.IO.Interfaces.IO;
 import org.joda.time.format.DateTimeFormat;
 import org.joda.time.format.DateTimeFormatter;
 

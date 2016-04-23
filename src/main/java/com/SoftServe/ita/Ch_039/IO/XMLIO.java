@@ -1,7 +1,7 @@
 package com.SoftServe.ita.Ch_039.IO;
 
-import com.SoftServe.ita.Ch_039.Interfaces.IO;
-import com.SoftServe.ita.Ch_039.Logic.Hospital;
+import com.SoftServe.ita.Ch_039.IO.Interfaces.IO;
+import com.SoftServe.ita.Ch_039.Model.Logic.Hospital;
 
 import javax.xml.bind.JAXBContext;
 import javax.xml.bind.JAXBException;

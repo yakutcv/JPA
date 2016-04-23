@@ -3,7 +3,8 @@ $(function () {
     var d = new Date();
     $('#datetimepicker4').datetimepicker({
         format: 'DD/MM/YYYY',
-        maxDate:d
+        maxDate:d,
+        howClose:true
     });
 });
 
@@ -13,6 +14,7 @@ $(function () {
     $('#datetimepicker2').datetimepicker({
         format: 'DD/MM/YYYY HH:mm',
         sideBySide: true,
-        maxDate:d
+        maxDate:d,
+        showClose:true
     });
 });

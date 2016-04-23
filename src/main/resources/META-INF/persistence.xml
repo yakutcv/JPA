@@ -5,8 +5,8 @@
                         http://java.sun.com/xml/ns/persistence/persistence_1_0.xsd">
     <persistence-unit name="HOSPITAL" transaction-type="RESOURCE_LOCAL">
         <provider>org.eclipse.persistence.jpa.PersistenceProvider</provider>
-        <class>com.SoftServe.ita.Ch_039.Entity.Patient </class>
-        <class>com.SoftServe.ita.Ch_039.Entity.Analysis</class>
+        <class>com.SoftServe.ita.Ch_039.Model.Entity.Patient</class>
+        <class>com.SoftServe.ita.Ch_039.Model.Entity.Analysis</class>
         <class>com.SoftServe.ita.Ch_039.IO.Adapters.DateTimeForJPAPatientAdapter</class>
         <class>com.SoftServe.ita.Ch_039.IO.Adapters.DateTimeForJPAAnalysisAdapter</class>
         <properties>

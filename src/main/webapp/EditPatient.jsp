@@ -20,12 +20,12 @@
     <link rel="stylesheet" href="${pageContext.request.contextPath}css/style.css">
     <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/css/bootstrap-datetimepicker.min.css" />
 
-    <script src="${pageContext.request.contextPath}/js/jquery-2.1.4.min.js"></script>
-    <script src="${pageContext.request.contextPath}/js/bootstrap.min.js"></script>
+    <script src="${pageContext.request.contextPath}/js/jquery-2.2.3.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
     <script src="${pageContext.request.contextPath}/js/moment-with-locales.min.js"></script>
-    <script src="${pageContext.request.contextPath}/js/bootstrap-datetimepicker.min.js"></script>
     <script src="${pageContext.request.contextPath}/js/jquery.backstretch.min.js"></script>
     <script src="${pageContext.request.contextPath}/js/check.js"></script>
+    <script src="${pageContext.request.contextPath}/dateTimePicker/js/bootstrap-datetimepicker.min.js"></script>
     <script src="${pageContext.request.contextPath}/js/datetimePicker.js"></script>
     <script src="${pageContext.request.contextPath}/assets/js/Background.js"></script>
 
@@ -72,7 +72,7 @@
                                 <button type="submit" class="btn form-control" onclick="checkPatient(event)">Edit Patient</button>
                                 <input type="hidden" id = "updatePatient" name = "id" value="${patient2.getId()}">
                             </div>
-                            <form name = "goToPatietnsList" action = "Patients" method = "GET">
+                            <form name = "goToPatietnsList" action = "AllPatientController" method = "GET">
                                 <button type="submit" class="btn btn-primary">Go back to the list with all patients</button>
                             </form>
                         </div>
@@ -99,10 +99,9 @@
     </div>
 </footer>
 
-<script src="${pageContext.request.contextPath}/js/jquery-2.1.4.min.js"></script>
+
 <script src="${pageContext.request.contextPath}/js/bootstrap.min.js"></script>
 <script src="${pageContext.request.contextPath}/js/moment-with-locales.min.js"></script>
-<script src="${pageContext.request.contextPath}/js/bootstrap-datetimepicker.min.js"></script>
 <script src="assets/js/jquery.backstretch.min.js"></script>
 <script src="${pageContext.request.contextPath}js/jquery.toastmessage.js"></script>
 </body>

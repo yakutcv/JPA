@@ -1,7 +1,7 @@
 package com.SoftServe.ita.Ch_039.Controlers;
 
-import com.SoftServe.ita.Ch_039.Entity.Patient;
-import com.SoftServe.ita.Ch_039.IO.SQL.PatientDAO;
+import com.SoftServe.ita.Ch_039.Model.Entity.Patient;
+import com.SoftServe.ita.Ch_039.Model.DAO.PatientDAO;
 
 import javax.persistence.PersistenceException;
 import javax.servlet.RequestDispatcher;
@@ -15,14 +15,13 @@ import java.util.ArrayList;
 import java.util.List;
 
 
-    @WebServlet("/Patients")
+    @WebServlet("/AllPatientController")
 public class AllPatientController extends HttpServlet {
 
 
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         RequestDispatcher dispatcher = request.getRequestDispatcher("index.jsp");
         dispatcher.forward(request, response);
-
     }
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 

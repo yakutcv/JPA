@@ -20,7 +20,7 @@ function checkPatient(event){
         });
     }
 
-    $.get('AddPatient',{'id':id,'name':firstName,'lastName':lastName,'birthDate':date}, function (data) {
+    $.get('AddPatientController',{'id':id,'name':firstName,'lastName':lastName,'birthDate':date}, function (data) {
         switch (data) {
             case 'Same': {
                 event.preventDefault();
@@ -88,12 +88,12 @@ function checkPatient(event){
             default :{
                 if (id){
                     $.post('EditPatientController',{'id':id,'name':firstName,'lastName':lastName, 'birthDate':date});
-                    window.location.replace("/Patients");
+                    window.location.replace("/AllPatientController");
                     break;
                 }
 
-                $.post('AddPatient',{'name':firstName,'lastName':lastName, 'birthDate':date});
-                window.location.replace("/Patients");
+                $.post('AddPatientController',{'name':firstName,'lastName':lastName, 'birthDate':date});
+                window.location.replace("/AllPatientController");
                 break;
             }
         }
@@ -121,7 +121,7 @@ function checkAnalysis(event) {
         });
     }
 
-    $.get('CheckerAnalysis',{'id':id,'type':type,'report':report,'date':date}, function (data) {
+    $.get('CheckerAnalysisController',{'id':id,'type':type,'report':report,'date':date}, function (data) {
         switch (data){
             case 'invalid_type': {
                 event.preventDefault();
@@ -171,8 +171,8 @@ function checkAnalysis(event) {
                 break;
             }
             default :
-                $.post('AddAnalyzes',{'id':id,'type':type,'report':report,'date':date});
-                window.location.replace("AllAnalyzes?id="+id);
+                $.post('AddAnalyzesController',{'id':id,'type':type,'report':report,'date':date});
+                window.location.replace("AllAnalyzesController?id="+id);
                 break;
         }
     });

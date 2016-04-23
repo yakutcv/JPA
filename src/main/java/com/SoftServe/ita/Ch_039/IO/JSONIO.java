@@ -1,8 +1,8 @@
 package com.SoftServe.ita.Ch_039.IO;
 
 import com.SoftServe.ita.Ch_039.IO.Adapters.DateTimeForJSONAdapter;
-import com.SoftServe.ita.Ch_039.Interfaces.IO;
-import com.SoftServe.ita.Ch_039.Logic.Hospital;
+import com.SoftServe.ita.Ch_039.IO.Interfaces.IO;
+import com.SoftServe.ita.Ch_039.Model.Logic.Hospital;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import org.joda.time.DateTime;

@@ -1,9 +1,9 @@
 package com.SoftServe.ita.Ch_039.Controlers;
 
-import com.SoftServe.ita.Ch_039.Entity.Analysis;
-import com.SoftServe.ita.Ch_039.Entity.Patient;
-import com.SoftServe.ita.Ch_039.IO.SQL.AnalyzesDAO;
-import com.SoftServe.ita.Ch_039.IO.SQL.PatientDAO;
+import com.SoftServe.ita.Ch_039.Model.Entity.Analysis;
+import com.SoftServe.ita.Ch_039.Model.Entity.Patient;
+import com.SoftServe.ita.Ch_039.Model.DAO.AnalyzesDAO;
+import com.SoftServe.ita.Ch_039.Model.DAO.PatientDAO;
 
 import javax.persistence.PersistenceException;
 import javax.servlet.RequestDispatcher;
@@ -19,7 +19,7 @@ import java.util.List;
 /**
  * Created by ayasintc on 4/7/2016.
  */
-@WebServlet("/AllAnalyzes")
+@WebServlet("/AllAnalyzesController")
 
 public class AllAnalyzesController extends HttpServlet {
 
@@ -48,7 +48,7 @@ public class AllAnalyzesController extends HttpServlet {
 
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
-        RequestDispatcher dispatcher = request.getRequestDispatcher("AllPatients");
+        RequestDispatcher dispatcher = request.getRequestDispatcher("AllPatientController");
         dispatcher.forward(request, response);
 
     }

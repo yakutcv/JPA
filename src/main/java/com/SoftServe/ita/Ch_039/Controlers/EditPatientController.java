@@ -1,7 +1,7 @@
 package com.SoftServe.ita.Ch_039.Controlers;
 
-import com.SoftServe.ita.Ch_039.Entity.Patient;
-import com.SoftServe.ita.Ch_039.IO.SQL.PatientDAO;
+import com.SoftServe.ita.Ch_039.Model.Entity.Patient;
+import com.SoftServe.ita.Ch_039.Model.DAO.PatientDAO;
 
 import javax.persistence.PersistenceException;
 import javax.servlet.RequestDispatcher;

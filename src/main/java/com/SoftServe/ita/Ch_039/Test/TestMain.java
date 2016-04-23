@@ -1,10 +1,10 @@
 package com.SoftServe.ita.Ch_039.Test;
 
-import com.SoftServe.ita.Ch_039.Entity.Analysis;
-import com.SoftServe.ita.Ch_039.Entity.AnalysisType;
-import com.SoftServe.ita.Ch_039.Entity.Patient;
-import com.SoftServe.ita.Ch_039.JPA.Service.AnalyzesService;
-import com.SoftServe.ita.Ch_039.JPA.Service.PatientService;
+import com.SoftServe.ita.Ch_039.Model.Entity.Analysis;
+import com.SoftServe.ita.Ch_039.Model.Entity.AnalysisType;
+import com.SoftServe.ita.Ch_039.Model.Entity.Patient;
+import com.SoftServe.ita.Ch_039.Model.DAO.AnalyzesDAO;
+import com.SoftServe.ita.Ch_039.Model.DAO.PatientDAO;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -61,14 +61,12 @@ public class TestMain {
         an.add(analysis1);
         an.add(analysis2);
 
-        PatientService patientService = new PatientService();
 
-        AnalyzesService analyzesService = new AnalyzesService();
-
-        System.out.println(patientService.getPatientByIdWithAllAnalyzes(9));
+        PatientDAO patientDAO = new PatientDAO();
+        AnalyzesDAO analyzesDAO = new AnalyzesDAO();
 
 
-
+        System.out.println(patientDAO.getAllPatientsWithStatusFalse());
 
 
 

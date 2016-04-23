@@ -11,12 +11,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/css/bootstrap.min.css" />
-    <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/css/bootstrap-datetimepicker.min.css" />
+<%--    <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/css/bootstrap-datetimepicker.min.css" />--%>
 
     <script src="${pageContext.request.contextPath}/js/jquery-2.2.3.min.js"></script>
+
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
-    <script src="${pageContext.request.contextPath}/js/moment-with-locales.min.js"></script>
-    <script src="${pageContext.request.contextPath}/js/bootstrap-datetimepicker.min.js"></script>
+   <%-- <script src="${pageContext.request.contextPath}/js/moment-with-locales.min.js"></script>
+    <script src="${pageContext.request.contextPath}/js/bootstrap-datetimepicker.min.js"></script>--%>
 
 
 
@@ -27,7 +28,7 @@
 <div class="container">
     <div class="row">
         <div class="col-md-12">
-            <h4>All Patients</h4>
+            <h4>Admin</h4>
             <div class="table-responsive">
                 <table id="mytable" class="table table-bordred table-striped">
                     <thead>
@@ -35,38 +36,34 @@
                     <th>Last Name</th>
                     <th>First Name</th>
                     <th>Birthdate</th>
-                    <th>Analyzes</th>
-                    <th>Edit</th>
+                    <th>Status</th>
+
                     <th>Delete</th>
                     </thead>
                     <c:forEach items = "${patients}" var = "patient">
                         <tbody>
                         <tr>
-                            <td><c:out value="${count}"/></td>
+                            <td id="counter"><c:out value="${count}"/></td>
                             <c:set var="count" value="${count+1}"/>
                             <td>${patient.lastName}</td>
                             <td>${patient.name} </td>
                             <td>${patient.getBirthDateInString()}</td>
-
                             <td>
-                                <div class="col-sm-5" name = "listAnalyzes">
-                                    <p data-placement="top" data-toggle="tooltip" title="Analyzes">
-                                        <a class="btn btn-success" data-title="Analyzes" href="AllAnalyzes?id=${patient.id}"><span class="glyphicon glyphicon-tint"> </span></a></p>
-                                </div>
-                            </td>
+                                <c:set var="status" value="${patient.getStatus()}"/>
+                                <c:if test="${status==true}">
+                                    <input type="button" class="btn btn-success btn-sm" id="patientStatus" value="${patient.getStatus()}">
+                                </c:if>
 
-                            <td>
-                                <form class="col-sm-5" name = "listAnalyzes">
-                                    <p data-placement="top" data-toggle="tooltip" title="Edit"><a class="btn btn-primary btn" data-title="Edit" href="EditPatientController?id=${patient.id}">
-                                        <span class="glyphicon glyphicon-pencil"></span></a>
-                                    </p>
-                                </form>
+                                <c:if test="${status==false}">
+                                    <input type="button" class="btn btn-warning btn-sm" id="patientStatus" value="${patient.getStatus()}">
+                                </c:if>
+
                             </td>
 
                             <td>
                                 <div class="col-sm-5">
                                     <p data-placement="top" data-toggle="tooltip" title="Delete">
-                                        <button  class="btn btn-danger" id="deletePatient" data-values="DeletePatient?id=,${patient.id},${patient.name}" data-toggle="modal" data-target="#deletePatientModal">
+                                        <button  class="btn btn-danger" id="deletePatient" data-values="AdminPatientController?id=,${patient.id},${patient.lastName}" data-toggle="modal" data-target="#deletePatientModal">
                                             <span class="glyphicon glyphicon-trash"></span>
                                         </button>
                                     </p>
@@ -78,11 +75,30 @@
                     </c:forEach>
                 </table>
             </div>
-            <input type="hidden" id="tmpId" value = "patientId" name = "id" value="${patient.getId()}">
+            <input type="hidden" id="disable" name = "disable" value="disable">
+
         </div>
-        <form name = "goToPatients" action = "Patients" method = "GET">
-            <button type="submit" class="btn btn-default btn-lg"> <span class="glyphicon glyphicon-arrow-left"></span>Go back to the list patients</button>
-        </form>
+
+
+
+        <div>
+            <a type="submit" class="btn btn-default btn-lg" href= "<c:url value = "index.jsp"/>" >
+                <span class="glyphicon glyphicon-arrow-left"></span>Go back to the main page</a>
+
+            <a type="submit" class="btn btn-primary btn-lg" href= "<c:url value = "Admin.jsp"/>" >
+                <span class="glyphicon glyphicon-refresh"></span>Reset</a>
+
+
+            <a class="btn btn-info btn-lg"  href= "<c:url value = "/AdminController"/>" role="button">
+            <span class="glyphicon glyphicon-user"></span> Show all patients </a>
+
+
+            <a class="btn btn-warning btn-lg"  href= "<c:url value = "/AdminController?disable=disable"/>" role="button">
+                <span class="glyphicon glyphicon-user"></span> Show all disabled patients </a>
+
+
+        </div>
+
     </div>
 </div>
 
@@ -142,13 +158,23 @@
         /* var id = $(e.relatedTarget).data('id');*/
         /*  var name = $(e.relatedTarget).data('name');*/
         var Selection = $(e.relatedTarget).data('values').split(",");
-        var name = Selection[2];
+        var lastName = Selection[2];
         var id = Selection[1];
         var action = Selection[0];
         $(this).find('#deleteButton').attr('href', action+id);
-        $('.debug-url').html('Are you sure you want to delete patient <strong>' + name +" ?" + '</strong>');
+        $('.debug-url').html('Are you sure you want to delete patient <strong>' + lastName +" with all his Analyzes ?" + '</strong>');
     });
 </script>
+<script>
+    var patietnId =
 
+
+</script>
+
+
+
+
+<script src="${pageContext.request.contextPath}/js/Admin.js"></script>
 </body>
+
 </html>

@@ -17,7 +17,6 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
     <script src="${pageContext.request.contextPath}/js/moment-with-locales.min.js"></script>
     <script src="${pageContext.request.contextPath}/js/bootstrap-datetimepicker.min.js"></script>
-    <script src="${pageContext.request.contextPath}/js/modal.js"></script>
     <title>All Analyzes</title>
 </head>
 
@@ -48,7 +47,7 @@
 
                             <div class="col-sm-5">
                                 <p data-placement="top" data-toggle="tooltip" title="Delete">
-                                    <button  class="btn btn-danger" id="deletePatient" data-values="DeleteAnalysis?idP=,${patient.id},&idA=${analysis.id},${analysis.getType()},${analysis.getDateInString()}" data-toggle="modal" data-target="#deleteAnalysisModal">
+                                    <button  class="btn btn-danger" id="deletePatient" data-values="DeleteAnalysisController?idP=,${patient.id},&idA=${analysis.id},${analysis.getType()},${analysis.getDateInString()}" data-toggle="modal" data-target="#deleteAnalysisModal">
                                         <span class="glyphicon glyphicon-trash"></span>
                                     </button>
                                 </p>
@@ -79,16 +78,15 @@
             </div>
         </div>
 
-
-
-        <a class="btn btn-default btn-lg" role="button" href = "<c:url value ="Patients"/>">
+        <div>
+        <a class="btn btn-default btn-lg" role="button" href = "<c:url value ="AllPatientController"/>">
             <span class="glyphicon glyphicon-arrow-left"></span> Go back to the list with all patients </a>
 
-        <a class="btn btn-success btn-lg" role="button" href = "<c:url value = "AddAnalyzes?id=${patient.id}"/>">
+        <a class="btn btn-success btn-lg" role="button" href = "<c:url value = "AddAnalyzesController?id=${patient.id}"/>">
             <span class="glyphicon glyphicon-plus"></span> Add </a>
 
         <input type="hidden" id="tmpId" value = "patientId" name = "id" value="${patient.getId()}">
-
+        </div>
     </div>
 </div>
 

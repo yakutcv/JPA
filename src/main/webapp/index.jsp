@@ -23,8 +23,9 @@
 
     <!-- Custom Fonts -->
     <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-    <link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
 
+    <link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
+    <link href="css/mainPage.css" rel="stylesheet" type="text/css">
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -33,7 +34,6 @@
     <![endif]-->
 
 </head>
-
 <body>
 
 <!-- Navigation -->
@@ -59,17 +59,37 @@
         <li>
             <a href="#contact" onclick = $("#menu-close").click(); >Contact</a>
         </li>
+        <li>
+            <a href = "<c:url value = "Admin.jsp"/>" onclick = $("#menu-close").click();>Admin</a>
+        </li>
     </ul>
 </nav>
 
 <!-- Header -->
 <header id="top" class="header">
     <div class="text-vertical-center">
-        <h1>Chernivtsi National Hospital</h1>
-        <h3>The duty of everyone to be healthy</h3>
+        <h1 class="mainText">Chernivtsi National Hospital</h1>
+        <h4 class="mainText">The duty of everyone to be healthy</h4>
         <br>
-        <a class="btn icon-btn btn-success btn-lg" role="button" href = "<c:url value = "AddPatient.jsp"/>"><span class="glyphicon btn-glyphicon glyphicon-plus img-circle text-success"></span>Add Patient</a>
-        <a class="btn icon-btn btn-info btn-lg"  role="button" href = "<c:url value = "Patients"/>"><span class="glyphicon btn-glyphicon glyphicon-share img-circle text-info"></span>All Patients</a>
+
+        <div class="container-fluid padding-50">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-lg-6 col-lg-offset-3">
+                                <p>
+                                    <a class="btn btn-outlined btn-theme btn-lg mainButton additionalButton" data-wow-delay="0.7s" role= "button"
+                                       href = "<c:url value = "AllPatientController"/>">All Patients</a>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
     </div>
 </header>
 

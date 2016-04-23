@@ -30,7 +30,7 @@ public class SelfFormatIO implements IO {
 
     @Override
     public void writeHospital(Hospital hospital, String file) throws IOException {
-        FileWriter writer = new FileWriter("src\\main\\java\\SoftServe.Task_1\\output\\" + file);
+        FileWriter writer = new FileWriter(file);
         try {
             writer.write(covertToString(hospital).toString());
             writer.flush();
@@ -46,7 +46,7 @@ public class SelfFormatIO implements IO {
         List<String> tmpHospital = new ArrayList<>();
         long id = 1;
         String st;
-        try (BufferedReader br = new BufferedReader(new FileReader("src\\main\\java\\SoftServe\\Task_1\\output\\" + file))) {
+        try (BufferedReader br = new BufferedReader(new FileReader(file))) {
             while ((st = br.readLine()) != null) {
                 validPatient(AnalyzesParser.parsePatients(st));
                 tmpHospital.add(st);
@@ -99,7 +99,6 @@ public class SelfFormatIO implements IO {
         for (Patient p : patients) {
             newHospital.append(p.getName() + " " + p.getLastName() + " (" + p.getBirthDate().toString(format1) + "):{");
             for (Analysis analysis : p.getListAnalyzes()) {
-                /*if (!(p.getList().get(p.getList().size() - 1).equals(analysis))) {}*/
                     newHospital.append(" " + analysis.getType() + " (" + analysis.getDate().toString(format) + ") " + analysis.getReport() + ",");
             }
             newHospital.append("}");
@@ -110,46 +109,3 @@ public class SelfFormatIO implements IO {
 
 }
 
-
-/*
-for(String s : tmpList) {
-
-        String tmpPatients [] = s.split("(\\):)");
-
-        String tmpPatient [] = tmpPatients[0].split("(\\()");
-
-        String tmpFullname [] = tmpPatient[0].split("\\s");
-
-        String tmpAnalyzes []  = tmpPatients[1].replaceAll("\\{|,\\s\\}", "").split("\\,");
-
-        Analysis analysis = new Analysis();
-
-        List<Analysis> tmpListOfAnalizes = new ArrayList<>();
-
-        for (int i = 0; i <tmpAnalyzes.length ; i++) {
-
-        String tmp = tmpAnalyzes[i].replaceAll("^(\\s)", "");
-
-        String tmpAnalizesFiels [] = tmp.split("(\\s\\()|(\\)\\s)");
-
-        analysis = Analysis.newAnalysisBuilder()
-        .setId(i)
-        .setType(AnalysisType.valueOf(tmpAnalizesFiels[0]))
-        .setDate(tmpAnalizesFiels[1])
-        .setReport(tmpAnalizesFiels[2])
-        .build();
-
-        tmpListOfAnalizes.add(analysis);
-        }
-        Patient newPatient = Patient.newPatientBuilder()
-        .setBirthDate(tmpPatient[1])
-        .setAnalyzes(tmpListOfAnalizes)
-        .setName(tmpFullname[0])
-        .setLastName(tmpFullname[1])
-        .setId(id)
-        .build();
-        id++;
-        hospital.addPatient(newPatient);
-        }
-
-        return hospital;*/

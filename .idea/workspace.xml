@@ -2,204 +2,36 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e6cafc1e-af77-42e2-9953-db19a232db35" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/SoftServe/ita/Ch_039/Controlers/AdminController.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/SoftServe/ita/Ch_039/Controlers/AdminPatientController.java" />
-      <change type="DELETED" beforePath="E:\Soft Serve\JPA\src\main\java\com\SoftServe\ita\Ch_039\Interfaces\DAO.java" afterPath="" />
-      <change type="DELETED" beforePath="E:\Soft Serve\JPA\src\main\java\com\SoftServe\ita\Ch_039\JPA\Service\AnalyzesService.java" afterPath="" />
-      <change type="DELETED" beforePath="E:\Soft Serve\JPA\src\main\java\com\SoftServe\ita\Ch_039\JPA\Service\PatientService.java" afterPath="" />
-      <change type="DELETED" beforePath="E:\Soft Serve\JPA\src\main\webapp\assets\bootstrap\css\bootstrap-theme.css" afterPath="" />
-      <change type="DELETED" beforePath="E:\Soft Serve\JPA\src\main\webapp\assets\bootstrap\css\bootstrap-theme.css.map" afterPath="" />
-      <change type="DELETED" beforePath="E:\Soft Serve\JPA\src\main\webapp\assets\bootstrap\css\bootstrap-theme.min.css" afterPath="" />
-      <change type="DELETED" beforePath="E:\Soft Serve\JPA\src\main\webapp\assets\bootstrap\css\bootstrap.css" afterPath="" />
-      <change type="DELETED" beforePath="E:\Soft Serve\JPA\src\main\webapp\assets\bootstrap\css\bootstrap.css.map" afterPath="" />
-      <change type="DELETED" beforePath="E:\Soft Serve\JPA\src\main\webapp\assets\bootstrap\css\bootstrap.min.css" afterPath="" />
-      <change type="DELETED" beforePath="E:\Soft Serve\JPA\src\main\webapp\assets\bootstrap\fonts\glyphicons-halflings-regular.eot" afterPath="" />
-      <change type="DELETED" beforePath="E:\Soft Serve\JPA\src\main\webapp\assets\bootstrap\fonts\glyphicons-halflings-regular.svg" afterPath="" />
-      <change type="DELETED" beforePath="E:\Soft Serve\JPA\src\main\webapp\assets\bootstrap\fonts\glyphicons-halflings-regular.ttf" afterPath="" />
-      <change type="DELETED" beforePath="E:\Soft Serve\JPA\src\main\webapp\assets\bootstrap\fonts\glyphicons-halflings-regular.woff" afterPath="" />
-      <change type="DELETED" beforePath="E:\Soft Serve\JPA\src\main\webapp\assets\bootstrap\fonts\glyphicons-halflings-regular.woff2" afterPath="" />
-      <change type="DELETED" beforePath="E:\Soft Serve\JPA\src\main\webapp\assets\bootstrap\js\bootstrap.js" afterPath="" />
-      <change type="DELETED" beforePath="E:\Soft Serve\JPA\src\main\webapp\assets\bootstrap\js\bootstrap.min.js" afterPath="" />
-      <change type="DELETED" beforePath="E:\Soft Serve\JPA\src\main\webapp\assets\bootstrap\js\npm.js" afterPath="" />
-      <change type="DELETED" beforePath="E:\Soft Serve\JPA\src\main\webapp\assets\css\form-elements.css" afterPath="" />
-      <change type="DELETED" beforePath="E:\Soft Serve\JPA\src\main\webapp\assets\css\style.css" afterPath="" />
-      <change type="DELETED" beforePath="E:\Soft Serve\JPA\src\main\webapp\assets\font-awesome\css\font-awesome.css" afterPath="" />
-      <change type="DELETED" beforePath="E:\Soft Serve\JPA\src\main\webapp\assets\font-awesome\css\font-awesome.min.css" afterPath="" />
-      <change type="DELETED" beforePath="E:\Soft Serve\JPA\src\main\webapp\assets\font-awesome\fonts\FontAwesome.otf" afterPath="" />
-      <change type="DELETED" beforePath="E:\Soft Serve\JPA\src\main\webapp\assets\font-awesome\fonts\fontawesome-webfont.eot" afterPath="" />
-      <change type="DELETED" beforePath="E:\Soft Serve\JPA\src\main\webapp\assets\font-awesome\fonts\fontawesome-webfont.svg" afterPath="" />
-      <change type="DELETED" beforePath="E:\Soft Serve\JPA\src\main\webapp\assets\font-awesome\fonts\fontawesome-webfont.ttf" afterPath="" />
-      <change type="DELETED" beforePath="E:\Soft Serve\JPA\src\main\webapp\assets\font-awesome\fonts\fontawesome-webfont.woff" afterPath="" />
-      <change type="DELETED" beforePath="E:\Soft Serve\JPA\src\main\webapp\assets\font-awesome\fonts\fontawesome-webfont.woff2" afterPath="" />
-      <change type="DELETED" beforePath="E:\Soft Serve\JPA\src\main\webapp\assets\font-awesome\less\animated.less" afterPath="" />
-      <change type="DELETED" beforePath="E:\Soft Serve\JPA\src\main\webapp\assets\font-awesome\less\bordered-pulled.less" afterPath="" />
-      <change type="DELETED" beforePath="E:\Soft Serve\JPA\src\main\webapp\assets\font-awesome\less\core.less" afterPath="" />
-      <change type="DELETED" beforePath="E:\Soft Serve\JPA\src\main\webapp\assets\font-awesome\less\fixed-width.less" afterPath="" />
-      <change type="DELETED" beforePath="E:\Soft Serve\JPA\src\main\webapp\assets\font-awesome\less\font-awesome.less" afterPath="" />
-      <change type="DELETED" beforePath="E:\Soft Serve\JPA\src\main\webapp\assets\font-awesome\less\icons.less" afterPath="" />
-      <change type="DELETED" beforePath="E:\Soft Serve\JPA\src\main\webapp\assets\font-awesome\less\larger.less" afterPath="" />
-      <change type="DELETED" beforePath="E:\Soft Serve\JPA\src\main\webapp\assets\font-awesome\less\list.less" afterPath="" />
-      <change type="DELETED" beforePath="E:\Soft Serve\JPA\src\main\webapp\assets\font-awesome\less\mixins.less" afterPath="" />
-      <change type="DELETED" beforePath="E:\Soft Serve\JPA\src\main\webapp\assets\font-awesome\less\path.less" afterPath="" />
-      <change type="DELETED" beforePath="E:\Soft Serve\JPA\src\main\webapp\assets\font-awesome\less\rotated-flipped.less" afterPath="" />
-      <change type="DELETED" beforePath="E:\Soft Serve\JPA\src\main\webapp\assets\font-awesome\less\stacked.less" afterPath="" />
-      <change type="DELETED" beforePath="E:\Soft Serve\JPA\src\main\webapp\assets\font-awesome\less\variables.less" afterPath="" />
-      <change type="DELETED" beforePath="E:\Soft Serve\JPA\src\main\webapp\assets\font-awesome\scss\_animated.scss" afterPath="" />
-      <change type="DELETED" beforePath="E:\Soft Serve\JPA\src\main\webapp\assets\font-awesome\scss\_bordered-pulled.scss" afterPath="" />
-      <change type="DELETED" beforePath="E:\Soft Serve\JPA\src\main\webapp\assets\font-awesome\scss\_core.scss" afterPath="" />
-      <change type="DELETED" beforePath="E:\Soft Serve\JPA\src\main\webapp\assets\font-awesome\scss\_fixed-width.scss" afterPath="" />
-      <change type="DELETED" beforePath="E:\Soft Serve\JPA\src\main\webapp\assets\font-awesome\scss\_icons.scss" afterPath="" />
-      <change type="DELETED" beforePath="E:\Soft Serve\JPA\src\main\webapp\assets\font-awesome\scss\_larger.scss" afterPath="" />
-      <change type="DELETED" beforePath="E:\Soft Serve\JPA\src\main\webapp\assets\font-awesome\scss\_list.scss" afterPath="" />
-      <change type="DELETED" beforePath="E:\Soft Serve\JPA\src\main\webapp\assets\font-awesome\scss\_mixins.scss" afterPath="" />
-      <change type="DELETED" beforePath="E:\Soft Serve\JPA\src\main\webapp\assets\font-awesome\scss\_path.scss" afterPath="" />
-      <change type="DELETED" beforePath="E:\Soft Serve\JPA\src\main\webapp\assets\font-awesome\scss\_rotated-flipped.scss" afterPath="" />
-      <change type="DELETED" beforePath="E:\Soft Serve\JPA\src\main\webapp\assets\font-awesome\scss\_stacked.scss" afterPath="" />
-      <change type="DELETED" beforePath="E:\Soft Serve\JPA\src\main\webapp\assets\font-awesome\scss\_variables.scss" afterPath="" />
-      <change type="DELETED" beforePath="E:\Soft Serve\JPA\src\main\webapp\assets\font-awesome\scss\font-awesome.scss" afterPath="" />
-      <change type="DELETED" beforePath="E:\Soft Serve\JPA\src\main\webapp\assets\ico\apple-touch-icon-114-precomposed.png" afterPath="" />
-      <change type="DELETED" beforePath="E:\Soft Serve\JPA\src\main\webapp\assets\ico\apple-touch-icon-144-precomposed.png" afterPath="" />
-      <change type="DELETED" beforePath="E:\Soft Serve\JPA\src\main\webapp\assets\ico\apple-touch-icon-57-precomposed.png" afterPath="" />
-      <change type="DELETED" beforePath="E:\Soft Serve\JPA\src\main\webapp\assets\ico\apple-touch-icon-72-precomposed.png" afterPath="" />
-      <change type="DELETED" beforePath="E:\Soft Serve\JPA\src\main\webapp\assets\ico\favicon.png" afterPath="" />
-      <change type="DELETED" beforePath="E:\Soft Serve\JPA\src\main\webapp\assets\img\backgrounds\1.jpg" afterPath="" />
-      <change type="DELETED" beforePath="E:\Soft Serve\JPA\src\main\webapp\assets\js\Background.js" afterPath="" />
-      <change type="DELETED" beforePath="E:\Soft Serve\JPA\src\main\webapp\assets\js\jquery-1.11.1.js" afterPath="" />
-      <change type="DELETED" beforePath="E:\Soft Serve\JPA\src\main\webapp\assets\js\jquery-1.11.1.min.js" afterPath="" />
-      <change type="DELETED" beforePath="E:\Soft Serve\JPA\src\main\webapp\assets\js\jquery.backstretch.js" afterPath="" />
-      <change type="DELETED" beforePath="E:\Soft Serve\JPA\src\main\webapp\assets\js\jquery.backstretch.min.js" afterPath="" />
-      <change type="DELETED" beforePath="E:\Soft Serve\JPA\src\main\webapp\css\animate.css" afterPath="" />
-      <change type="DELETED" beforePath="E:\Soft Serve\JPA\src\main\webapp\css\animate.min.css" afterPath="" />
-      <change type="DELETED" beforePath="E:\Soft Serve\JPA\src\main\webapp\css\bootstrap-datepicker.css" afterPath="" />
-      <change type="DELETED" beforePath="E:\Soft Serve\JPA\src\main\webapp\css\bootstrap-datepicker3.css" afterPath="" />
-      <change type="DELETED" beforePath="E:\Soft Serve\JPA\src\main\webapp\css\bootstrap-datetimepicker.min.css" afterPath="" />
-      <change type="DELETED" beforePath="E:\Soft Serve\JPA\src\main\webapp\css\bootstrap.css" afterPath="" />
-      <change type="DELETED" beforePath="E:\Soft Serve\JPA\src\main\webapp\css\bootstrap.css.map" afterPath="" />
-      <change type="DELETED" beforePath="E:\Soft Serve\JPA\src\main\webapp\css\bootstrap.min.css" afterPath="" />
-      <change type="DELETED" beforePath="E:\Soft Serve\JPA\src\main\webapp\css\creative.css" afterPath="" />
-      <change type="DELETED" beforePath="E:\Soft Serve\JPA\src\main\webapp\css\formValidation.css" afterPath="" />
-      <change type="DELETED" beforePath="E:\Soft Serve\JPA\src\main\webapp\css\jquery.toastmessage.css" afterPath="" />
-      <change type="DELETED" beforePath="E:\Soft Serve\JPA\src\main\webapp\css\style.css" afterPath="" />
-      <change type="DELETED" beforePath="E:\Soft Serve\JPA\src\main\webapp\css\stylish-portfolio.css" afterPath="" />
-      <change type="DELETED" beforePath="E:\Soft Serve\JPA\src\main\webapp\font-awesome\css\font-awesome.css" afterPath="" />
-      <change type="DELETED" beforePath="E:\Soft Serve\JPA\src\main\webapp\font-awesome\css\font-awesome.min.css" afterPath="" />
-      <change type="DELETED" beforePath="E:\Soft Serve\JPA\src\main\webapp\font-awesome\fonts\FontAwesome.otf" afterPath="" />
-      <change type="DELETED" beforePath="E:\Soft Serve\JPA\src\main\webapp\font-awesome\fonts\fontawesome-webfont.eot" afterPath="" />
-      <change type="DELETED" beforePath="E:\Soft Serve\JPA\src\main\webapp\font-awesome\fonts\fontawesome-webfont.svg" afterPath="" />
-      <change type="DELETED" beforePath="E:\Soft Serve\JPA\src\main\webapp\font-awesome\fonts\fontawesome-webfont.ttf" afterPath="" />
-      <change type="DELETED" beforePath="E:\Soft Serve\JPA\src\main\webapp\font-awesome\fonts\fontawesome-webfont.woff" afterPath="" />
-      <change type="DELETED" beforePath="E:\Soft Serve\JPA\src\main\webapp\font-awesome\fonts\fontawesome-webfont.woff2" afterPath="" />
-      <change type="DELETED" beforePath="E:\Soft Serve\JPA\src\main\webapp\font-awesome\less\animated.less" afterPath="" />
-      <change type="DELETED" beforePath="E:\Soft Serve\JPA\src\main\webapp\font-awesome\less\bordered-pulled.less" afterPath="" />
-      <change type="DELETED" beforePath="E:\Soft Serve\JPA\src\main\webapp\font-awesome\less\core.less" afterPath="" />
-      <change type="DELETED" beforePath="E:\Soft Serve\JPA\src\main\webapp\font-awesome\less\fixed-width.less" afterPath="" />
-      <change type="DELETED" beforePath="E:\Soft Serve\JPA\src\main\webapp\font-awesome\less\font-awesome.less" afterPath="" />
-      <change type="DELETED" beforePath="E:\Soft Serve\JPA\src\main\webapp\font-awesome\less\icons.less" afterPath="" />
-      <change type="DELETED" beforePath="E:\Soft Serve\JPA\src\main\webapp\font-awesome\less\larger.less" afterPath="" />
-      <change type="DELETED" beforePath="E:\Soft Serve\JPA\src\main\webapp\font-awesome\less\list.less" afterPath="" />
-      <change type="DELETED" beforePath="E:\Soft Serve\JPA\src\main\webapp\font-awesome\less\mixins.less" afterPath="" />
-      <change type="DELETED" beforePath="E:\Soft Serve\JPA\src\main\webapp\font-awesome\less\path.less" afterPath="" />
-      <change type="DELETED" beforePath="E:\Soft Serve\JPA\src\main\webapp\font-awesome\less\rotated-flipped.less" afterPath="" />
-      <change type="DELETED" beforePath="E:\Soft Serve\JPA\src\main\webapp\font-awesome\less\spinning.less" afterPath="" />
-      <change type="DELETED" beforePath="E:\Soft Serve\JPA\src\main\webapp\font-awesome\less\stacked.less" afterPath="" />
-      <change type="DELETED" beforePath="E:\Soft Serve\JPA\src\main\webapp\font-awesome\less\variables.less" afterPath="" />
-      <change type="DELETED" beforePath="E:\Soft Serve\JPA\src\main\webapp\font-awesome\scss\_animated.scss" afterPath="" />
-      <change type="DELETED" beforePath="E:\Soft Serve\JPA\src\main\webapp\font-awesome\scss\_bordered-pulled.scss" afterPath="" />
-      <change type="DELETED" beforePath="E:\Soft Serve\JPA\src\main\webapp\font-awesome\scss\_core.scss" afterPath="" />
-      <change type="DELETED" beforePath="E:\Soft Serve\JPA\src\main\webapp\font-awesome\scss\_fixed-width.scss" afterPath="" />
-      <change type="DELETED" beforePath="E:\Soft Serve\JPA\src\main\webapp\font-awesome\scss\_icons.scss" afterPath="" />
-      <change type="DELETED" beforePath="E:\Soft Serve\JPA\src\main\webapp\font-awesome\scss\_larger.scss" afterPath="" />
-      <change type="DELETED" beforePath="E:\Soft Serve\JPA\src\main\webapp\font-awesome\scss\_list.scss" afterPath="" />
-      <change type="DELETED" beforePath="E:\Soft Serve\JPA\src\main\webapp\font-awesome\scss\_mixins.scss" afterPath="" />
-      <change type="DELETED" beforePath="E:\Soft Serve\JPA\src\main\webapp\font-awesome\scss\_path.scss" afterPath="" />
-      <change type="DELETED" beforePath="E:\Soft Serve\JPA\src\main\webapp\font-awesome\scss\_rotated-flipped.scss" afterPath="" />
-      <change type="DELETED" beforePath="E:\Soft Serve\JPA\src\main\webapp\font-awesome\scss\_spinning.scss" afterPath="" />
-      <change type="DELETED" beforePath="E:\Soft Serve\JPA\src\main\webapp\font-awesome\scss\_stacked.scss" afterPath="" />
-      <change type="DELETED" beforePath="E:\Soft Serve\JPA\src\main\webapp\font-awesome\scss\_variables.scss" afterPath="" />
-      <change type="DELETED" beforePath="E:\Soft Serve\JPA\src\main\webapp\font-awesome\scss\font-awesome.scss" afterPath="" />
-      <change type="DELETED" beforePath="E:\Soft Serve\JPA\src\main\webapp\fonts\glyphicons-halflings-regular.eot" afterPath="" />
-      <change type="DELETED" beforePath="E:\Soft Serve\JPA\src\main\webapp\fonts\glyphicons-halflings-regular.svg" afterPath="" />
-      <change type="DELETED" beforePath="E:\Soft Serve\JPA\src\main\webapp\fonts\glyphicons-halflings-regular.ttf" afterPath="" />
-      <change type="DELETED" beforePath="E:\Soft Serve\JPA\src\main\webapp\fonts\glyphicons-halflings-regular.woff" afterPath="" />
-      <change type="DELETED" beforePath="E:\Soft Serve\JPA\src\main\webapp\fonts\glyphicons-halflings-regular.woff2" afterPath="" />
-      <change type="DELETED" beforePath="E:\Soft Serve\JPA\src\main\webapp\images\close.gif" afterPath="" />
-      <change type="DELETED" beforePath="E:\Soft Serve\JPA\src\main\webapp\images\error.png" afterPath="" />
-      <change type="DELETED" beforePath="E:\Soft Serve\JPA\src\main\webapp\images\notice.png" afterPath="" />
-      <change type="DELETED" beforePath="E:\Soft Serve\JPA\src\main\webapp\images\success.png" afterPath="" />
-      <change type="DELETED" beforePath="E:\Soft Serve\JPA\src\main\webapp\images\warning.png" afterPath="" />
-      <change type="DELETED" beforePath="E:\Soft Serve\JPA\src\main\webapp\img\background.jpg" afterPath="" />
-      <change type="DELETED" beforePath="E:\Soft Serve\JPA\src\main\webapp\img\bg.jpg" afterPath="" />
-      <change type="DELETED" beforePath="E:\Soft Serve\JPA\src\main\webapp\img\callout.jpg" afterPath="" />
-      <change type="DELETED" beforePath="E:\Soft Serve\JPA\src\main\webapp\img\portfolio-1.jpg" afterPath="" />
-      <change type="DELETED" beforePath="E:\Soft Serve\JPA\src\main\webapp\img\portfolio-2.jpg" afterPath="" />
-      <change type="DELETED" beforePath="E:\Soft Serve\JPA\src\main\webapp\img\portfolio-3.jpg" afterPath="" />
-      <change type="DELETED" beforePath="E:\Soft Serve\JPA\src\main\webapp\img\portfolio-4.jpg" afterPath="" />
-      <change type="DELETED" beforePath="E:\Soft Serve\JPA\src\main\webapp\js\bootstrap-datepicker.js" afterPath="" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/img/hospital.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/img/hospital2.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/img/hospital3.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/js/Admin.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/js/Carousel.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/dateTimePicker/css/bootstrap-datepicker.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/dateTimePicker/css/bootstrap-datetimepicker.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/dateTimePicker/css/bootstrap-datetimepicker.min.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/dateTimePicker/js/bootstrap-datetimepicker.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/css/mainPage.css" />
       <change type="DELETED" beforePath="E:\Soft Serve\JPA\src\main\webapp\js\bootstrap-datetimepicker.min.js" afterPath="" />
-      <change type="DELETED" beforePath="E:\Soft Serve\JPA\src\main\webapp\js\bootstrap.js" afterPath="" />
-      <change type="DELETED" beforePath="E:\Soft Serve\JPA\src\main\webapp\js\bootstrap.min.js" afterPath="" />
-      <change type="DELETED" beforePath="E:\Soft Serve\JPA\src\main\webapp\js\cbpAnimatedHeader.js" afterPath="" />
-      <change type="DELETED" beforePath="E:\Soft Serve\JPA\src\main\webapp\js\check.js" afterPath="" />
-      <change type="DELETED" beforePath="E:\Soft Serve\JPA\src\main\webapp\js\classie.js" afterPath="" />
-      <change type="DELETED" beforePath="E:\Soft Serve\JPA\src\main\webapp\js\creative.js" afterPath="" />
-      <change type="DELETED" beforePath="E:\Soft Serve\JPA\src\main\webapp\js\datetimePicker.js" afterPath="" />
-      <change type="DELETED" beforePath="E:\Soft Serve\JPA\src\main\webapp\js\formValidation.js" afterPath="" />
-      <change type="DELETED" beforePath="E:\Soft Serve\JPA\src\main\webapp\js\jqBootstrapValidation-1.3.7.js" afterPath="" />
-      <change type="DELETED" beforePath="E:\Soft Serve\JPA\src\main\webapp\js\jquery-1.11.1.js" afterPath="" />
-      <change type="DELETED" beforePath="E:\Soft Serve\JPA\src\main\webapp\js\jquery-1.11.1.min.js" afterPath="" />
-      <change type="DELETED" beforePath="E:\Soft Serve\JPA\src\main\webapp\js\jquery-2.1.4.min.js" afterPath="" />
-      <change type="DELETED" beforePath="E:\Soft Serve\JPA\src\main\webapp\js\jquery-2.2.3.min.js" afterPath="" />
-      <change type="DELETED" beforePath="E:\Soft Serve\JPA\src\main\webapp\js\jquery.backstretch.js" afterPath="" />
-      <change type="DELETED" beforePath="E:\Soft Serve\JPA\src\main\webapp\js\jquery.backstretch.min.js" afterPath="" />
-      <change type="DELETED" beforePath="E:\Soft Serve\JPA\src\main\webapp\js\jquery.easing.min.js" afterPath="" />
-      <change type="DELETED" beforePath="E:\Soft Serve\JPA\src\main\webapp\js\jquery.fittext.js" afterPath="" />
-      <change type="DELETED" beforePath="E:\Soft Serve\JPA\src\main\webapp\js\jquery.js" afterPath="" />
-      <change type="DELETED" beforePath="E:\Soft Serve\JPA\src\main\webapp\js\jquery.toastmessage.js" afterPath="" />
-      <change type="DELETED" beforePath="E:\Soft Serve\JPA\src\main\webapp\js\moment-with-locales.min.js" afterPath="" />
-      <change type="DELETED" beforePath="E:\Soft Serve\JPA\src\main\webapp\js\npm.js" afterPath="" />
-      <change type="DELETED" beforePath="E:\Soft Serve\JPA\src\main\webapp\js\placeholder.js" afterPath="" />
-      <change type="DELETED" beforePath="E:\Soft Serve\JPA\src\main\webapp\js\require.js" afterPath="" />
-      <change type="DELETED" beforePath="E:\Soft Serve\JPA\src\main\webapp\js\scripts.js" afterPath="" />
-      <change type="DELETED" beforePath="E:\Soft Serve\JPA\src\main\webapp\js\validationForm.js" afterPath="" />
-      <change type="DELETED" beforePath="E:\Soft Serve\JPA\src\main\webapp\js\wow.js" afterPath="" />
-      <change type="DELETED" beforePath="E:\Soft Serve\JPA\src\main\webapp\js\wow.min.js" afterPath="" />
-      <change type="DELETED" beforePath="E:\Soft Serve\JPA\src\main\webapp\less\creative.less" afterPath="" />
-      <change type="DELETED" beforePath="E:\Soft Serve\JPA\src\main\webapp\less\mixins.less" afterPath="" />
-      <change type="DELETED" beforePath="E:\Soft Serve\JPA\src\main\webapp\less\variables.less" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/Task/Task-1.0-SNAPSHOT.war" afterPath="$PROJECT_DIR$/out/artifacts/Task/Task-1.0-SNAPSHOT.war" />
+      <change type="MODIFICATION" beforePath="E:\Soft Serve\JPA\out\artifacts\Task\Task-1.0-SNAPSHOT.war" afterPath="E:\Soft Serve\JPA\out\artifacts\Task\Task-1.0-SNAPSHOT.war" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/AddAnalyzes.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/AddAnalyzes.jsp" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/AddPatient.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/AddPatient.jsp" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/Admin.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/Admin.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/SoftServe/ita/Ch_039/Controlers/AdminPatientController.java" afterPath="$PROJECT_DIR$/src/main/java/com/SoftServe/ita/Ch_039/Controlers/AdminPatientController.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/AllAnalyzes.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/AllAnalyzes.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/SoftServe/ita/Ch_039/Controlers/AllAnalyzesController.java" afterPath="$PROJECT_DIR$/src/main/java/com/SoftServe/ita/Ch_039/Controlers/AllAnalyzesController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/SoftServe/ita/Ch_039/Controlers/AllPatientController.java" afterPath="$PROJECT_DIR$/src/main/java/com/SoftServe/ita/Ch_039/Controlers/AllPatientController.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/AllPatients.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/AllPatients.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/SoftServe/ita/Ch_039/Model/Entity/AnalysisType.java" afterPath="$PROJECT_DIR$/src/main/java/com/SoftServe/ita/Ch_039/Model/Entity/AnalysisType.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/EditPatient.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/EditPatient.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/SoftServe/ita/Ch_039/Controlers/EditPatientController.java" afterPath="$PROJECT_DIR$/src/main/java/com/SoftServe/ita/Ch_039/Controlers/EditPatientController.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/SoftServe/ita/Ch_039/IO/JSONIO.java" afterPath="$PROJECT_DIR$/src/main/java/com/SoftServe/ita/Ch_039/IO/JSONIO.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/SoftServe/ita/Ch_039/IO/SelfFormatIO.java" afterPath="$PROJECT_DIR$/src/main/java/com/SoftServe/ita/Ch_039/IO/SelfFormatIO.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/SoftServe/ita/Ch_039/IO/Validators/SelfFormatValidator.java" afterPath="$PROJECT_DIR$/src/main/java/com/SoftServe/ita/Ch_039/IO/Validators/SelfFormatValidator.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Task.iml" afterPath="$PROJECT_DIR$/Task.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/SoftServe/ita/Ch_039/Test/TestMain.java" afterPath="$PROJECT_DIR$/src/main/java/com/SoftServe/ita/Ch_039/Test/TestMain.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/SoftServe/ita/Ch_039/IO/XMLIO.java" afterPath="$PROJECT_DIR$/src/main/java/com/SoftServe/ita/Ch_039/IO/XMLIO.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/css/bootstrap-datetimepicker.min.css" afterPath="$PROJECT_DIR$/src/main/webapp/css/bootstrap-datetimepicker.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/js/datetimePicker.js" afterPath="$PROJECT_DIR$/src/main/webapp/js/datetimePicker.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/index.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/index.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" afterPath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml" afterPath="$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/css/stylish-portfolio.css" afterPath="$PROJECT_DIR$/src/main/webapp/css/stylish-portfolio.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MOVED" beforePath="E:\Soft Serve\JPA\src\main\java\com\SoftServe\ita\Ch_039\Controlers\AddAnalyzes.java" afterPath="$PROJECT_DIR$/src/main/java/com/SoftServe/ita/Ch_039/Controlers/AddAnalyzesController.java" />
-      <change type="MOVED" beforePath="E:\Soft Serve\JPA\src\main\java\com\SoftServe\ita\Ch_039\Controlers\AddPatient.java" afterPath="$PROJECT_DIR$/src/main/java/com/SoftServe/ita/Ch_039/Controlers/AddPatientController.java" />
-      <change type="MOVED" beforePath="E:\Soft Serve\JPA\src\main\java\com\SoftServe\ita\Ch_039\Controlers\CheckerAnalysis.java" afterPath="$PROJECT_DIR$/src/main/java/com/SoftServe/ita/Ch_039/Controlers/CheckerAnalysisController.java" />
-      <change type="MOVED" beforePath="E:\Soft Serve\JPA\src\main\java\com\SoftServe\ita\Ch_039\Controlers\DeleteAnalysis.java" afterPath="$PROJECT_DIR$/src/main/java/com/SoftServe/ita/Ch_039/Controlers/DeleteAnalysisController.java" />
-      <change type="MOVED" beforePath="E:\Soft Serve\JPA\src\main\java\com\SoftServe\ita\Ch_039\Controlers\DeletePatient.java" afterPath="$PROJECT_DIR$/src/main/java/com/SoftServe/ita/Ch_039/Controlers/DeletePatientController.java" />
-      <change type="MOVED" beforePath="E:\Soft Serve\JPA\src\main\java\com\SoftServe\ita\Ch_039\Entity\Analysis.java" afterPath="$PROJECT_DIR$/src/main/java/com/SoftServe/ita/Ch_039/Model/Entity/Analysis.java" />
-      <change type="MOVED" beforePath="E:\Soft Serve\JPA\src\main\java\com\SoftServe\ita\Ch_039\Entity\AnalysisType.java" afterPath="$PROJECT_DIR$/src/main/java/com/SoftServe/ita/Ch_039/Model/Entity/AnalysisType.java" />
-      <change type="MOVED" beforePath="E:\Soft Serve\JPA\src\main\java\com\SoftServe\ita\Ch_039\Entity\Patient.java" afterPath="$PROJECT_DIR$/src/main/java/com/SoftServe/ita/Ch_039/Model/Entity/Patient.java" />
-      <change type="MOVED" beforePath="E:\Soft Serve\JPA\src\main\java\com\SoftServe\ita\Ch_039\IO\SQL\AnalyzesDAO.java" afterPath="$PROJECT_DIR$/src/main/java/com/SoftServe/ita/Ch_039/Model/DAO/AnalyzesDAO.java" />
-      <change type="MOVED" beforePath="E:\Soft Serve\JPA\src\main\java\com\SoftServe\ita\Ch_039\IO\SQL\PatientDAO.java" afterPath="$PROJECT_DIR$/src/main/java/com/SoftServe/ita/Ch_039/Model/DAO/PatientDAO.java" />
-      <change type="MOVED" beforePath="E:\Soft Serve\JPA\src\main\java\com\SoftServe\ita\Ch_039\Interfaces\IO.java" afterPath="$PROJECT_DIR$/src/main/java/com/SoftServe/ita/Ch_039/IO/Interfaces/IO.java" />
-      <change type="MOVED" beforePath="E:\Soft Serve\JPA\src\main\java\com\SoftServe\ita\Ch_039\Logic\Hospital.java" afterPath="$PROJECT_DIR$/src/main/java/com/SoftServe/ita/Ch_039/Model/Logic/Hospital.java" />
-      <change type="MOVED" beforePath="E:\Soft Serve\JPA\src\main\java\com\SoftServe\ita\Ch_039\output\hospital.xml" afterPath="$PROJECT_DIR$/src/main/java/com/SoftServe/ita/Ch_039/IO/output/hospital.xml" />
-      <change type="MOVED" beforePath="E:\Soft Serve\JPA\src\main\java\com\SoftServe\ita\Ch_039\output\myTxt.txt" afterPath="$PROJECT_DIR$/src/main/java/com/SoftServe/ita/Ch_039/IO/output/myTxt.txt" />
+      <change type="MOVED" beforePath="E:\Soft Serve\JPA\src\main\webapp\js\bootstrap-datepicker.js" afterPath="$PROJECT_DIR$/src/main/webapp/dateTimePicker/js/bootstrap-datepicker.js" />
     </list>
     <ignored path=".idea/dataSources.local.xml" />
     <ignored path="$PROJECT_DIR$/out/" />
@@ -259,67 +91,7 @@
         <entry file="file://$PROJECT_DIR$/src/main/webapp/js/Admin.js">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1105">
-              <caret line="30" column="0" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="AllPatients.jsp" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/AllPatients.jsp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-16.307692" vertical-offset="2126" max-vertical-offset="2737">
-              <caret line="150" column="44" selection-start-line="150" selection-start-column="44" selection-end-line="150" selection-end-column="44" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Admin.jsp" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/Admin.jsp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-7.8461537" vertical-offset="0" max-vertical-offset="3145">
-              <caret line="12" column="91" selection-start-line="12" selection-start-column="91" selection-end-line="12" selection-end-column="91" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="style.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/css/style.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="3544" max-vertical-offset="4420">
-              <caret line="215" column="51" selection-start-line="215" selection-start-column="51" selection-end-line="215" selection-end-column="51" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="creative.less" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/less/creative.less">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.46314102" vertical-offset="0" max-vertical-offset="6001">
-              <caret line="17" column="20" selection-start-line="17" selection-start-column="20" selection-end-line="17" selection-end-column="20" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="mainPage.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/css/mainPage.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1003">
-              <caret line="0" column="9" selection-start-line="0" selection-start-column="1" selection-end-line="0" selection-end-column="9" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="AddPatient.jsp" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/AddPatient.jsp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-16.307692" vertical-offset="358" max-vertical-offset="2261">
-              <caret line="46" column="31" selection-start-line="46" selection-start-column="31" selection-end-line="46" selection-end-column="31" />
+              <caret line="33" column="47" selection-start-line="33" selection-start-column="47" selection-end-line="33" selection-end-column="47" />
               <folding />
             </state>
           </provider>
@@ -328,28 +100,48 @@
       <file leaf-file-name="index.jsp" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/index.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-5.6545453" vertical-offset="879" max-vertical-offset="5440">
-              <caret line="70" column="62" selection-start-line="70" selection-start-column="62" selection-end-line="70" selection-end-column="62" />
+            <state vertical-scroll-proportion="-10.423077" vertical-offset="1582" max-vertical-offset="7038">
+              <caret line="109" column="0" selection-start-line="109" selection-start-column="0" selection-end-line="109" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="scripts.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/js/scripts.js">
+      <file leaf-file-name="mainPage.css" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/css/mainPage.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="648" max-vertical-offset="1241">
-              <caret line="6" column="63" selection-start-line="6" selection-start-column="63" selection-end-line="6" selection-end-column="63" />
+            <state vertical-scroll-proportion="0.32" vertical-offset="863" max-vertical-offset="1972">
+              <caret line="63" column="13" selection-start-line="63" selection-start-column="13" selection-end-line="63" selection-end-column="13" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="datetimePicker.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/js/datetimePicker.js">
+      <file leaf-file-name="EditPatient.jsp" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/EditPatient.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="17" max-vertical-offset="425">
-              <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="8" selection-end-column="3" />
+            <state vertical-scroll-proportion="-15.692307" vertical-offset="0" max-vertical-offset="1853">
+              <caret line="24" column="4" selection-start-line="24" selection-start-column="4" selection-end-line="24" selection-end-column="95" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AddAnalyzesController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/SoftServe/ita/Ch_039/Controlers/AddAnalyzesController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="217" max-vertical-offset="867">
+              <caret line="41" column="37" selection-start-line="41" selection-start-column="37" selection-end-line="41" selection-end-column="37" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="PatientDAO.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/SoftServe/ita/Ch_039/Model/DAO/PatientDAO.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2652">
+              <caret line="137" column="25" selection-start-line="137" selection-start-column="25" selection-end-line="137" selection-end-column="25" />
               <folding />
             </state>
           </provider>
@@ -665,14 +457,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/com/SoftServe/ita/Ch_039/IO/Adapters/DateTimeForJPAPatientAdapter.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/SoftServe/ita/Ch_039/IO/Adapters/DateTimeForJPAAnalysisAdapter.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/META-INF/persistence.tld" />
-        <option value="dbtable:/21b81309/9686fe9c-bbd8-46ab-84be-9930d3c8b459/andrewdatabase..analysis" />
-        <option value="$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/com/SoftServe/ita/Ch_039/IO/SelfFormatIO.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/SoftServe/ita/Ch_039/Logic/Hospital.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/SoftServe/ita/Ch_039/JPA/Service/SQLConnector.java" />
         <option value="dbtable:/db89f338/9686fe9c-bbd8-46ab-84be-9930d3c8b459/andrewdatabase..patient" />
         <option value="$PROJECT_DIR$/src/main/java/com/SoftServe/ita/Ch_039/JPA/Service/AnalyzesService.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/SoftServe/ita/Ch_039/JPA/Service/PatientService.java" />
@@ -683,19 +467,15 @@
         <option value="$PROJECT_DIR$/src/main/java/com/SoftServe/ita/Ch_039/Controlers/DeletePatient.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/SoftServe/ita/Ch_039/Controlers/EditPatientController.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/SoftServe/ita/Ch_039/Entity/AnalysisType.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/js/modal.js" />
         <option value="$PROJECT_DIR$/src/main/webapp/testTimePicker.jsp" />
-        <option value="$PROJECT_DIR$/src/main/webapp/css/stylish-portfolio.css" />
         <option value="$PROJECT_DIR$/src/main/java/com/SoftServe/ita/Ch_039/Controlers/AddAnalyzesContoller.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/SoftServe/ita/Ch_039/Controlers/AllAnalyzesController.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/SoftServe/ita/Ch_039/Controlers/CheckerAnalysisController.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/js/check.js" />
         <option value="$PROJECT_DIR$/src/main/java/com/SoftServe/ita/Ch_039/Controlers/DeleteAnalysisController.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/AllAnalyzes.jsp" />
         <option value="$PROJECT_DIR$/src/main/java/com/SoftServe/ita/Ch_039/Controlers/DeletePatientController.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/SoftServe/ita/Ch_039/Entity/Analysis.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/SoftServe/ita/Ch_039/Entity/Patient.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/SoftServe/ita/Ch_039/Controlers/AdminPatientController.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/SoftServe/ita/Ch_039/Controlers/AddAnalyzesController.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/SoftServe/ita/Ch_039/IO/SQL/AnalyzesDAO.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/SoftServe/ita/Ch_039/Controlers/AddPatientController.java" />
@@ -704,18 +484,30 @@
         <option value="$PROJECT_DIR$/src/main/java/com/SoftServe/ita/Ch_039/Test/TestMain.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/SoftServe/ita/Ch_039/Controlers/AllPatientController.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/SoftServe/ita/Ch_039/Controlers/AdminController.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/Admin.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/css/style.css" />
+        <option value="$PROJECT_DIR$/src/main/webapp/assets/css/form-elements.css" />
+        <option value="$PROJECT_DIR$/src/main/java/com/SoftServe/ita/Ch_039/Interfaces/DAO.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/SoftServe/ita/Ch_039/IO/JSONIO.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/SoftServe/ita/Ch_039/IO/SelfFormatIO.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/SoftServe/ita/Ch_039/IO/XMLIO.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/AddPatient.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/AllAnalyzes.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/AllPatients.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/EditPatient.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/js/datetimePicker.js" />
         <option value="$PROJECT_DIR$/src/main/webapp/AddAnalyzes.jsp" />
-        <option value="$PROJECT_DIR$/src/main/webapp/css/style.css" />
-        <option value="$PROJECT_DIR$/src/main/webapp/assets/css/form-elements.css" />
-        <option value="$PROJECT_DIR$/src/main/webapp/AddPatient.jsp" />
-        <option value="$PROJECT_DIR$/src/main/webapp/css/mainPage.css" />
-        <option value="$PROJECT_DIR$/src/main/webapp/index.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/css/bootstrap-datetimepicker.min.css" />
+        <option value="$PROJECT_DIR$/src/main/java/com/SoftServe/ita/Ch_039/Controlers/AdminPatientController.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/Admin.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/js/Admin.js" />
-        <option value="$PROJECT_DIR$/src/main/webapp/AllPatients.jsp" />
-        <option value="$PROJECT_DIR$/src/main/java/com/SoftServe/ita/Ch_039/Interfaces/DAO.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml" />
+        <option value="$PROJECT_DIR$/src/main/webapp/css/Carousel.css" />
+        <option value="$PROJECT_DIR$/src/main/webapp/js/modal.js" />
+        <option value="$PROJECT_DIR$/src/main/webapp/js/Carousel.js" />
+        <option value="$PROJECT_DIR$/src/main/webapp/css/stylish-portfolio.css" />
+        <option value="$PROJECT_DIR$/src/main/java/com/SoftServe/ita/Ch_039/Model/Entity/AnalysisType.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/index.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/css/mainPage.css" />
       </list>
     </option>
   </component>
@@ -860,41 +652,11 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
+              <option name="myItemId" value="resources" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="Ch_039" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Task" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="JPA" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Ch_039" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Model" />
+              <option name="myItemId" value="META-INF" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -921,14 +683,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="Ch_039" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Model" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Entity" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -962,11 +716,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\Soft Serve\JPA\src\main\webapp\img" />
+      <recent name="E:\Soft Serve\JPA\src\main\webapp\dateTimePicker\css" />
+      <recent name="E:\Soft Serve\JPA\src\main\webapp\dateTimePicker\js" />
       <recent name="E:\Soft Serve\JPA\src\main\webapp" />
       <recent name="E:\Soft Serve\JPA\src\main\webapp\assets\js" />
-      <recent name="E:\Soft Serve\JPA\src\main\webapp\img" />
-      <recent name="D:\AndrewJass\JPA\src\main\webapp\js" />
-      <recent name="D:\AndrewJass\JPA\src\main\java\com\SoftServe\ita\Ch_039\JPA\Service" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="E:\Soft Serve\JPA\src\main\webapp\sources" />
@@ -1416,7 +1170,7 @@
       <workItem from="1461349138294" duration="17294000" />
       <workItem from="1461403942957" duration="4736000" />
       <workItem from="1461410574927" duration="14504000" />
-      <workItem from="1461426782506" duration="1929000" />
+      <workItem from="1461426782506" duration="20852000" />
     </task>
     <task id="LOCAL-00001" summary="Serve">
       <created>1461250466489</created>
@@ -1430,47 +1184,53 @@
       <option name="project" value="LOCAL" />
       <updated>1461258807641</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="homework">
+      <created>1461428779914</created>
+      <option name="number" value="00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1461428779914</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="123300000" />
+    <option name="totallyTimeSpent" value="142223000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="0" />
     <editor active="false" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32972974" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="CDI" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.108208954" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="ASM" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32972974" sideWeight="0.5" order="14" side_tool="false" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="CDI" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.108208954" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="ASM" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="JSF" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32995737" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="JSF" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32995737" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32972974" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.0021621622" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32972974" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.0021621622" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.26702702" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Persistence" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24946696" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
+      <window_info id="Persistence" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24946696" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24946696" sideWeight="0.9277286" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24920969" sideWeight="0.072271384" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24920969" sideWeight="0.072271384" order="4" side_tool="true" content_ui="tabs" />
+      <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32864866" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.15458423" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24946696" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.15458423" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24946696" sideWeight="0.5" order="5" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
@@ -1494,7 +1254,8 @@
     </option>
     <MESSAGE value="Homework" />
     <MESSAGE value="Serve" />
-    <option name="LAST_COMMIT_MESSAGE" value="Serve" />
+    <MESSAGE value="homework" />
+    <option name="LAST_COMMIT_MESSAGE" value="homework" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1507,103 +1268,11 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/js/bootstrap-datepicker.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-26.316477" vertical-offset="20399" max-vertical-offset="36567">
-          <caret line="251" column="72" selection-start-line="251" selection-start-column="68" selection-end-line="251" selection-end-column="72" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/css/bootstrap-datepicker.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="6.406199" vertical-offset="3451" max-vertical-offset="8143">
-          <caret line="434" column="7" selection-start-line="434" selection-start-column="5" selection-end-line="434" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/css/jquery.toastmessage.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.23831776" vertical-offset="0" max-vertical-offset="2363">
-          <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$APPLICATION_HOME_DIR$/lib/idea.jar!/resources/html5-schema/html5/sectional.rnc">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.47663552" vertical-offset="0" max-vertical-offset="2601">
-          <caret line="18" column="9" selection-start-line="18" selection-start-column="9" selection-end-line="18" selection-end-column="9" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/SoftServe/ita/Ch_039/IO/XMLIO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.10014728" vertical-offset="0" max-vertical-offset="679">
-          <caret line="13" column="13" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/SoftServe/ita/Ch_039/IO/JSONIO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.10014728" vertical-offset="0" max-vertical-offset="714">
-          <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/SoftServe/ita/Ch_039/IO/Parsers/AnalyzesParser.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="262" max-vertical-offset="918">
-          <caret line="34" column="15" selection-start-line="34" selection-start-column="15" selection-end-line="34" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/SoftServe/ita/Ch_039/IO/SelfFormatIO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="1571" max-vertical-offset="2431">
-          <caret line="122" column="36" selection-start-line="122" selection-start-column="36" selection-end-line="122" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/SoftServe/ita/Ch_039/IO/Validators/SelfFormatValidator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="58" max-vertical-offset="2550">
-          <caret line="24" column="35" selection-start-line="24" selection-start-column="35" selection-end-line="24" selection-end-column="35" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/SoftServe/ita/Ch_039/Model/Logic/Hospital.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="2144" max-vertical-offset="2737">
-          <caret line="162" column="16" selection-start-line="162" selection-start-column="16" selection-end-line="162" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/SoftServe/ita/Ch_039/Controlers/EditPatientController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="171" max-vertical-offset="850">
           <caret line="28" column="40" selection-start-line="28" selection-start-column="40" selection-end-line="28" selection-end-column="40" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/SoftServe/ita/Ch_039/Controlers/AddAnalyzesController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="102" max-vertical-offset="867">
-          <caret line="41" column="37" selection-start-line="41" selection-start-column="37" selection-end-line="41" selection-end-column="37" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/SoftServe/ita/Ch_039/Controlers/DeletePatientController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="884">
-          <caret line="27" column="61" selection-start-line="27" selection-start-column="8" selection-end-line="27" selection-end-column="61" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1643,43 +1312,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/img/hospital.jpg">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/css/stylish-portfolio.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="2193" max-vertical-offset="4386">
-          <caret line="174" column="27" selection-start-line="174" selection-start-column="27" selection-end-line="174" selection-end-column="27" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/AllAnalyzes.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.30114567" vertical-offset="649" max-vertical-offset="1921">
-          <caret line="49" column="72" selection-start-line="49" selection-start-column="72" selection-end-line="49" selection-end-column="72" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/SoftServe/ita/Ch_039/Controlers/AdminPatientController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6276923" vertical-offset="0" max-vertical-offset="650">
-          <caret line="36" column="76" selection-start-line="36" selection-start-column="61" selection-end-line="36" selection-end-column="76" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/SoftServe/ita/Ch_039/Model/DAO/PatientDAO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="2002" max-vertical-offset="2652">
-          <caret line="137" column="25" selection-start-line="137" selection-start-column="25" selection-end-line="137" selection-end-column="25" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/SoftServe/ita/Ch_039/Controlers/AllAnalyzesController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="51" max-vertical-offset="833">
@@ -1692,14 +1324,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.36615384" vertical-offset="0" max-vertical-offset="650">
           <caret line="26" column="0" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/SoftServe/ita/Ch_039/Controlers/CheckerAnalysisController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.18307692" vertical-offset="0" max-vertical-offset="650">
-          <caret line="15" column="13" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
           <folding />
         </state>
       </provider>
@@ -1738,30 +1362,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/AddAnalyzes.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="255" max-vertical-offset="1938">
-          <caret line="28" column="92" selection-start-line="28" selection-start-column="3" selection-end-line="28" selection-end-column="92" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/EditPatient.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="785" max-vertical-offset="1921">
-          <caret line="57" column="133" selection-start-line="57" selection-start-column="133" selection-end-line="57" selection-end-column="133" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/assets/css/style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="1904" max-vertical-offset="3961">
-          <caret line="112" column="5" selection-start-line="112" selection-start-column="1" selection-end-line="112" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/js/check.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.078461535" vertical-offset="0" max-vertical-offset="4012">
@@ -1770,80 +1370,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/js/datetimePicker.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="425">
-          <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="8" selection-end-column="3" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/assets/css/form-elements.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.37037036" vertical-offset="1096" max-vertical-offset="1717">
-          <caret line="78" column="16" selection-start-line="78" selection-start-column="16" selection-end-line="78" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/AddPatient.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-16.307692" vertical-offset="358" max-vertical-offset="2261">
-          <caret line="46" column="31" selection-start-line="46" selection-start-column="31" selection-end-line="46" selection-end-column="31" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/img/bg.jpg">
       <provider selected="true" editor-type-id="images">
         <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/js/scripts.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1241">
-          <caret line="6" column="63" selection-start-line="6" selection-start-column="63" selection-end-line="6" selection-end-column="63" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/font-awesome/css/font-awesome.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-7.210345" vertical-offset="4590" max-vertical-offset="35564">
-          <caret line="24" column="22" selection-start-line="24" selection-start-column="22" selection-end-line="24" selection-end-column="22" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/css/mainPage.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1020">
-          <caret line="0" column="9" selection-start-line="0" selection-start-column="1" selection-end-line="0" selection-end-column="9" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/index.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-5.6545453" vertical-offset="879" max-vertical-offset="5440">
-          <caret line="70" column="62" selection-start-line="70" selection-start-column="62" selection-end-line="70" selection-end-column="62" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/js/Admin.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1105">
-          <caret line="30" column="0" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/AllPatients.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-16.307692" vertical-offset="2126" max-vertical-offset="2737">
-          <caret line="150" column="44" selection-start-line="150" selection-start-column="44" selection-end-line="150" selection-end-column="44" />
-          <folding />
-        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/SoftServe/ita/Ch_039/IO/Interfaces/IO.java">
@@ -1870,6 +1399,147 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/js/scripts.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1241">
+          <caret line="6" column="63" selection-start-line="6" selection-start-column="63" selection-end-line="6" selection-end-column="63" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/assets/img/backgrounds/1.jpg">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/less/creative.less">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.68108976" vertical-offset="0" max-vertical-offset="6001">
+          <caret line="25" column="20" selection-start-line="25" selection-start-column="20" selection-end-line="25" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/SoftServe/ita/Ch_039/IO/JSONIO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.83692306" vertical-offset="0" max-vertical-offset="714">
+          <caret line="39" column="9" selection-start-line="39" selection-start-column="9" selection-end-line="39" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/SoftServe/ita/Ch_039/IO/SelfFormatIO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="1.8830769" vertical-offset="0" max-vertical-offset="1683">
+          <caret line="90" column="5" selection-start-line="90" selection-start-column="5" selection-end-line="90" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/SoftServe/ita/Ch_039/IO/XMLIO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.6276923" vertical-offset="0" max-vertical-offset="650">
+          <caret line="33" column="0" selection-start-line="33" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/dateTimePicker/js/bootstrap-datepicker.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="36193">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/dateTimePicker/css/bootstrap-datepicker.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="153" max-vertical-offset="8143">
+          <caret line="9" column="29" selection-start-line="9" selection-start-column="29" selection-end-line="9" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/AllPatients.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.3617021" vertical-offset="0" max-vertical-offset="2737">
+          <caret line="13" column="0" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/AddPatient.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.27659574" vertical-offset="222" max-vertical-offset="1972">
+          <caret line="23" column="0" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="129" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/css/bootstrap-datetimepicker.min.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.10675039" vertical-offset="0" max-vertical-offset="637">
+          <caret line="4" column="7603" selection-start-line="4" selection-start-column="7603" selection-end-line="4" selection-end-column="7603" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/AllAnalyzes.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-9.769231" vertical-offset="1310" max-vertical-offset="1921">
+          <caret line="92" column="0" selection-start-line="92" selection-start-column="0" selection-end-line="103" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/js/datetimePicker.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.31384614" vertical-offset="0" max-vertical-offset="650">
+          <caret line="12" column="0" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/AddAnalyzes.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.41666666" vertical-offset="481" max-vertical-offset="2125">
+          <caret line="13" column="107" selection-start-line="13" selection-start-column="107" selection-end-line="13" selection-end-column="107" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/Admin.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="36.653847" vertical-offset="1990" max-vertical-offset="3060">
+          <caret line="61" column="0" selection-start-line="61" selection-start-column="0" selection-end-line="61" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/SoftServe/ita/Ch_039/Controlers/AdminPatientController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="629">
+          <caret line="19" column="36" selection-start-line="19" selection-start-column="14" selection-end-line="19" selection-end-column="36" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="442">
+          <caret line="20" column="14" selection-start-line="20" selection-start-column="14" selection-end-line="20" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/SoftServe/ita/Ch_039/Controlers/CheckerAnalysisController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="578">
+          <caret line="15" column="13" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/SoftServe/ita/Ch_039/Model/Entity/Analysis.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="1.3338462" vertical-offset="0" max-vertical-offset="1819">
@@ -1881,26 +1551,132 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/Admin.jsp">
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/font-awesome/css/font-awesome.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-7.8461537" vertical-offset="0" max-vertical-offset="3145">
-          <caret line="12" column="91" selection-start-line="12" selection-start-column="91" selection-end-line="12" selection-end-column="91" />
+        <state vertical-scroll-proportion="-7.365777" vertical-offset="5100" max-vertical-offset="35564">
+          <caret line="24" column="22" selection-start-line="24" selection-start-column="22" selection-end-line="24" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/assets/css/form-elements.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="2.04" vertical-offset="0" max-vertical-offset="1717">
+          <caret line="78" column="16" selection-start-line="78" selection-start-column="16" selection-end-line="78" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/assets/css/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.51692307" vertical-offset="2240" max-vertical-offset="3961">
+          <caret line="112" column="5" selection-start-line="112" selection-start-column="1" selection-end-line="112" selection-end-column="5" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/css/style.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="3544" max-vertical-offset="4420">
+        <state vertical-scroll-proportion="5.623077" vertical-offset="0" max-vertical-offset="4420">
           <caret line="215" column="51" selection-start-line="215" selection-start-column="51" selection-end-line="215" selection-end-column="51" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/less/creative.less">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/SoftServe/ita/Ch_039/Controlers/DeletePatientController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.46314102" vertical-offset="0" max-vertical-offset="6001">
-          <caret line="17" column="20" selection-start-line="17" selection-start-column="20" selection-end-line="17" selection-end-column="20" />
+        <state vertical-scroll-proportion="0.3726813" vertical-offset="0" max-vertical-offset="884">
+          <caret line="27" column="61" selection-start-line="27" selection-start-column="8" selection-end-line="27" selection-end-column="61" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/SoftServe/ita/Ch_039/Controlers/AddAnalyzesController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="217" max-vertical-offset="867">
+          <caret line="41" column="37" selection-start-line="41" selection-start-column="37" selection-end-line="41" selection-end-column="37" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/font-awesome/css/font-awesome.min.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="637">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/css/bootstrap.min.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.10675039" vertical-offset="0" max-vertical-offset="637">
+          <caret line="4" column="15855" selection-start-line="4" selection-start-column="15855" selection-end-line="4" selection-end-column="15855" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/js/Carousel.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="3736" max-vertical-offset="4386">
+          <caret line="244" column="63" selection-start-line="244" selection-start-column="63" selection-end-line="244" selection-end-column="63" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/SoftServe/ita/Ch_039/Model/Entity/AnalysisType.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.13076924" vertical-offset="0" max-vertical-offset="650">
+          <caret line="6" column="36" selection-start-line="6" selection-start-column="36" selection-end-line="6" selection-end-column="36" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/SoftServe/ita/Ch_039/Model/DAO/PatientDAO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2652">
+          <caret line="137" column="25" selection-start-line="137" selection-start-column="25" selection-end-line="137" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/EditPatient.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-15.692307" vertical-offset="0" max-vertical-offset="1853">
+          <caret line="24" column="4" selection-start-line="24" selection-start-column="4" selection-end-line="24" selection-end-column="95" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/css/stylish-portfolio.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-1.1707692" vertical-offset="3736" max-vertical-offset="4386">
+          <caret line="175" column="30" selection-start-line="175" selection-start-column="30" selection-end-line="175" selection-end-column="30" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/js/Admin.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="166" max-vertical-offset="1105">
+          <caret line="33" column="47" selection-start-line="33" selection-start-column="47" selection-end-line="33" selection-end-column="47" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/index.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-10.423077" vertical-offset="1582" max-vertical-offset="7038">
+          <caret line="109" column="0" selection-start-line="109" selection-start-column="0" selection-end-line="109" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/css/mainPage.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.32" vertical-offset="863" max-vertical-offset="1972">
+          <caret line="63" column="13" selection-start-line="63" selection-start-column="13" selection-end-line="63" selection-end-column="13" />
           <folding />
         </state>
       </provider>

@@ -19,19 +19,26 @@
     <link href="css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Custom CSS -->
-    <link href="css/stylish-portfolio.css" rel="stylesheet">
+
 
     <!-- Custom Fonts -->
     <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
 
     <link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
     <link href="css/mainPage.css" rel="stylesheet" type="text/css">
+
+    <link href="css/stylish-portfolio.css" rel="stylesheet">
+
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
     <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
     <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
+
+    <script src="js/jquery-2.2.3.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <script src="js/Carousel.js"></script>
 
 </head>
 <body>
@@ -67,9 +74,91 @@
 
 <!-- Header -->
 <header id="top" class="header">
-    <div class="text-vertical-center">
+
+
+
+
+
+    <div id="Carousel" class="carousel slide">
+
+        <ol class="carousel-indicators">
+            <li class="item1 active"></li>
+            <li class="item2 "></li>
+            <li class="item3 "></li>
+        </ol>
+
+        <div class="carousel-inner" role="listbox">
+
+            <div class="item active">
+                <img src="img/hospital.jpg" alt="hospital" class="header">
+
+                <div class="hero">
+                    <hgroup>
+                        <h1>Chernivtsi National Hospital</h1>
+                        <h2>Everyone's duty is to be healthy</h2>
+                    </hgroup>
+                    <br>
+                    <p>
+                        <a class="btn btn-outlined btn-theme btn-lg mainButton additionalButton" data-wow-delay="0.7s" role= "button"
+                           href = "<c:url value = "AllPatientController"/>">All Patients</a>
+                    </p>
+                </div>
+
+
+            </div>
+
+
+            <div class="item">
+                <img src="img/hospital2.jpg" alt="hospital2" class="header">
+
+                <div class="hero">
+                    <hgroup>
+                        <h1>Chernivtsi National Hospital</h1>
+                        <h2>Some patients recover, because they believe in doctors</h2>
+                    </hgroup>
+                    <br>
+                    <p>
+                        <a class="btn btn-outlined btn-theme btn-lg mainButton additionalButton" data-wow-delay="0.7s" role= "button"
+                           href = "<c:url value = "AllPatientController"/>">All Patients</a>
+                    </p>
+                </div>
+
+
+            </div>
+
+
+            <div class="item">
+                <img src="img/hospital3.jpg" alt="hospital3" class="header">
+
+                <div class="hero">
+                    <hgroup>
+                        <h1>Chernivtsi National Hospital</h1>
+                        <h2>Health is not simply the absence of sickness</h2>
+                    </hgroup>
+                    <br>
+                    <p>
+                        <a class="btn btn-outlined btn-theme btn-lg mainButton additionalButton" data-wow-delay="0.7s" role= "button"
+                           href = "<c:url value = "AllPatientController"/>">All Patients</a>
+                    </p>
+                </div>
+
+
+            </div>
+
+        </div>
+
+
+
+
+
+    </div>
+
+
+
+    <%--<div class="text-vertical-center">
+
         <h1 class="mainText">Chernivtsi National Hospital</h1>
-        <h4 class="mainText">The duty of everyone to be healthy</h4>
+        <h4 class="mainText">Everyone's duty is to be healthy</h4>
         <br>
 
         <div class="container-fluid padding-50">
@@ -90,7 +179,12 @@
         </div>
 
 
-    </div>
+    </div>--%>
+
+
+
+
+
 </header>
 
 <!-- About -->

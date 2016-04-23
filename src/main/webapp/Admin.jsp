@@ -51,11 +51,11 @@
                             <td>
                                 <c:set var="status" value="${patient.getStatus()}"/>
                                 <c:if test="${status==true}">
-                                    <input type="button" class="btn btn-success btn-sm" id="patientStatus" value="${patient.getStatus()}">
+                                    <input type="button" class="btn btn-success btn-sm" id="patientStatus" value="${patient.getStatus()}" data-values="AdminPatientController?id=,${patient.id},${patient.getStatus()}">
                                 </c:if>
 
                                 <c:if test="${status==false}">
-                                    <input type="button" class="btn btn-warning btn-sm" id="patientStatus" value="${patient.getStatus()}">
+                                    <input type="button" class="btn btn-warning btn-sm" id="patientStatus" value="${patient.getStatus()}" data-values="AdminPatientController?id=,${patient.id},${patient.getStatus()}">
                                 </c:if>
 
                             </td>
@@ -164,11 +164,6 @@
         $(this).find('#deleteButton').attr('href', action+id);
         $('.debug-url').html('Are you sure you want to delete patient <strong>' + lastName +" with all his Analyzes ?" + '</strong>');
     });
-</script>
-<script>
-    var patietnId =
-
-
 </script>
 
 

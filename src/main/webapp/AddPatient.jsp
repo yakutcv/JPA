@@ -12,43 +12,30 @@
 
     <title>New Patient</title>
     <!-- CSS -->
-
     <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/css/bootstrap.min.css" />
-
     <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:400,100,300,500">
-    <link rel="stylesheet" href="${pageContext.request.contextPath}assets/font-awesome/css/font-awesome.min.css">
-    <link rel="stylesheet" href="${pageContext.request.contextPath}assets/css/form-elements.css">
-    <link rel="stylesheet" href="${pageContext.request.contextPath}assets/css/style.css">
-    <link rel="stylesheet" href="${pageContext.request.contextPath}css/jquery.toastmessage.css">
-    <link rel="stylesheet" href="${pageContext.request.contextPath}css/formValidation.css">
-    <link rel="stylesheet" href="${pageContext.request.contextPath}css/style.css">
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/assets/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/assets/css/form-elements.css">
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/assets/css/style.css">
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/css/jquery.toastmessage.css">
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/css/formValidation.css">
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/css/style.css">
 
-
+    <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/dateTimePicker/css/bootstrap-datepicker.css">
 
 
     <script src="${pageContext.request.contextPath}/js/jquery-2.2.3.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
     <script src="${pageContext.request.contextPath}/js/moment-with-locales.min.js"></script>
     <script src="${pageContext.request.contextPath}/js/jquery.backstretch.min.js"></script>
-    <script src="${pageContext.request.contextPath}js/validationForm.js"></script>
+    <script src="${pageContext.request.contextPath}/js/validationForm.js"></script>
     <script src="${pageContext.request.contextPath}/js/check.js"></script>
     <script src="${pageContext.request.contextPath}/assets/js/Background.js"></script>
-    <script src="${pageContext.request.contextPath}/dateTimePicker/js/bootstrap-datetimepicker.min.js"></script>
-    <script src="assets/js/jquery.backstretch.min.js"></script>
-    <script src="${pageContext.request.contextPath}js/jquery.toastmessage.js"></script>
 
-    <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/css/bootstrap-datetimepicker.min.css" />
-    <script>
-        $(function () {
-            var d = new Date();
-            $('#datetimepicker4').datetimepicker({
-                format: 'DD/MM/YYYY',
-                maxDate:d,
-                showClose:true,
-                viewMode: 'DD/MM/YYYY'
-            });
-        });
-    </script>
+    <script src="${pageContext.request.contextPath}/dateTimePicker/js/bootstrap-datepicker.js"></script>
+    <script src="assets/js/jquery.backstretch.min.js"></script>
+    <script src="${pageContext.request.contextPath}/js/jquery.toastmessage.js"></script>
+    <script src="${pageContext.request.contextPath}/js/datetimePicker.js"></script>
 
 </head>
 <body>
@@ -120,9 +107,5 @@
         </div>
     </div>
 </footer>
-
-
-
-
 </body>
 </html>

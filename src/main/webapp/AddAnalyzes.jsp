@@ -11,8 +11,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Add Analysis</title>
     <!-- CSS -->
-    <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/css/bootstrap.min.css"/>
     <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/css/bootstrap-datetimepicker.min.css"/>
+    <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/css/bootstrap.min.css"/>
     <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:400,100,300,500">
     <link rel="stylesheet" href="${pageContext.request.contextPath}/assets/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="${pageContext.request.contextPath}/assets/font-awesome/css/font-awesome.min.css">
@@ -22,7 +22,7 @@
     <link rel="stylesheet" href="${pageContext.request.contextPath}/css/style.css">
     <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/css/bootstrap.min.css"/>
     <link rel="stylesheet" href="${pageContext.request.contextPath}/css/style.css">
-    <link rel="stylesheet" type="text/css"href="${pageContext.request.contextPath}/dateTimePicker/css/bootstrap-datetimepicker.min.css"/>
+
 
     <script src="${pageContext.request.contextPath}/js/jquery-2.2.3.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
@@ -32,8 +32,19 @@
     <script src="${pageContext.request.contextPath}/assets/js/jquery.backstretch.min.js"></script>
     <script src="${pageContext.request.contextPath}/assets/js/Background.js"></script>
     <script src="${pageContext.request.contextPath}/dateTimePicker/js/bootstrap-datetimepicker.min.js"></script>
-    <script src="${pageContext.request.contextPath}/js/datetimePicker.js"></script>
 
+
+<script>
+    var d = new Date();
+    $(function () {
+    $('#datetimepicker2').datetimepicker({
+    format: 'DD/MM/YYYY HH:mm',
+    sideBySide: true,
+    maxDate:d,
+    showClose:true
+    });
+    });
+</script>
 
 </head>
 <body>

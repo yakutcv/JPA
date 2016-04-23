@@ -11,14 +11,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Edit Patient</title>
     <!-- CSS -->
+
+    <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/dateTimePicker/css/bootstrap-datepicker.css">
     <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/css/bootstrap.min.css" />
     <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:400,100,300,500">
-    <link rel="stylesheet" href="${pageContext.request.contextPath}assets/font-awesome/css/font-awesome.min.css">
-    <link rel="stylesheet" href="${pageContext.request.contextPath}assets/css/form-elements.css">
-    <link rel="stylesheet" href="${pageContext.request.contextPath}assets/css/style.css">
-    <link rel="stylesheet" href="${pageContext.request.contextPath}css/jquery.toastmessage.css">
-    <link rel="stylesheet" href="${pageContext.request.contextPath}css/style.css">
-    <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/css/bootstrap-datetimepicker.min.css" />
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/assets/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/assets/css/form-elements.css">
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/assets/css/style.css">
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/css/jquery.toastmessage.css">
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/css/style.css">
 
     <script src="${pageContext.request.contextPath}/js/jquery-2.2.3.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
@@ -28,6 +29,7 @@
     <script src="${pageContext.request.contextPath}/dateTimePicker/js/bootstrap-datetimepicker.min.js"></script>
     <script src="${pageContext.request.contextPath}/js/datetimePicker.js"></script>
     <script src="${pageContext.request.contextPath}/assets/js/Background.js"></script>
+    <script src="${pageContext.request.contextPath}/dateTimePicker/js/bootstrap-datepicker.js"></script>
 
 </head>
 <body>
@@ -98,11 +100,5 @@
         </div>
     </div>
 </footer>
-
-
-<script src="${pageContext.request.contextPath}/js/bootstrap.min.js"></script>
-<script src="${pageContext.request.contextPath}/js/moment-with-locales.min.js"></script>
-<script src="assets/js/jquery.backstretch.min.js"></script>
-<script src="${pageContext.request.contextPath}js/jquery.toastmessage.js"></script>
 </body>
 </html>

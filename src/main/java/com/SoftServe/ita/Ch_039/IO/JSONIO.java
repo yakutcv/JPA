@@ -18,7 +18,7 @@ public class JSONIO implements IO {
         Gson gson = new GsonBuilder().registerTypeAdapter(DateTime.class, new DateTimeForJSONAdapter()).setPrettyPrinting().create();
         String json = gson.toJson(hospital);
         try{
-            FileWriter writer = new FileWriter("src\\SoftServe\\SoftServe.Task_1\\output\\" + file);
+            FileWriter writer = new FileWriter(file);
             writer.write(json);
             writer.close();
             System.out.println("Json file created!");
@@ -32,7 +32,7 @@ public class JSONIO implements IO {
         Gson gson = new GsonBuilder().registerTypeAdapter(DateTime.class, new DateTimeForJSONAdapter()).create();
         Hospital hospital = new Hospital();
         try{
-            BufferedReader br = new BufferedReader(new FileReader("src\\SoftServe\\SoftServe.Task_1\\output\\" + file));
+            BufferedReader br = new BufferedReader(new FileReader(file));
             hospital = gson.fromJson(br, Hospital.class);
             System.out.println(hospital);
         }catch (FileNotFoundException e) {

@@ -19,6 +19,12 @@ public enum AnalysisType implements Serializable {
     RH_FACTOR,
     @XmlEnumValue(value = "Allergy")
     ALLERGY,
-    @XmlEnumValue(value = "Allergy")
-    ALLERGY_2
+    @XmlEnumValue(value = "Allergy_2")
+    ALLERGY_2,
+    @XmlEnumValue(value = "Karyotyping")
+    KARYOTYPING,
+    @XmlEnumValue(value = "Cancer")
+    CANCER,
+    @XmlEnumValue(value = "Hepatitis")
+    HEPATITIS
 }

@@ -14,7 +14,7 @@
             <property name="javax.persistence.jdbc.driver" value="com.mysql.jdbc.Driver"/>
             <property name="javax.persistence.jdbc.user" value="root"/>
             <property name="javax.persistence.jdbc.password" value="root"/>
-            <property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/andrewdatabase?characterEncoding=UTF-8"/>
+            <property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/chernivtsi_hospital?characterEncoding=UTF-8"/>
            <!-- <property name="eclipselink.ddl-generation" value="drop-and-create-tables"/>-->
         </properties>
     </persistence-unit>

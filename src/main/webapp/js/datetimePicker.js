@@ -1,20 +1,12 @@
 
 $(function () {
-    var d = new Date();
-    $('#datetimepicker4').datetimepicker({
-        format: 'DD/MM/YYYY',
-        maxDate:d,
-        howClose:true
+    $('#datetimepicker4').datepicker({
+        format: "dd/mm/yyyy",
+        endDate: "today",
+        orientation: "bottom left",
+        daysOfWeekHighlighted: "0,6",
+        autoclose: true,
+        todayHighlight: true
     });
 });
 
-
-var d = new Date();
-$(function () {
-    $('#datetimepicker2').datetimepicker({
-        format: 'DD/MM/YYYY HH:mm',
-        sideBySide: true,
-        maxDate:d,
-        showClose:true
-    });
-});

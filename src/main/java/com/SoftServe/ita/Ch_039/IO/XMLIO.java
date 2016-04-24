@@ -1,6 +1,6 @@
 package com.SoftServe.ita.Ch_039.IO;
 
-import com.SoftServe.ita.Ch_039.IO.Interfaces.IO;
+import com.SoftServe.ita.Ch_039.Interfaces.IO;
 import com.SoftServe.ita.Ch_039.Model.Logic.Hospital;
 
 import javax.xml.bind.JAXBContext;
@@ -18,7 +18,7 @@ public class XMLIO implements IO {
             JAXBContext jc = JAXBContext.newInstance(Hospital.class);
             Marshaller m = jc.createMarshaller();
             m.setProperty(Marshaller.JAXB_FORMATTED_OUTPUT, true);
-            m.marshal(hospital, new File("src\\SoftServe\\SoftServe.Task_1\\output\\" + file));
+            m.marshal(hospital, new File(file));
             System.out.println("XML file created!");
         }catch (JAXBException e){
             System.out.println("JAXB wrong " + e);

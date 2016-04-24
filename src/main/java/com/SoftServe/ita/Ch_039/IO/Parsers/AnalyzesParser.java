@@ -14,9 +14,7 @@ public class AnalyzesParser {
     private static final String ANALYZES_PATTERN = "\\s([A-Z]{1,})\\s\\((.*)\\)\\s(.*)";
     private static final String INPUT_PATTERN = "([A-Z]{1}[a-z]{1,})\\s([A-Z]{1}[a-z]{1,})\\s\\((.*)\\)\\:\\{(.*)\\}";
 
-
     public static List<String> parsePatients(String string) throws SelfFormatException {
-
         List<String> patients = new ArrayList<>();
         try{
             Pattern p = Pattern.compile(INPUT_PATTERN);
@@ -35,7 +33,6 @@ public class AnalyzesParser {
         return patients;
     }
 
-
     public static List<String> parseAnalyzes(String string) throws SelfFormatException {
         List<String> analyzes = new ArrayList<>();
         try{
@@ -50,6 +47,4 @@ public class AnalyzesParser {
         }
         return analyzes;
     }
-
-
 }

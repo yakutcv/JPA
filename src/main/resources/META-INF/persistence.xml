@@ -7,8 +7,8 @@
         <provider>org.eclipse.persistence.jpa.PersistenceProvider</provider>
         <class>com.SoftServe.ita.Ch_039.Model.Entity.Patient</class>
         <class>com.SoftServe.ita.Ch_039.Model.Entity.Analysis</class>
-        <class>com.SoftServe.ita.Ch_039.IO.Adapters.DateTimeForJPAPatientAdapter</class>
-        <class>com.SoftServe.ita.Ch_039.IO.Adapters.DateTimeForJPAAnalysisAdapter</class>
+        <class>com.SoftServe.ita.Ch_039.Adapters.DateTimeForJPAPatientAdapter</class>
+        <class>com.SoftServe.ita.Ch_039.Adapters.DateTimeForJPAAnalysisAdapter</class>
         <properties>
             <property name="eclipselink.ddl-generation" value="create-tables"/>
             <property name="javax.persistence.jdbc.driver" value="com.mysql.jdbc.Driver"/>

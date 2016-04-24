@@ -1,7 +1,9 @@
 package com.SoftServe.ita.Ch_039.Model.Entity;
 
-import com.SoftServe.ita.Ch_039.IO.Adapters.DateTimeForJPAAnalysisAdapter;
-import com.SoftServe.ita.Ch_039.IO.Adapters.DateTimeForXmlAdapter;
+import com.SoftServe.ita.Ch_039.Adapters.DateTimeForJPAAnalysisAdapter;
+import com.SoftServe.ita.Ch_039.Adapters.DateTimeForJSONAdapter;
+import com.SoftServe.ita.Ch_039.Adapters.DateTimeForXmlAdapter;
+import com.google.gson.annotations.JsonAdapter;
 import org.joda.time.DateTime;
 import org.joda.time.format.DateTimeFormat;
 import org.joda.time.format.DateTimeFormatter;
@@ -30,7 +32,6 @@ import java.io.Serializable;
         @NamedQuery(name = "DELETE_ALL_ANALYZES_BY_PATIENT_ID", query ="DELETE FROM Analysis a WHERE a.patient =:patient")
 })
 
-
 public class Analysis implements Comparable<Analysis>, Serializable {
 
     @Id
@@ -38,7 +39,8 @@ public class Analysis implements Comparable<Analysis>, Serializable {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @XmlAttribute(name="id")
     private long id=1;
-    //@JsonAdapter(DateTimeForJSONAdapter.class)
+
+    @JsonAdapter(DateTimeForJSONAdapter.class)
     @Column
     @NotNull
     @Basic(optional = true)
@@ -68,14 +70,13 @@ public class Analysis implements Comparable<Analysis>, Serializable {
     @Transient
     private DateTimeFormatter formatter = DateTimeFormat.forPattern("dd/MM/yyyy HH:mm");
 
+    //default constructor
     public Analysis(){
     }
 
+    //getters and setters
     public void setPatient(Patient patient) {
         this.patient = patient;
-        /*if(!patient.getListAnalyzes().contains(this)){
-            patient.getListAnalyzes().add(this);
-        }*/
     }
 
     public Patient getPatient() {
@@ -118,6 +119,7 @@ public class Analysis implements Comparable<Analysis>, Serializable {
         return type;
     }
 
+    //Patient builder
     public static AnalysisBuilder newAnalysisBuilder () {
         return new Analysis().new AnalysisBuilder();
     }
@@ -129,8 +131,7 @@ public class Analysis implements Comparable<Analysis>, Serializable {
 
     public class AnalysisBuilder {
 
-        private AnalysisBuilder(){
-        }
+        private AnalysisBuilder(){}
 
         public AnalysisBuilder setReport(String report) {
             Analysis.this.report = report;
@@ -161,6 +162,5 @@ public class Analysis implements Comparable<Analysis>, Serializable {
     public String toString() {
         return "Type of analysis - " + type +  ", Date - " + date.toString(formatter) + ", Report - " + report + "." +"\n";
     }
-
 
 }

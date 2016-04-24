@@ -1,9 +1,8 @@
 package com.SoftServe.ita.Ch_039.Controlers;
 
 import com.SoftServe.ita.Ch_039.Model.Entity.Patient;
-import com.SoftServe.ita.Ch_039.Model.DAO.PatientDAO;
+import com.SoftServe.ita.Ch_039.Service.PatientService;
 
-import javax.persistence.PersistenceException;
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -12,17 +11,15 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.io.PrintWriter;
-import java.util.ArrayList;
 import java.util.List;
 
 import static com.SoftServe.ita.Ch_039.IO.Validators.SelfFormatValidator.validBirthDate;
 import static com.SoftServe.ita.Ch_039.IO.Validators.SelfFormatValidator.validName;
 
-/**
- * Created by ayasintc on 4/7/2016.
- */
 @WebServlet("/AddPatientController")
 public class AddPatientController extends HttpServlet {
+
+    PatientService patientService = new PatientService();
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
@@ -32,12 +29,14 @@ public class AddPatientController extends HttpServlet {
         String birthDate = request.getParameter("birthDate");
         String id = request.getParameter("id");
 
+        //create tmpPatient
         Patient patient = Patient.newPatientBuilder()
-                .setBirthDate(birthDate)
-                .setLastName(lastName)
                 .setName(name)
+                .setLastName(lastName)
+                .setBirthDate(birthDate)
                 .build();
 
+        //valid patient
         if(!validName(patient.getName())){
             out.print("Invalid_name");
         }else if(!validName(patient.getLastName())){
@@ -45,18 +44,16 @@ public class AddPatientController extends HttpServlet {
         }else if(!validBirthDate(patient.getBirthDateInString())) {
             out.print("Invalid_birth_date");
         }
+
+        //if id equals null we create new patient
         if (id.equals("")){
-            List<Patient> tmpPatients;
-            try {
-                tmpPatients = new PatientDAO().getAllPatients();
-                for(Patient onePatient: tmpPatients) {
-                    if(onePatient.getFullName().equals(patient.getFullName()) )  {
-                        out.print("Same");
-                        break;
-                    }
+            List<Patient> tmpPatients = patientService.getAllPatients();
+            //check new patient on equals full name
+            for(Patient onePatient: tmpPatients) {
+                if(onePatient.getFullName().equals(patient.getFullName()) )  {
+                    out.print("Same");
+                    break;
                 }
-            } catch (PersistenceException e) {
-                e.printStackTrace();
             }
         }
     }
@@ -65,27 +62,15 @@ public class AddPatientController extends HttpServlet {
         String name = request.getParameter("name");
         String lastName = request.getParameter("lastName");
         String birthDate = request.getParameter("birthDate");
-        Patient patient = Patient.newPatientBuilder()
-                .setBirthDate(birthDate)
-                .setLastName(lastName)
-                .setName(name)
-                .setStatus(true)
-                .build();
-        try{
-            new PatientDAO().addPatient(patient);
-        }catch (PersistenceException e){
-            e.printStackTrace();
-        }
 
-       List<Patient> patients = new ArrayList<>();
-        try{
-            patients = new PatientDAO().getAllPatients();
-        }catch (PersistenceException e) {
-            e.printStackTrace();
-        }
+        //add patient
+        patientService.addPatient(name,lastName,birthDate);
+
+        //get all patients
+        List<Patient> patients = patientService.getAllPatients();
+
         request.setAttribute("patients", patients);
         RequestDispatcher rd = request.getRequestDispatcher("AllPatients.jsp");
         rd.forward(request, response);
-
     }
 }

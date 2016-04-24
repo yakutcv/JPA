@@ -1,8 +1,8 @@
 package com.SoftServe.ita.Ch_039.Model.Entity;
 
 
-import com.SoftServe.ita.Ch_039.IO.Adapters.DateTimeForJPAPatientAdapter;
-import com.SoftServe.ita.Ch_039.IO.Adapters.DateTimeForXmlAdapter;
+import com.SoftServe.ita.Ch_039.Adapters.DateTimeForJPAPatientAdapter;
+import com.SoftServe.ita.Ch_039.Adapters.DateTimeForXmlAdapter;
 import com.google.gson.annotations.SerializedName;
 import org.joda.time.DateTime;
 import org.joda.time.Years;
@@ -17,12 +17,11 @@ import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
-
 @Entity
 @Table
 @XmlRootElement(name="Patient")
 @XmlAccessorType(XmlAccessType.FIELD)
-   @XmlType(name="Patient", propOrder = {
+@XmlType(name="Patient", propOrder = {
         "id",
         "name",
         "lastName",
@@ -71,27 +70,11 @@ public class Patient implements Comparable<Patient>,Serializable {
     @Temporal(TemporalType.DATE)
     private DateTime birthDate;
 
-
     @SerializedName("List of Analyzes")
     @XmlElementWrapper(name="List_of_Analyzes")
     @XmlElement(name="Analysis")
     @OneToMany(mappedBy = "patient", cascade = CascadeType.ALL)
     private List<Analysis> listAnalyzes = new ArrayList<>();
-
-    public List<Analysis> getListAnalyzes() {
-        return listAnalyzes;
-    }
-
-    /*public void addAnalysis(Analysis analysis) {
-        this.listAnalyzes.add(analysis);
-        if(analysis.getPatient()!=this){
-            analysis.setPatient(this);
-        }
-    }*/
-
-    public void setListAnalyzes(List<Analysis> listAnalyzes) {
-        this.listAnalyzes.addAll(listAnalyzes);
-    }
 
     @Column
     private boolean status = true;
@@ -99,6 +82,15 @@ public class Patient implements Comparable<Patient>,Serializable {
     //default constructor
     public Patient() {
 
+    }
+
+    //getters and setters
+    public void setListAnalyzes(List<Analysis> listAnalyzes) {
+        this.listAnalyzes.addAll(listAnalyzes);
+    }
+
+    public List<Analysis> getListAnalyzes() {
+        return listAnalyzes;
     }
 
     public DateTime getBirthDate() {
@@ -112,8 +104,6 @@ public class Patient implements Comparable<Patient>,Serializable {
     public boolean getStatus() {
         return status;
     }
-
-//    @XmlElementWrapper(name = "Analysis")
 
     public String getLastName() {
         return lastName;
@@ -223,7 +213,7 @@ public class Patient implements Comparable<Patient>,Serializable {
         }
     }
 
-    //first override
+
     @Override
     public String toString() {
         StringBuilder builder = new StringBuilder();

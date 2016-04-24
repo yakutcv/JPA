@@ -3,9 +3,6 @@ package com.SoftServe.ita.Ch_039.Model.Entity;
 import javax.xml.bind.annotation.XmlEnumValue;
 import java.io.Serializable;
 
-/**
- * Created by ayasintc on 3/29/2016.
- */
 public enum AnalysisType implements Serializable {
     @XmlEnumValue(value = "Blood")
     BLOOD,

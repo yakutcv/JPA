@@ -6,7 +6,7 @@ import com.SoftServe.ita.Ch_039.Model.Entity.Analysis;
 import com.SoftServe.ita.Ch_039.Model.Entity.AnalysisType;
 import com.SoftServe.ita.Ch_039.Model.Entity.Patient;
 import com.SoftServe.ita.Ch_039.IO.Exceptions.SelfFormatException;
-import com.SoftServe.ita.Ch_039.IO.Interfaces.IO;
+import com.SoftServe.ita.Ch_039.Interfaces.IO;
 import org.joda.time.format.DateTimeFormat;
 import org.joda.time.format.DateTimeFormatter;
 
@@ -24,8 +24,6 @@ public class SelfFormatIO implements IO {
 
     private static DateTimeFormatter format = DateTimeFormat.forPattern("dd/MM/yyyy HH:mm");
     private static DateTimeFormatter format1 = DateTimeFormat.forPattern("dd/MM/yyyy");
-
-
     private static final String ANALYZES_PATTERN = "\\s([A-Z]{1,})\\s\\((.*)\\)\\s(.*)";
 
     @Override
@@ -53,9 +51,7 @@ public class SelfFormatIO implements IO {
             }
         } catch (IOException e) {
             System.out.println("Invalid format input file!" + e);
-
         }
-
 
         for(String s : tmpHospital) {
             List<String> patients = AnalyzesParser.parsePatients(s);
@@ -78,18 +74,17 @@ public class SelfFormatIO implements IO {
             }
 
             Patient newPatient = Patient.newPatientBuilder()
-                .setBirthDate(patients.get(2))
-                .setAnalyzes(tmpListOfAnalyzes)
-                .setName(patients.get(0))
-                .setLastName(patients.get(1))
-                .setId(id)
-                .build();
+                    .setBirthDate(patients.get(2))
+                    .setAnalyzes(tmpListOfAnalyzes)
+                    .setName(patients.get(0))
+                    .setLastName(patients.get(1))
+                    .setId(id)
+                    .build();
             id++;
-             hospital.addPatient(newPatient);
-    }
+            hospital.addPatient(newPatient);
+        }
         return hospital;
     }
-
 
     //method to convert output Hospital to correct String format
     private StringBuilder covertToString(Hospital value) {
@@ -99,13 +94,12 @@ public class SelfFormatIO implements IO {
         for (Patient p : patients) {
             newHospital.append(p.getName() + " " + p.getLastName() + " (" + p.getBirthDate().toString(format1) + "):{");
             for (Analysis analysis : p.getListAnalyzes()) {
-                    newHospital.append(" " + analysis.getType() + " (" + analysis.getDate().toString(format) + ") " + analysis.getReport() + ",");
+                newHospital.append(" " + analysis.getType() + " (" + analysis.getDate().toString(format) + ") " + analysis.getReport() + ",");
             }
             newHospital.append("}");
             newHospital.append("\n");
         }
         return newHospital;
     }
-
 }
 

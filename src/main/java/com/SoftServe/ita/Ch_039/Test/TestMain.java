@@ -3,8 +3,8 @@ package com.SoftServe.ita.Ch_039.Test;
 import com.SoftServe.ita.Ch_039.Model.Entity.Analysis;
 import com.SoftServe.ita.Ch_039.Model.Entity.AnalysisType;
 import com.SoftServe.ita.Ch_039.Model.Entity.Patient;
-import com.SoftServe.ita.Ch_039.Model.DAO.AnalyzesDAO;
-import com.SoftServe.ita.Ch_039.Model.DAO.PatientDAO;
+import com.SoftServe.ita.Ch_039.DAO.AnalysisDAO;
+import com.SoftServe.ita.Ch_039.DAO.PatientDAO;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -63,7 +63,7 @@ public class TestMain {
 
 
         PatientDAO patientDAO = new PatientDAO();
-        AnalyzesDAO analyzesDAO = new AnalyzesDAO();
+        AnalysisDAO analysisDAO = new AnalysisDAO();
 
 
         System.out.println(patientDAO.getAllPatientsWithStatusFalse());

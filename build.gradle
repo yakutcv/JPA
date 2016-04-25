@@ -1,13 +1,13 @@
 group 'Chernivtsi_hospital'
-version '1.0'
+version '1.7'
 
 apply plugin: 'java'
 compileJava {
-    sourceCompatibility = '1.8'
+    sourceCompatibility = '1.7'
 }
 apply plugin: 'war'
 
-sourceCompatibility = 1.8
+sourceCompatibility = 1.7
 
 repositories {
     mavenCentral()

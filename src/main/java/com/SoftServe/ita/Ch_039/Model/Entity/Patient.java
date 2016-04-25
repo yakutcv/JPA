@@ -49,13 +49,11 @@ public class Patient implements Comparable<Patient>,Serializable {
 
     @Column(name="name")
     @Basic(optional = false)
-    @NotNull
     @SerializedName("Name")
     @XmlElement
     private String name;
 
     @Column(name="last_name")
-    @NotNull
     @Basic(optional = false)
     @SerializedName("Last name")
     @XmlElement

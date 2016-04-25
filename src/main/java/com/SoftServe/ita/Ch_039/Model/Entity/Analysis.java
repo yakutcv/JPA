@@ -35,14 +35,12 @@ import java.io.Serializable;
 public class Analysis implements Comparable<Analysis>, Serializable {
 
     @Id
-    @NotNull
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @XmlAttribute(name="id")
     private long id=1;
 
     @JsonAdapter(DateTimeForJSONAdapter.class)
     @Column
-    @NotNull
     @Basic(optional = true)
     @Convert(converter = DateTimeForJPAAnalysisAdapter.class)
     @XmlJavaTypeAdapter(DateTimeForXmlAdapter.class)

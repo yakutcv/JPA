@@ -23,29 +23,26 @@
     <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/css/bootstrap.min.css"/>
     <link rel="stylesheet" href="${pageContext.request.contextPath}/css/style.css">
 
-
+    <!-- Script -->
     <script src="${pageContext.request.contextPath}/js/jquery-2.2.3.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
     <script src="${pageContext.request.contextPath}/js/moment-with-locales.min.js"></script>
     <script src="${pageContext.request.contextPath}/js/check.js"></script>
-    <script src="${pageContext.request.contextPath}js/jquery.toastmessage.js"></script>
+    <script src="${pageContext.request.contextPath}/js/jquery.toastmessage.js"></script>
     <script src="${pageContext.request.contextPath}/assets/js/jquery.backstretch.min.js"></script>
     <script src="${pageContext.request.contextPath}/assets/js/Background.js"></script>
     <script src="${pageContext.request.contextPath}/dateTimePicker/js/bootstrap-datetimepicker.min.js"></script>
-
-
 <script>
     var d = new Date();
     $(function () {
-    $('#datetimepicker2').datetimepicker({
-    format: 'DD/MM/YYYY HH:mm',
-    sideBySide: true,
-    maxDate:d,
-    showClose:true
-    });
+        $('#datetimepicker2').datetimepicker({
+            format: 'DD/MM/YYYY HH:mm',
+            sideBySide: true,
+            maxDate:d,
+            showClose:true
+        });
     });
 </script>
-
 </head>
 <body>
 <!-- Top content -->
@@ -65,7 +62,7 @@
                             </div>
                         </div>
                         <div class="form-bottom">
-                            <div role="form" <%--action="AddAnalyzesController?id=${patient.getId()}" method="POST"--%> class="registration-form">
+                            <div role="form" class="registration-form">
                                 <div class="form-group">
                                     <label class="sr-only control-label" for="inputType">Type Analyzes</label>
                                     <select name="type" class="form-control" id="inputType">
@@ -76,21 +73,21 @@
                                 </div>
                                 <div class="form-group">
                                     <label for="datetimepicker2" class="col-sm-2 control-label sr-only">Date</label>
-                                    <input type='text' class="form-control" id='datetimepicker2' name="date"
-                                           placeholder="Date..."/>
+                                    <input type='text' class="form-control" id='datetimepicker2' name="date" placeholder="Date..."/>
                                 </div>
                                 <div class="form-group">
                                     <label class="sr-only" for="inputReport">Report</label>
-                                   <textarea name="report" placeholder="Report..." class="form-report form-control"
-                                             id="inputReport" onkeyup="checkReport(this.value)"></textarea>
+                                    <textarea name="report" placeholder="Report..." class="form-report form-control"
+                                              id="inputReport" onkeyup="checkReport(this.value)"></textarea>
                                     <span id="wrongLengthReport">Report must contains maximum 200 characters!</span>
                                 </div>
                                 <input type="hidden" name="id" id="patientId" value="${patient.getId()}">
                                 <button type="submit" onclick = "checkAnalysis(event)" class="btn form-control">Add Analyzes</button>
                             </div>
-                            <form name="goToListWithAnalyzes" role="form" class="registration-form" action="AllAnalyzesController" method="GET">
-                                <input type="hidden" name="id" id="patientId2" value="${patient.getId()}">
-                                <button type="submit" class="btn btn-primary">Go back to the list with Analyzes </button>
+                            <form name="goToListWithAnalyzes" role="form" class="registration-form" action="AllAnalyzesController?id=id&laboratory=laboratory" method="GET">
+                                <button type="submit" class="btn btn-primary">Go back to the list with Analyzes</button>
+                                <input type="hidden" name="id" id="id" value="${patient.getId()}">
+                                <input type="hidden" name="laboratory" id="laboratory" value="laboratory">
                             </form>
                         </div>
                     </div>

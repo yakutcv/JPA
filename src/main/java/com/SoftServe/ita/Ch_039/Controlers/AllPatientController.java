@@ -23,11 +23,21 @@ public class AllPatientController extends HttpServlet {
     }
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
+        String laboratory = request.getParameter("laboratory");
+
         //get all patients
         List<Patient> patients = new PatientService().getAllPatients();
 
+        //define previous page
+        String direction;
+        if(laboratory==null){
+            direction ="AllPatients.jsp";
+        }else{
+            direction = "Laboratory.jsp";
+        }
+
         request.setAttribute("patients", patients);
-        RequestDispatcher dispatcher = request.getRequestDispatcher("AllPatients.jsp");
+        RequestDispatcher dispatcher = request.getRequestDispatcher(direction);
         dispatcher.forward(request, response);
     }
 }

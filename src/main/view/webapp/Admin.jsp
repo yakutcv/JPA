@@ -3,19 +3,19 @@
 
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
+    <%--CSS--%>
     <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/css/bootstrap.min.css"/>
     <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/css/theme.default.css"/>
 
+    <%--Script--%>
     <script src="${pageContext.request.contextPath}/js/jquery-2.2.3.min.js"></script>
     <script src="${pageContext.request.contextPath}/js/jquery.tablesorter.js"></script>
-
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 
     <title>Admin</title>
@@ -37,8 +37,8 @@
                     <th>Status</th>
                     <th>Delete</th>
                     </thead>
-                        <tbody>
-                        <c:forEach items = "${patients}" var = "patient">
+                    <tbody>
+                    <c:forEach items = "${patients}" var = "patient">
                         <tr>
                             <td id="counter"><c:out value="${count}"/></td>
                             <c:set var="count" value="${count+1}"/>
@@ -55,9 +55,6 @@
                                 <c:if test="${status==false}">
                                     <input name="status" type="button" class="btn btn-warning btn-sm statusPatient" value="${patient.getStatus()}" data-id="${patient.getId()}">
                                 </c:if>
-
-                            </td>
-
                             <td>
                                 <div class="col-sm-5">
                                     <p data-placement="top" data-toggle="tooltip" title="Delete">
@@ -67,40 +64,26 @@
                                     </p>
                                 </div>
                             </td>
-
                         </tr>
                         <input type="hidden" id="id" name = "id" value="${patient.id}">
-                        </c:forEach>
-                        </tbody>
+                    </c:forEach>
+                    </tbody>
                 </table>
             </div>
             <input type="hidden" id="disable" name = "disable" value="disable">
-
         </div>
-
-
-
         <div>
             <a type="submit" class="btn btn-default btn-lg" href= "<c:url value = "index.jsp"/>" >
                 <span class="glyphicon glyphicon-arrow-left"></span>Go back to the main page</a>
-
             <a type="submit" class="btn btn-primary btn-lg" href= "<c:url value = "Admin.jsp"/>" >
                 <span class="glyphicon glyphicon-refresh"></span>Reset</a>
-
-
             <a class="btn btn-info btn-lg"  href= "<c:url value = "/AdminController"/>" role="button">
-            <span class="glyphicon glyphicon-user"></span> Show all patients </a>
-
-
+                <span class="glyphicon glyphicon-user"></span> Show all patients </a>
             <a class="btn btn-warning btn-lg"  href= "<c:url value = "/AdminController?disable=disable"/>" role="button">
                 <span class="glyphicon glyphicon-user"></span> Show all disabled patients </a>
-
-
         </div>
-
     </div>
 </div>
-
 <%-- </form>--%>
 <%--  modal--%>
 <div class="modal fade" id="deletePatientModal" tabindex="-1" role="dialog" aria-labelledby="edit" aria-hidden="true">
@@ -123,5 +106,4 @@
 <%-- end modal--%>
 <script src="${pageContext.request.contextPath}/js/Admin.js"></script>
 </body>
-
 </html>

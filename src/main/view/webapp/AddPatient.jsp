@@ -9,8 +9,8 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
     <title>New Patient</title>
+
     <!-- CSS -->
     <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/css/bootstrap.min.css" />
     <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:400,100,300,500">
@@ -20,10 +20,9 @@
     <link rel="stylesheet" href="${pageContext.request.contextPath}/css/jquery.toastmessage.css">
     <link rel="stylesheet" href="${pageContext.request.contextPath}/css/formValidation.css">
     <link rel="stylesheet" href="${pageContext.request.contextPath}/css/style.css">
-
     <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/dateTimePicker/css/bootstrap-datepicker.css">
 
-
+    <!-- Script -->
     <script src="${pageContext.request.contextPath}/js/jquery-2.2.3.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
     <script src="${pageContext.request.contextPath}/js/moment-with-locales.min.js"></script>
@@ -31,7 +30,6 @@
     <script src="${pageContext.request.contextPath}/js/validationForm.js"></script>
     <script src="${pageContext.request.contextPath}/js/check.js"></script>
     <script src="${pageContext.request.contextPath}/assets/js/Background.js"></script>
-
     <script src="${pageContext.request.contextPath}/dateTimePicker/js/bootstrap-datepicker.js"></script>
     <script src="assets/js/jquery.backstretch.min.js"></script>
     <script src="${pageContext.request.contextPath}/js/jquery.toastmessage.js"></script>
@@ -42,11 +40,6 @@
 <div class="top-content">
     <div class="inner-bg">
         <div class="container">
-            <div class="row">
-                <div class="col-sm-8 col-sm-offset-2 text">
-                    <h2 id="error_message" style="display: none"> </h2>
-                </div>
-            </div>
             <div class="row">
                 <div class="col-sm-6 col-sm-offset-3">
                     <div class="form-box">
@@ -61,7 +54,6 @@
                         </div>
                         <div class="form-bottom">
                             <div role="form" name="AddPatient" class="registration-form" id ="addPatientForm">
-
                                 <div class="form-group">
                                     <label class="sr-only" for="form-first-name">First name</label>
                                     <input type="text" name="name"  placeholder="First name..." class="form-first-name form-control" id="form-first-name" onkeyup="checkName(this.value)"/>

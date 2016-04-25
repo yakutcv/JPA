@@ -9,9 +9,8 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Edit Patient</title>
-    <!-- CSS -->
 
+    <!-- CSS -->
     <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/dateTimePicker/css/bootstrap-datepicker.css">
     <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/css/bootstrap.min.css" />
     <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:400,100,300,500">
@@ -21,6 +20,7 @@
     <link rel="stylesheet" href="${pageContext.request.contextPath}/css/jquery.toastmessage.css">
     <link rel="stylesheet" href="${pageContext.request.contextPath}/css/style.css">
 
+    <%--Script--%>
     <script src="${pageContext.request.contextPath}/js/jquery-2.2.3.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
     <script src="${pageContext.request.contextPath}/js/moment-with-locales.min.js"></script>
@@ -31,6 +31,7 @@
     <script src="${pageContext.request.contextPath}/assets/js/Background.js"></script>
     <script src="${pageContext.request.contextPath}/dateTimePicker/js/bootstrap-datepicker.js"></script>
 
+    <title>Edit Patient</title>
 </head>
 <body>
 <div class="top-content">

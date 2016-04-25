@@ -1,5 +1,5 @@
-group 'Task'
-version '1.0-SNAPSHOT'
+group 'Chernivtsi_hospital'
+version '1.0'
 
 apply plugin: 'java'
 compileJava {

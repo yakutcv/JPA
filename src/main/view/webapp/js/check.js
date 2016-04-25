@@ -170,7 +170,7 @@ function checkAnalysis(event) {
             }
             default :
                 $.post('AddAnalyzesController',{'id':id,'type':type,'report':report,'date':date});
-                window.location.replace("AllAnalyzesController?id="+id);
+                window.location.replace("AllAnalyzesController?id="+id+"&laboratory=laboratory");
                 break;
         }
     });

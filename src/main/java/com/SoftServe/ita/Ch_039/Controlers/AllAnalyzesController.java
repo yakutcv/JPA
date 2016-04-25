@@ -23,6 +23,7 @@ public class AllAnalyzesController extends HttpServlet {
         AnalysisService analysisService = new AnalysisService();
 
         long id = Long.parseLong(request.getParameter("id"));
+        String laboratory = request.getParameter("laboratory");
 
         //get patient by id
         Patient patient = patientService.getPatientById(id);
@@ -31,7 +32,16 @@ public class AllAnalyzesController extends HttpServlet {
 
         request.setAttribute("analyzes", analyzes);
         request.setAttribute("patient", patient);
-        RequestDispatcher dispatcher = request.getRequestDispatcher("AllAnalyzes.jsp");
+
+        //define previous page
+        String direction;
+        if(laboratory==null){
+            direction ="AllAnalyzes.jsp";
+        }else{
+            direction ="LaboratoryAnalyzes.jsp";
+        }
+
+        RequestDispatcher dispatcher = request.getRequestDispatcher(direction);
         dispatcher.forward(request, response);
     }
 

@@ -46,14 +46,14 @@ public class AddAnalyzesController extends HttpServlet {
         analysisService.addAnalysisByPatient(analysis,patient);
 
         request.setAttribute("patient", patient);
-        RequestDispatcher rd = request.getRequestDispatcher("AllAnalyzesController");
+        RequestDispatcher rd = request.getRequestDispatcher("AllAnalyzesController?laboratory=laboratory");
         rd.forward(request, response);
 
     }
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
-        //pass all our analysis type tp <SELECT> tag on jsp
+        //pass all our analysis type to <SELECT> tag on jsp
         List<AnalysisType> analysisTypes = Arrays.asList(AnalysisType.values());
         //get patient by id
         Patient patient = patientService.getPatientById(Long.parseLong(request.getParameter("id")));

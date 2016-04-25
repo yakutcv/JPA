@@ -28,7 +28,7 @@ public class DeleteAnalysisController extends HttpServlet {
         Patient patient = patientService.getPatientById(id);
 
         request.setAttribute("patient", patient);
-        RequestDispatcher dispatcher = request.getRequestDispatcher("AllAnalyzes.jsp");
+        RequestDispatcher dispatcher = request.getRequestDispatcher("Laboratory.jsp");
         dispatcher.forward(request, response);
     }
 
@@ -48,7 +48,7 @@ public class DeleteAnalysisController extends HttpServlet {
 
         request.setAttribute("analyzes", analyzes);
         request.setAttribute("patient", patient);
-        RequestDispatcher rd = request.getRequestDispatcher("AllAnalyzes.jsp");
+        RequestDispatcher rd = request.getRequestDispatcher("LaboratoryAnalyzes.jsp");
         rd.forward(request, response);
     }
 }

@@ -25,6 +25,7 @@
           <element id="library" level="project" name="Gradle: org.eclipse.persistence:eclipselink:2.5.0" />
           <element id="library" level="project" name="Gradle: org.eclipse.persistence:javax.persistence:2.1.0" />
           <element id="library" level="project" name="Gradle: org.eclipse.persistence:commonj.sdo:2.1.1" />
+          <element id="library" level="project" name="Gradle: log4j:log4j:1.2.17" />
         </element>
       </element>
       <element id="directory" name="META-INF">

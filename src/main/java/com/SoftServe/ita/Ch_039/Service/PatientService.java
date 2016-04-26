@@ -3,13 +3,15 @@ package com.SoftServe.ita.Ch_039.Service;
 import com.SoftServe.ita.Ch_039.DAO.PatientDAO;
 import com.SoftServe.ita.Ch_039.Model.Entity.Analysis;
 import com.SoftServe.ita.Ch_039.Model.Entity.Patient;
+import org.apache.log4j.Logger;
 
 import javax.persistence.PersistenceException;
 import java.util.ArrayList;
 import java.util.List;
 
 public class PatientService {
-
+    //logger
+    private static final Logger log = Logger.getLogger(PatientService.class.getName());
     PatientDAO patientDAO = new PatientDAO();
 
     //add patient
@@ -22,7 +24,9 @@ public class PatientService {
                 .build();
         try{
             patientDAO.addPatient(patient);
+            log.info("Patient " + patient + " was added!");
         }catch (PersistenceException e){
+            log.error("Can't add " + patient + " to DB");
             e.printStackTrace();
         }
     }

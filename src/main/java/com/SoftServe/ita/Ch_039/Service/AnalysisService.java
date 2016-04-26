@@ -4,11 +4,16 @@ import com.SoftServe.ita.Ch_039.DAO.AnalysisDAO;
 import com.SoftServe.ita.Ch_039.DAO.PatientDAO;
 import com.SoftServe.ita.Ch_039.Model.Entity.Analysis;
 import com.SoftServe.ita.Ch_039.Model.Entity.Patient;
+import org.apache.log4j.Logger;
 
 import javax.persistence.PersistenceException;
 import java.util.List;
 
 public class AnalysisService {
+
+    //logger
+    private static final Logger log = Logger.getLogger(AnalysisService.class);
+
 
     PatientDAO patientDAO = new PatientDAO();
     AnalysisDAO analysisDAO = new AnalysisDAO();
@@ -17,8 +22,11 @@ public class AnalysisService {
     public void addAnalysisByPatient(Analysis analysis, Patient patient){
         try {
             analysisDAO.addAnalysis(analysis, patient);
+            log.info(analysisDAO);
+            log.info("Analyzes was added!");
         } catch (PersistenceException e) {
             e.printStackTrace();
+            log.info("Analyzes was not added!");
         }
     }
 
